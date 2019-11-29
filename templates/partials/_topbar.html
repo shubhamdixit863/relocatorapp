@@ -1,0 +1,71 @@
+<section id="topbar">
+
+        <div class="container">
+      
+          <div class="row">
+      
+            <div class="col-lg-12 ">
+      
+              <div class="contact-info pull-left">
+      
+                <ul>
+      
+                  <li><img class="phone-icon" src="https://www.relocatoremovals.in/images/phone.gif"> <b style="color:white;" href="tel:"> 7982940347 </b></li>
+      
+                  <li><i class="fa fa-envelope"></i> <b style="color:white;" href="mailto:">Support@Relocatopackers.com</b></li>
+      
+                </ul>
+      
+              </div>
+      
+              <!-- /.contact-info -->
+      
+              <div class="link-info">
+      
+                <ul>
+      
+                  <!--<li><i class="fa fa-truck"></i> <a href="#">Consigment Tracking</a></li>-->
+      
+                  <li><a href="#"><img class="qms" src="https://www.relocatoremovals.in/images/quality-management-system.png"></a></li>
+      
+                  <li><i class="fa fa-file-text-o" aria-hidden="true"></i> <a data-toggle="modal" data-target="#myModal">Write A Review</a></li>
+                  
+                      {%if user.is_authenticated %}
+                      <li>
+                          <i class="fa fa-dashboard" aria-hidden="true"></i> <a href="{%url 'dashboard'%}">Dashboard</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Logout
+                              </a>
+                         <form action="{%url 'logout'%}" method="POST" id="logout">
+                           {%csrf_token%}
+                           <input type="hidden">
+                         </form>
+                          </li>
+                      {% else %}
+                      <li>
+                      <i class="fa fa-user" aria-hidden="true"></i> <a href="{%url 'login'%}">Login</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-user-plus" aria-hidden="true"></i></i> <a href="{%url 'register'%}">Signup</a>
+                      </li>
+                  {%endif%}
+                 
+                 
+      
+                </ul>
+      
+              </div>
+      
+              <!-- /.social -->
+      
+            </div>
+      
+          </div>
+      
+        </div>
+      
+      </section>

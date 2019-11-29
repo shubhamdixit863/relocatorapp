@@ -1,0 +1,498 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta name="norton-safeweb-site-verification" content="9ez0twxb7vbn0au9mgx1u66pgi6cf-1o2k6aart5hla5vs4lehu5hh8q2b-x0wcyrj4dvuc45go03aoep191kleod8nae98m3jl9zq07wgimq7gri0ctp9na-2-6ayqy" />
+<meta charset="utf-8">
+<meta http-equiv = " X-UA-compatible " content = " IE = 9; IE = 7; IE = 8 ; IE = EDGE, Chrome = 1 " >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="-_ffHiQbPSrhEmXP3iLTp8Xggk7_kiS7mPT2dZrL17o" />
+<link rel="shortcut icon" type="image/png" href="https://www.relocatoremovals.in/images/favicon.png" />
+<title>Packers and Movers Service Providers | Packers and Movers Relocato Removals</title>
+<meta name="description" content="Relocato Removals offer best car transportation, plants & tree, pet, fine art, office and house relocation moving and shifting Service Provider in Indirapuram Ghaziabad">
+<meta name="keywords" content="relocato removals, packers and movers near me, cheap movers and packers, international packers and movers, packers and movers NCR, top 10 movers and packers, no.1 packers and movers, iba approved packers and movers, best offers for movers and packers, corporate relocation services">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ajax-bootstrap-select/1.4.5/js/ajax-bootstrap-select.min.js">
+
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+   
+  <link rel="stylesheet" href="{% static 'css/main-style.css'%}">
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  <link rel="stylesheet" href="{% static 'css/responsive.css'%}">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+  <!-- Custom -->
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
+
+   
+</head>
+<body>
+    
+    <!--Topbar-->
+     {% include 'partials/_topbar.html'%}
+ <!--Navbar-->
+     {% include 'partials/_navbar.html'%}
+    {% block content %} {% endblock%}
+
+     <!--Footer-->
+    {% include 'partials/_footer.html'%}
+ 
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'js/plugins.js'%}"></script>
+    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'js/theme.js'%}"></script>
+    <script src="{% static 'js/wow.js'%}"></script>
+    <script src="{% static 'js/custom.js'%}"></script>
+    <script src="{% static 'js/jquery.simpleTicker.js'%}"></script>
+
+    
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.10/js/bootstrap-select.js"></script>
+   
+    <!--=============== our Partners ====================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    
+    
+    <script>
+    $(document).ready(function(){
+        $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
+    $(function(){
+                //Scroll event
+                $(window).on("scroll",function(){
+                    var scrolled = $(window).scrollTop();
+                    if (scrolled > 200) $('.go-top').fadeIn('slow');
+                    if (scrolled < 200) $('.go-top').fadeOut('slow');
+                });  
+                //Click event
+                $('.go-top').on('click', function () {
+                    $("html, body").animate({ scrollTop: "0" },  500);
+                });
+            });
+    $(document).ready(function() {
+        $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+            e.preventDefault();
+            $(this).siblings('a.active').removeClass("active");
+            $(this).addClass("active");
+            var index = $(this).index();
+            $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+            $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+        });
+    });		
+    </script>
+    <!--=============== our partners end================-->
+    <script>
+    $(document).ready(function() {
+        $('#Carousel').carousel({
+            interval: 5000
+        })
+    });
+    $(window).load(function(){
+       setTimeout(function(){
+           $('#firstModal').modal('show');
+       }, 4500);
+    });
+        
+    $(document).ready(function(){
+    $(".slidingDiv").hide();
+        $(".show_hide").show();
+        
+        $('.show_hide').click(function(){
+        $(".slidingDiv").slideToggle();
+        });
+    
+    });
+    $('.moreless-button').click(function() {
+      $('.moretext').slideToggle();
+      if ($('.moreless-button').text() == "Read more") {
+        $(this).text("Read less")
+      } else {
+        $(this).text("Read more")
+      }
+    });
+    </script>
+    <script>
+    $(function() {
+    //----- OPEN
+    $('[data-popup-open]').on('click', function(e) {
+    var targeted_popup_class = jQuery(this).attr('data-popup-open');
+    $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+    e.preventDefault();
+    });
+    //----- CLOSE
+    $('[data-popup-close]').on('click', function(e) {
+    var targeted_popup_class = jQuery(this).attr('data-popup-close');
+    $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+    e.preventDefault();
+    });
+    });
+    </script>
+    <!-- ============== chat popup =========================-->
+    <script>
+    $(function(){
+    $("#addClass").click(function () {
+      $('#sidebar_secondary').addClass('popup-box-on');
+        });
+      
+        $("#removeClass").click(function () {
+      $('#sidebar_secondary').removeClass('popup-box-on');
+        });
+    })
+    </script>
+    <!--=============== Chat popup end =================-->
+    <script>
+      $(function(){
+    $("#addClass").click(function () {
+              $('#qnimate').addClass('popup-box-on');
+                });
+              
+                $("#removeClass").click(function () {
+              $('#qnimate').removeClass('popup-box-on');
+                });
+      })
+    </script>
+    <!-- end  -->
+    <!--=========================Frequently Asked Questions ===========================-->
+    <script>
+    /*
+    Author       : Theme_ocean.
+    Template Name: Fury - Product Landing Page
+    Version      : 1.0
+    */
+    (function($) {
+        'use strict';
+        
+        jQuery(document).on('ready', function(){
+        
+                $('a.page-scroll').on('click', function(e){
+                    var anchor = $(this);
+                    $('html, body').stop().animate({
+                        scrollTop: $(anchor.attr('href')).offset().top - 50
+                    }, 1500);
+                    e.preventDefault();
+                });		
+    
+        }); 	
+    
+                    
+    })(jQuery);
+    </script>
+    <!--=========================Frequently Asked Questions End ======================-->
+    <!--========================== Testimonial  ====================-->
+    <script>
+    // vars
+    'use strict'
+   /* var	testim = document.getElementById("testim"),
+            testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+        testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+        testimLeftArrow = document.getElementById("left-arrow"),
+        testimRightArrow = document.getElementById("right-arrow"),
+        testimSpeed = 4500,
+        currentSlide = 0,
+        currentActive = 0,
+        testimTimer,
+            touchStartPos,
+            touchEndPos,
+            touchPosDiff,
+            ignoreTouch = 30;
+    ;*/
+    /*
+    window.onload = function() {
+    
+        // Testim Script
+        function playSlide(slide) {
+            for (var k = 0; k < testimDots.length; k++) {
+                testimContent[k].classList.remove("active");
+                testimContent[k].classList.remove("inactive");
+                testimDots[k].classList.remove("active");
+            }
+    
+            if (slide < 0) {
+                slide = currentSlide = testimContent.length-1;
+            }
+    
+            if (slide > testimContent.length - 1) {
+                slide = currentSlide = 0;
+            }
+    
+            if (currentActive != currentSlide) {
+                testimContent[currentActive].classList.add("inactive");            
+            }
+            testimContent[slide].classList.add("active");
+            testimDots[slide].classList.add("active");
+    
+            currentActive = currentSlide;
+        
+            clearTimeout(testimTimer);
+            testimTimer = setTimeout(function() {
+                playSlide(currentSlide += 1);
+            }, testimSpeed)
+        }
+    
+        testimLeftArrow.addEventListener("click", function() {
+            playSlide(currentSlide -= 1);
+        })
+    
+        testimRightArrow.addEventListener("click", function() {
+            playSlide(currentSlide += 1);
+        })    
+    
+        for (var l = 0; l < testimDots.length; l++) {
+            testimDots[l].addEventListener("click", function() {
+                playSlide(currentSlide = testimDots.indexOf(this));
+            })
+        }
+    
+        playSlide(currentSlide);
+    
+        // keyboard shortcuts
+        document.addEventListener("keyup", function(e) {
+            switch (e.keyCode) {
+                case 37:
+                    testimLeftArrow.click();
+                    break;
+                    
+                case 39:
+                    testimRightArrow.click();
+                    break;
+    
+                case 39:
+                    testimRightArrow.click();
+                    break;
+    
+                default:
+                    break;
+            }
+        })
+            
+            testim.addEventListener("touchstart", function(e) {
+                    touchStartPos = e.changedTouches[0].clientX;
+            })
+        
+            testim.addEventListener("touchend", function(e) {
+                    touchEndPos = e.changedTouches[0].clientX;
+                
+                    touchPosDiff = touchStartPos - touchEndPos;
+                
+                    console.log(touchPosDiff);
+                    console.log(touchStartPos);	
+                    console.log(touchEndPos);	
+    
+                
+                    if (touchPosDiff > 0 + ignoreTouch) {
+                            testimLeftArrow.click();
+                    } else if (touchPosDiff < 0 - ignoreTouch) {
+                            testimRightArrow.click();
+                    } else {
+                        return;
+                    }
+                
+            })
+    } */
+    
+    </script>
+    <!--========================== Testimonial end ====================-->
+    <!--========================= footer Slide =========================-->
+    <script>
+    $(document).ready(function(){
+    
+        $(".footer-slider").click(function(){
+          var cls = $('.gototop').hasClass( "img-slide" );
+          // console.log(cls);
+          if(cls === false){
+            $('#footer-top').animate({
+              top: "0"
+            }, 15, function() {
+              $("#go-up").animate({
+                top: "0"
+              }, 15, function(){
+                $('.gototop').addClass('img-slide');
+              });
+            });
+            $("#menu-slide").slideDown('slow');
+          }else{
+            $('#footer-top').animate({
+              top: "0"
+            }, 15, function() {
+              $("#go-up").animate({
+                top: "0"
+              }, 15, function(){
+                $('.gototop').removeClass('img-slide');
+              });
+            });
+            $("#menu-slide").slideUp('slow');
+          }
+        });
+    });
+    
+      $(".bar_menu").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").fadeIn('slow');
+        $("p").css("background-color");
+      });
+    </script>
+    <!--================================ footer slide end =============================-->
+    <script>
+    $(document).ready(function(){
+      $(".slide-toggle.arrowleft").click(function(){
+        $(".social").animate({
+          width: "toggle"
+        });
+      });
+      
+      $(".slide-toggle.arrowleft").click(function(){
+       $(".slide-toggle.arrowleft").css({"display": "none"});
+      $(".slide-toggle.arrowright").css({"display": "block"});
+      });
+      
+      $(".slide-toggle.arrowright").click(function(){
+        $(".social").animate({
+          width: "toggle"
+        });
+      });
+      
+      $(".slide-toggle.arrowright").click(function(){
+       $(".slide-toggle.arrowright").css({"display": "none"});
+      $(".slide-toggle.arrowleft").css({"display": "block"});
+      });
+      
+    });
+    
+    </script>
+    <script>
+    $(function(){
+      $.simpleTicker($("#news-ticker-fade-demo"),{'effectType':'fade'});
+    });
+    </script>
+    <!--Start of Tawk.to Script-->
+    <!--<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5ca3355c6bba46052800d58e/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>->
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"></script>
+    <script>
+     //$('.input-group.date').datepicker({format: "dd.mm.yyyy"}); 
+     var date = new Date();
+         date.setDate(date.getDate());
+        $('.datepickstart').datepicker({
+         autoclose: true,
+         todayHighlight: true,
+         format: 'dd/mm/yyyy',
+          startDate: date
+        });
+        $('.datepickstart').datepicker().on('changeDate', function() {
+          var temp = $(this).datepicker('getDate');
+          var d = new Date(temp);
+          d.setDate(d.getDate() + 1);
+          $('.datepickend').datepicker({
+         autoclose: true,
+         format: 'dd/mm/yyyy',
+         startDate: d
+        }).on('changeDate', function() {
+          var temp1 = $(this).datepicker('getDate');
+          var d1 = new Date(temp1);
+           d1.setDate(d1.getDate() + 1);
+          $('.datepickthird').datepicker({
+         autoclose: true,
+         format: 'dd/mm/yyyy',
+         startDate: d1
+        });
+        });
+        });
+    </script>
+    <script>
+     $('.input-group.date').datepicker({format: "dd.mm.yyyy"});
+    
+    
+        </script>
+      <script type="text/javascript">
+        $(document).ready(function($) {
+          $("#loader1").hide();
+          $("#form1").submit(function() {
+            $("#submit1").hide();
+            $("#loader1").show();
+            var str = $(this).serialize();
+            $.ajax({
+              type: "POST",
+              url: "mail1.php",
+              data: str,
+              success: function(msg) {
+                if(msg == 'OK') {
+                  result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';
+                  $("#fields1").hide();
+                } else {
+                  result = msg;
+                }
+                $("#submit1").show();
+                $("#loader1").hide();
+                $('#note1').html(result);
+              }
+            });
+            return false;
+          });
+        });
+      </script>
+      <script type="text/javascript">
+        $(document).ready(function($) {
+          $("#loader").hide();
+          $("#form").submit(function() {
+            $("#submit").hide();
+            $("#loader").show();
+            var str = $(this).serialize();
+            $.ajax({
+              type: "POST",
+              url: "mail2.php",
+              data: str,
+              success: function(msg) {
+                if(msg == 'OK') {
+                  result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';
+                  $("#fields").hide();
+                } else {
+                  result = msg;
+                }
+                $("#submit").show();
+                $("#loader").hide();
+                $('#note').html(result);
+              }
+            });
+            return false;
+          });
+        });
+      </script>
+
+  </body>
+</body>
+</html>
