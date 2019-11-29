@@ -1,0 +1,332 @@
+{%  extends 'base.html'%}
+{% load static%}
+
+{%block title%}
+|Welcome
+
+{%endblock%}
+{% block content%}
+<!-- popup -->
+
+<div class="clearfix"></div>
+<!--header end-->
+<!--Page Title-->
+<section class="page-title inner-baner">
+  <div class="container">
+    <h2>about us</h2>
+    <ul class="bread-crumb clearfix">
+      <li><i class="fa fa-home"></i> <a  href="{%url 'index'%}">Home</a></li>
+      <li class="active">about</li>
+    </ul>
+  </div>
+</section>
+<!--End Page Title-->
+<!--================== About us 2 =====================-->
+ <div class="container-fluid track sec-pad">
+    <!--<h3 class="title_head">About</h3>-->
+  <h2 class="overview_title text-center">About</h2>
+            <div class="separator"><span><i class="fa fa-circle"></i></span></div>
+    <!--<p class="augue_agile">Our journey, our path</p>-->
+    <div class="w3layouts_services_grids container" style="text-align:center;font-size:18px;margin: 0 auto;">
+      <?php echo $about;?>
+
+    <p class="collapse" id="block-id">
+        to those who believe in working with Quality. Regardless whether it is a personal , Individual, Corporate or any Business Migration ,moving from one place to another dependable accompanies different challenges right from <strong>Pre-Move till Post Move</strong> activities.<strong>Relocato Packers &amp; Movers</strong> here gives thorough and financially savvy answer for all your necessities.
+    <br>We are proficient <strong>Packers &amp; Movers</strong> nurturing new wave of change in the way <strong>Relocation Industry</strong> operates by bringing in the much needed standardisation of various parameters like safety of one’s belongings , Accountability Professionalism and obviously unmatched service experience at your ease with in your budget. <strong>Relocato</strong> always keeps the flexibility for providing you Tailor made solutions as per your moving requirements . Moreover this we always love to flow with the charms of technology that motivates us to bring some new changes to make your move convenient , Payment Gateway, SSL covered web page, Ease pricing , customised services , single window co-ordination or time effectiveness.Hence we have introduced very first of the industry’s <strong>Volume Calculator</strong> that allows you to know the vehicle requirement to move your Goods and also enables you to get the Quote online through entering the basic details only.
+        <br>We as a professional experts never pass over your move to any vendor as we do understand the value of your sentiments attached with your belongings and must take care in the same way . So Relocato Removals always deploys it’s professional &amp; trained Team for accomplishing the Move efficiently.</p>
+    
+     <a href="#block-id"
+         data-toggle="collapse"
+         aria-expanded="false"
+         aria-controls="block-id">
+        
+        <span class="collapsed">
+          <p class="about-collapse"><img src="{% static 'images/arrow_bottom.png'%}"></p>
+        </span>
+        <span class="expanded">
+          <p class="about-top-arrow"><img src="{% static 'images/arrow_top.png'%}"></p>
+        </span>
+        
+      </a>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+<!-- mission -->
+<div class="projects" id="projects">
+  <div class="container-fluid track no-pad">
+    <div class="news-bottom">
+      <div class="news-one-wthree-agile">
+        <div class="col-md-6 no-pad">
+          <div class="biseller-column"> 
+          <a class="lightbox" href="#one"> 
+          <img src="<?php echo $base_url;?>admin/uploads/<?php echo $overview_img;?>" alt="""> 
+          </a>
+            
+          </div>
+        </div>
+    
+        <div class="col-md-6 news-right">
+          <p class="para-w3-agile" style="font-size:17px;"><?php echo $overview;?></p>
+        </div>
+        <div class="lightbox-target" id="one">
+              <div class="clearfix"> </div>
+            </div>
+      </div>
+   <!-- ============== vision ================= -->
+      <div class="news-one-wthree-agile">
+        <div class="col-md-6 news-right"> 
+    <a href="#two">
+          <h4>Our Vision</h4>
+          </a>
+        <p class="para-w3-agile" style="font-size:17px;"><?php echo $vision;?></p>
+        </div>
+        <div class="col-md-6 no-pad">
+          <div class="biseller-column"> <a class="lightbox" href="#two"> <img src="<?php echo $base_url;?>admin/uploads/<?php echo $vision_img;?>" alt=""> </a>
+            <div class="lightbox-target" id="two">
+              <div class="clearfix"> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- ============== vision End================= -->
+    <!-- ============== Mission ================= -->
+      <div class="news-one-wthree-agile">
+        <div class="col-md-6 no-pad">
+          <div class="biseller-column"> 
+      <a class="lightbox" href="#one"> 
+      <img src="<?php echo $base_url;?>admin/uploads/<?php echo $mission_img;?>" alt="" height="428px;"> 
+      </a>
+            
+          </div>
+        </div>
+    
+        <div class="col-md-6 news-right"> <a href="#one">
+          <h4>Our Mission</h4>
+          </a>
+          <p class="para-w3-agile" style="font-size:17px;"><?php echo $mission;?></p>
+        </div>
+        <div class="lightbox-target" id="one">
+              <div class="clearfix"> </div>
+            </div>
+      </div>
+    <!-- ============== mission end ================= -->
+     <!-- ============== Values ================= -->
+      <div class="news-one-wthree-agile">
+        <div class="col-md-6 news-right"> 
+          <a href="#two">
+          <h4>Our Values</h4>
+          </a>
+          <p class="para-w3-agile" style="font-size:17px;"><?php echo $c_values;?></p>
+        </div>
+        <div class="col-md-6 no-pad" style="background-color: #fff;">
+          <div class="biseller-column"> <a class="lightbox" href="#two"> <img src="<?php echo $base_url;?>admin/uploads/<?php echo $values_img;?>" alt=""> </a>
+            <div class="lightbox-target" id="two">
+              <div class="clearfix"> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- ============== Values end ================= -->
+    </div>
+  </div>
+</div>
+<!-- mission end -->
+<!--================= About us 2 end ================-->
+<!--=================== Planing a relocation =============-->
+<div class="banner-bottom" style="padding: 5em 0 1em; background: #e5f4f4;">
+  <div class="container">
+    <div class="w3_agileits_banner_bottom_grids">
+      <h2 class="overview_title text-center">Planning a Relocation</h2>
+      <div class="separator" style="padding-bottom:40px;"><span><i class="fa fa-circle"></i></span></div>
+      <div class="col-md-6 w3_agileits_banner_bottom_grid">
+        <!--<h1 style="color:#333;">Planning a <span>Relocation?</span></h1>-->
+        <div class="wthree_banner_btm_grid">
+          <div class="wthree_banner_btm_grid1">
+            <h4>Survey</h4>
+            <?php echo $survey;?>
+            <div class="wthree_banner_btm_grid1_pos"> <i class="fa fa-list-alt" aria-hidden="true"></i> </div>
+          </div>
+          <div class="wthree_banner_btm_grid1">
+            <h4>Planning</h4>
+            <?php echo $planning;?>
+            <div class="wthree_banner_btm_grid1_pos"> <i class="fa fa-calendar" aria-hidden="true"></i> </div>
+          </div>
+          <div class="wthree_banner_btm_grid1">
+            <h4>Transit</h4>
+            <?php echo $transit;?>
+            <div class="wthree_banner_btm_grid1_pos"> <i class="fa fa-truck" aria-hidden="true"></i> </div>
+          </div>
+          <div class="wthree_banner_btm_grid1">
+            <h4>Delivery</h4>
+           <?php echo $delivery;?>
+            <div class="wthree_banner_btm_grid1_pos"> <i class="fa fa-dropbox" aria-hidden="true"></i> </div>
+          </div>
+        </div>
+      </div>
+      <div id="blog" class="col-md-6 col-sm-6 col-xs-12">
+        <div class="section-title title-padd-btm">
+          <!-- <h1>News & Events </h1>-->
+        </div>
+        <div class="row mrgn-offset-2">
+          <div class="col-lg-12">
+            <div class="owl-carousel">
+              <div class="item">
+                <div class="blog-main-holder">
+                  <div class="single-blog-post">
+                    <div class="img-holder"> <img src="<?php echo $base_url;?>admin/uploads/<?php echo $survey_img;?>" alt="img">
+                      <div class="overlay"> </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- blog-main-holder -->
+              </div>
+              <!-- item -->
+              <div class="item">
+                <div class="blog-main-holder">
+                  <div class="single-blog-post">
+                    <div class="img-holder"> <img src="<?php echo $base_url;?>admin/uploads/<?php echo $plannig_img;?>" alt="img">
+                      <div class="overlay"> </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- blog-main-holder -->
+              </div>
+              <!-- item -->
+              <div class="item">
+                <div class="blog-main-holder">
+                  <div class="single-blog-post">
+                    <div class="img-holder"> <img src="<?php echo $base_url;?>admin/uploads/<?php echo $transit_img;?>" alt="img">
+                      <div class="overlay"> </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- blog-main-holder -->
+              </div>
+              <!-- item -->
+              <div class="item">
+                <div class="blog-main-holder">
+                  <div class="single-blog-post">
+                    <div class="img-holder"> <img src="<?php echo $base_url;?>admin/uploads/<?php echo $devivery_img;?>" alt="img">
+                      <div class="overlay"> </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- blog-main-holder -->
+              </div>
+              <!-- item -->
+            </div>
+          </div>
+        </div>
+
+        <div class="rotate_text">
+          <h3>Lorem Ipsum is simply text.</h3>
+          <h2>Lorem Ipsum is simply dummy text &nbsp; &nbsp; &nbsp; &nbsp;industry.</h2>
+        </div>
+
+        <!-- row -->
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!--==================== Planing a relocation end =============-->
+<!--===================================== employee =======================-->
+<div class="projects" id="projects">
+  <div class="container-fluid track no-pad">
+    <div class="news-bottom">
+      <div class="news-one-wthree-agile">
+        <div class="col-md-6 no-pad">
+          <div class="biseller-column"> 
+          <a class="lightbox" href="#one"> 
+          <img src="<?php echo $base_url;?>admin/uploads/<?php echo $employee_relocation_img;?>" alt="""> 
+          </a>
+            
+          </div>
+        </div>
+    
+        
+        <div class="col-md-6 news-right"> 
+          <a href="#two">
+          <h4>Employee Relocation</h4>
+          </a>
+          <p class="para-w3-agile" style="font-size:17px;"> <?php echo $employee_relocation;?></p>
+        </div>
+        <div class="lightbox-target" id="one">
+              <div class="clearfix"> </div>
+            </div>
+      </div>
+   <!-- ============== vision ================= -->
+      <div class="news-one-wthree-agile">
+        <div class="col-md-6 news-right"> 
+    <a href="#two">
+          <h4>Company Relocation</h4>
+          </a>
+        <p class="para-w3-agile" style="font-size:17px;"><?php echo $company_relocation;?></p>
+        </div>
+        <div class="col-md-6 no-pad">
+          <div class="biseller-column"> <a class="lightbox" href="#two"> <img src="<?php echo $base_url;?>admin/uploads/<?php echo $company_relocation_img;?>" alt=""> </a>
+            <div class="lightbox-target" id="two">
+              <div class="clearfix"> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- ============== vision End================= -->
+    <!-- ============== Mission ================= -->
+      <div class="news-one-wthree-agile">
+        <div class="col-md-6 no-pad">
+          <div class="biseller-column"> 
+      <a class="lightbox" href="#one"> 
+      <img src="" alt="" height="428px;"> 
+      </a>
+            
+          </div>
+        </div>
+    
+        <div class="col-md-6 news-right"> <a href="#one">
+          <h4>Project Relocation</h4>
+          </a>
+          <p class="para-w3-agile" style="font-size:17px;"></p>
+        </div>
+        <div class="lightbox-target" id="one">
+              <div class="clearfix"> </div>
+            </div>
+      </div>
+    <!-- ============== mission end ================= -->
+    
+    </div>
+  </div>
+</div>
+<!--============================= Project relocation end ==================-->
+
+<!-- Start why-choose-us 2-->
+
+<div class="text-center counter6 customer-like">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 count-header">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 count-header">
+      <h2 class="overview_title text-center">WHY US</h2>
+      <div class="separator"><span><i class="fa fa-circle"></i></span></div>
+     
+    </div>
+  </div>
+ 
+</div>
+<!-- who we are -->
+<div class="container-fluid who-we-are">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 col-xs-12">
+      <h3 class="title_head">WHO WE ARE</h3>
+      <p class="augue_agile">Our journey, our path</p>
+      <p class="text-center"><?php echo $who_we_are;?></p>
+      <p class="text-center"><a class="btn-model-quote" href="<?php echo $base_url;?>book-a-survey.php">Get a Quote</a></p>
+    </div>
+  </div>
+</div>
+<!-- who we are end -->
+
+<!-- sticky -->
+<div id="mySidenav" class="sidenav"> <a href="book-a-survey.php" id="cup"><span><img src="images/cup.jpg"></span><span class="cup-tea">Lets have a Cup of Tea</span></a> </div>
+<!-- Sticky -->
+<!-- Stat Footer -->
+
+{% endblock%}

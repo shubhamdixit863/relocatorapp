@@ -1,0 +1,350 @@
+{%  extends 'base.html'%}
+{%block title%}
+|Welcome
+
+{%endblock%}
+{% block content%}
+
+<div class="clearfix"></div>
+
+<!--header end-->
+
+<!--Page Title-->
+
+<section class="page-title inner-baner">
+
+  <div class="container">
+
+    <h2>Book a Survey</h2>
+
+    <ul class="bread-crumb clearfix">
+
+      <li><i class="fa fa-home"></i> <a href="<?php echo $base_url;?>">Home</a></li>
+
+      <li class="active">Book a Survey</li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+<!--End Page Title-->
+
+</div>
+
+<!-- ===================== Tracking Tabs ===========================-->
+
+<!-- #blog-post -->
+
+<section class="sec-pad track">
+
+  <div class="container">
+
+    <div class="row">
+
+      <!-- .blog-content -->
+
+      <div class="col-lg-12 col-md-12 col-sm-12">
+
+        <!-- ============================ Book a Survey Content =========================-->
+
+        <div class="row">
+
+          <div class="col-md-12 service-text-box">
+
+            <h2 class="overview_title text-center">BOOK AN APPOINTMENT FOR YOUR FREE NO OBLIGATION QUOTATION</h2>
+
+            <div class="separator"><span><i class="fa fa-circle"></i></span></div>
+
+            <p class="text-center">An appointment with one of our expert Move Consultants helps you plan and prepare for your move and allows us to understand your individual requirements to be able to provide you with a fixed, accurate quote for your move making sure that everything that's important to you happens just the way you want it to.</p>
+
+          </div>
+
+        </div>
+
+        <!--=========================== Book a Survey Content end ===============-->
+
+      <!-- ======================= Form ========================-->
+
+        <div class="row">
+
+          <div class="col-md-12" style="padding-left: 0;" 
+
+	<!-- =========================== Book a servey form ====================== -->
+
+			 <form class="book-survey-form" method="post" action="submit-query.php">
+
+    <div class="form-group col-md-4">
+
+      <label for="usr">Salutation:</label>
+
+      <select class="form-control track-input" name="title" required="">
+
+			<option value="" disabled="" selected="">- Please Select -</option>
+
+			<option value="Miss">Miss</option>
+
+			<option value="Mr">Mr</option>
+
+			<option value="Mrs">Mrs</option>
+
+			<option value="Ms">Ms</option>
+
+			<option value="Dr.">Dr.</option>
+
+			<option value="Prof.">Prof.</option>
+
+			<option value="Col.">Col.</option>
+
+			<option value="Mjr.">Mjr.</option>
+
+			<option value="Deacon">Deacon</option>
+
+			<option value="Lord">Lord</option>
+
+			<option value="Lady">Lady</option>
+
+			<option value="Sir">Sir</option>
+
+			<option value="Rev.">Rev.</option>
+
+			<option value="Other">Other</option>
+
+		</select>
+
+    </div>
+
+    <div class="form-group col-md-4">
+
+      <label for="usr">First Name:</label>
+
+      <input type="text" class="form-control track-input" name="fname" placeholder="First Name" required>
+
+    </div>
+
+	<div class="form-group col-md-4">
+
+      <label for="usr">Last Name:</label>
+
+      <input type="text" class="form-control track-input" name="lname" placeholder="Last Name" required>
+
+    </div>
+
+	 <div class="form-group col-md-4">
+
+      <label for="usr">Email address:</label>
+
+      <input type="text" class="form-control track-input" name="email"  pattern="[^ @]*@[^ @]*" placeholder="Email address" required>
+
+    </div>
+
+    <div class="form-group col-md-4">
+
+      <label for="usr">Phone Number:</label>
+
+      <input type="text" class="form-control track-input" name="phone" pattern="[789][0-9]{9}" placeholder="Phone Number" required>
+
+    </div>
+
+	<div class="form-group col-md-4">
+
+      <label for="usr">Target move date:</label>
+
+		  <div class="input-group date" data-date-format="dd.mm.yyyy">
+
+			<input  type="text" class="form-control track-input" placeholder="Select moving date" name="move_date" style="width: 107%;border-radius: 3px;" required>
+
+			<div class="input-group-addon" ></div>
+
+		 </div>
+
+    </div>
+
+	 <div class="form-group col-md-4">
+
+      <label for="usr">Size of property:</label>
+
+<select class="form-control track-input" name="prop_size" required="">
+
+<option value="" selected="">- Please Select -</option>
+
+<option value="Just moving a few items">Just moving a few items</option>
+
+<option value="1 bedroom">1 bedroom</option>
+
+<option value="2 bedroom">2 bedrooms</option>
+
+<option value="3 bedroom">3 bedrooms</option>
+
+<option value="4 bedroom">4 bedrooms</option>
+
+<option value="5 bedrooms or more">5 bedrooms or more</option>
+
+</select>
+
+    </div>
+
+    <div class="form-group col-md-4">
+
+      <label for="usr">Target move date:</label>
+
+		  <div class="input-group date" data-date-format="dd.mm.yyyy">
+
+			<input  type="text" class="form-control track-input" placeholder="Select moving date"  name="appointment_date" style="width: 107%;border-radius: 3px;" required>
+
+			<div class="input-group-addon" ></div>
+
+		 </div>
+
+    </div>
+
+	<div class="form-group col-md-4">
+
+      <label for="usr">City Moving From:</label>
+
+      <input type="text" class="form-control track-input" name="moving_city" placeholder="City Moving From" required>
+
+    </div>
+
+	<div class="form-group col-md-4">
+
+      <label for="usr">Destination city:</label>
+
+      <input type="text" class="form-control track-input" name="destination_city" placeholder="Destination city" required>
+
+    </div>
+
+	<div class="form-group col-md-12">
+
+	<button type="submit" name="submit" class="btn btn-primary">Submit</button>
+
+	</div>
+
+  
+
+  <p class="col-md-12"><strong>Preferred Appointment Date</strong><br/>Unfortunately we cannot guarantee this date at the time of request as appointments are subject to availability but we will endeavour to offer you your preferred date where possible.</p>
+
+  </form>
+
+			
+
+			<!--============================ Book a servey form end ==================-->
+
+			
+
+          </div>
+
+        </div>
+
+        <!-- ======================= Form =====================-->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- /#blog-post -->
+
+<!--=============== Testimonial ==============-->
+
+<div id="testimonial_7" class="carousel slide testimonial_7_indicators testimonial6_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="3000" data-duration="2000">
+
+          <ol class="carousel-indicators">
+
+            <li data-target="#testimonial_7" data-slide-to="0" class="active"></li>
+
+            <li data-target="#testimonial_7" data-slide-to="1"></li>
+
+            <li data-target="#testimonial_7" data-slide-to="2"></li>
+
+          </ol>
+
+          <div class="carousel-inner" role="listbox">
+
+                <?php 
+
+								 $sqlAssign = "SELECT * FROM `testimonial` order by `id` ASC limit 0,3";											
+
+									$resultAssign = mysqli_query($conn, $sqlAssign);											
+
+									if (mysqli_num_rows($resultAssign) > 0) {
+
+									$i=1;
+
+									while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+
+
+
+										$id = $rowAssign['id'];
+
+                $name = $rowAssign['name'];
+
+                $email = $rowAssign['email'];
+
+                $image = $rowAssign['image'];
+
+                $review = $rowAssign['review'];
+
+                $date = $rowAssign['date'];
+
+                $status = $rowAssign['status'];
+
+							?>
+
+
+
+    <div class="item <?php if($id == 6){ echo 'active';}?>">
+
+      <div class="testimonial_7_slide">
+
+		<div class="img"><img src="admin/uploads/<?php echo $image;?>" alt="" style="width:100px;height:100px"></div>
+
+        <p><?php echo $review;?></p>
+
+        <h4>Customer feedback for International Removals services from UK to Victoria, Australia</h4>
+
+        <a class="btn-model-quote" href="testimonial.php">View Testimonial</a> </div>
+
+    </div>
+
+    <?php }} ?>
+
+
+
+          </div>
+
+          <a class="left carousel-control" href="#testimonial_7" role="button" data-slide="prev"> <span class="fa fa-chevron-left"></span> </a> <a class="right carousel-control" href="#testimonial_7" role="button" data-slide="next"> <span class="fa fa-chevron-right"></span> </a> </div>
+
+<!--=============== Testimonial End==============-->
+
+<!--============================= Customer Just Like ==============================-->
+
+<div class="text-center counter6 customer-like">
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 count-header">
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 count-header">
+
+      <h2 class="overview_title text-center">WHY US</h2>
+
+      <div class="separator"><span><i class="fa fa-circle"></i></span></div>
+
+      <?php echo $why_us;?>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+<!--============================= Customer Just like end =========================-->
+
+<!-- Stat Footer -->
+
+
+{%endblock%}

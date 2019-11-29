@@ -1,4 +1,4 @@
-  
+{% load static%}
 
 <div id="myModal" class="modal fade" role="dialog">
 
@@ -94,8 +94,8 @@
             <div class="navbar-header">
       
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="fa fa-bars"></i> </button>
-      
-              <a class="navbar-brand" href="https://www.relocatoremovals.in/index.php"><img src="https://www.relocatoremovals.in/images/logo.png" class="logo logo-scrolled" alt=""></a> </div>
+              
+              <a class="navbar-brand" href="{%url 'index'%}"><img src="{% static 'images/logo.png'%}" class="logo logo-scrolled" alt=""></a> </div>
       
             <!-- End Header Navigation -->
       
@@ -105,43 +105,43 @@
       
               <ul class="nav navbar-nav navbar-right" data-in="" data-out="">
       
-                <li class="active"><a href="https://www.relocatoremovals.in/index.php">Home</a></li>
+                <li class="active"><a href="{%url 'index'%}">Home</a></li>
       
-                <li><a href="https://www.relocatoremovals.in/about.php">About Us</a></li>
+                <li><a href="{%url 'about'%}">About Us</a></li>
       
                 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Services</a>
       
                   <ul class="dropdown-menu">
       
-                    <li><a href="https://www.relocatoremovals.in/international-relocation.php">International Relocation</a></li>
+                    <li><a href="{%url 'internationalrelocations'%}">International Relocation</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/with-in-india-shifting.php">With-in India Relocation</a></li>
+                    <li><a href="{%url 'indiarelocations'%}">With-in India Relocation</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/with-in-city-shifting.php">With - in City Relocation</a></li>
+                    <li><a href="{%url 'withincity'%}">With - in City Relocation</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/vehicle-shifting.php">Car Shifting</a></li>
+                    <li><a href="{%url 'carshifting'%}">Car Shifting</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/world-class-storage.php">World Class Storage</a></li>
+                    <li><a href="{%url 'worldclassstorage'%}">World Class Storage</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/fine-art-moving.php">Fine Art Moving</a></li>
+                    <li><a href="{%url 'fineartmoving'%}">Fine Art Moving</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/orientation-services.php">Orientation Services</a></li>
+                    <li><a href="{%url 'orientationservices'%}">Orientation Services</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/pet-relocation.php">Pet Relocation</a></li>
+                    <li><a href="{%url 'petrelocation'%}">Pet Relocation</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/plants-trees-relocation.php">Plants &amp; Trees Relocation</a></li>
+                    <li><a href="{%url 'treesrelocation'%}">Plants &amp; Trees Relocation</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/handyman-valet-services.php">Handyman &amp; Valet Services</a></li>
+                    <li><a href="{%url 'valetservice'%}">Handyman &amp; Valet Services</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/hospitality-logistics.php">Hospitality Logistics</a></li>
+                    <li><a href="{%url 'hospitalitylogistics'%}">Hospitality Logistics</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/office-moves.php">Office Moves</a></li>
+                    <li><a href="{%url 'officemoves'%}">Office Moves</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/commercial-moves.php">Commercial Moves</a></li>
+                    <li><a href="{%url 'commercialmoves'%}">Commercial Moves</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/book-a-survey.php">Book a Survey</a></li>
+                    <li><a href="{%url 'bookasurvey'%}">Book a Survey</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/useful-tools.php">Resources</a></li>
+                    <li><a href="{%url 'resources'%}">Resources</a></li>
       
                   </ul>
       
@@ -151,21 +151,21 @@
       
                   <ul class="dropdown-menu animated" style="display: none; opacity: 1;">
       
-                    <li> <a href="https://www.relocatoremovals.in/tracking.php">Tracking Information</a> </li>
+                    <li> <a href="{%url 'tracking'%}">Tracking Information</a> </li>
       
-                    <li> <a href="https://www.relocatoremovals.in/general-information.php">General Information</a> </li>
+                    <li> <a href="{%url 'generalinformation'%}">General Information</a> </li>
       
-                    <li> <a href="https://www.relocatoremovals.in/custom-information.php">Custom Information</a> </li>
+                    <li> <a href="{%url 'custominformation'%}">Custom Information</a> </li>
       
-                    <li> <a href="https://www.relocatoremovals.in/industry-information.php">Industry Information</a> </li>
+                    <li> <a href="{%url 'industryinformation'%}">Industry Information</a> </li>
       
-                    <li> <a href="https://www.relocatoremovals.in/useful-information.php">Useful Information</a> </li>
+                    <li> <a href="{%url 'usefulinformation'%}">Useful Information</a> </li>
       
-                    <li> <a href="https://www.relocatoremovals.in/insurance.php">Insurance</a></li>
+                    <li> <a href="{%url 'insurance'%}">Insurance</a></li>
       
-                    <li> <a href="https://www.relocatoremovals.in/claims.php">Claims</a></li>
+                    <li> <a href="{%url 'claims'%}">Claims</a></li>
       
-                    <li> <a href="https://www.relocatoremovals.in/volume-calculator.php">Volume Calculator</a></li>
+                    <li> <a href="{%url 'volumecalculator'%}">Volume Calculator</a></li>
       
                   </ul>
       
@@ -175,25 +175,25 @@
       
                   <ul class="dropdown-menu">
       
-                    <li><a href="https://www.relocatoremovals.in/useful-tools.php">Useful Tools</a></li>
+                    <li><a href="{%url 'usefultools'%}">Useful Tools</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/blog.php">Blog</a></li>
+                    <li><a href="{%url 'blog'%}">Blog</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/online-payment.php">Online Payment</a></li>
+                    <li><a href="{%url 'onlinepayment'%}">Online Payment</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/testimonial.php">Customer Video & Text Testimonials</a></li>
+                    <li><a href="{%url 'customervideos'%}">Customer Video & Text Testimonials</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/gallery.php">Gallery</a></li>
+                    <li><a href="{%url 'gallery'%}">Gallery</a></li>
       
-                    <li><a href="https://www.relocatoremovals.in/contact-us.php">Contact us</a></li>
+                    <li><a href="{%url 'contactus'%}">Contact us</a></li>
       
                   </ul>
       
                 </li>
       
-                <li><a href="https://www.relocatoremovals.in/book-a-survey.php">Request a quote</a></li>
+                <li><a href="{%url 'requestquote'%}">Request a quote</a></li>
       
-                <li><a href="https://www.relocatoremovals.in/volume-calculator.php">calculate your Move Volume</a></li>
+                <li><a href="{%url 'volumecalculator'%}">calculate your Move Volume</a></li>
       
                 <!--<li><a href="#">Contact Us</a></li>-->
       

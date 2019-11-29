@@ -1,3 +1,4 @@
+{% load static%}
 <section id="topbar">
 
         <div class="container">
@@ -10,7 +11,7 @@
       
                 <ul>
       
-                  <li><img class="phone-icon" src="https://www.relocatoremovals.in/images/phone.gif"> <b style="color:white;" href="tel:"> 7982940347 </b></li>
+                  <li><img class="phone-icon" src="{% static 'images/phone.gif'%}"> <b style="color:white;" href="tel:"> 7982940347 </b></li>
       
                   <li><i class="fa fa-envelope"></i> <b style="color:white;" href="mailto:">Support@Relocatopackers.com</b></li>
       
@@ -25,8 +26,8 @@
                 <ul>
       
                   <!--<li><i class="fa fa-truck"></i> <a href="#">Consigment Tracking</a></li>-->
-      
-                  <li><a href="#"><img class="qms" src="https://www.relocatoremovals.in/images/quality-management-system.png"></a></li>
+                 
+                  <li><a href="{%url 'index' %}"><img class="qms"src="{% static 'images/quality-management-system.png'%}" ></a></li>
       
                   <li><i class="fa fa-file-text-o" aria-hidden="true"></i> <a data-toggle="modal" data-target="#myModal">Write A Review</a></li>
                   
