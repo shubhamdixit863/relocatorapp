@@ -1,0 +1,103 @@
+{%  extends 'base.html'%}
+{% load static%}
+{%block title%}
+|Welcome
+
+{%endblock%}
+{% block content%}
+
+<!--header end-->
+
+    <section id="userprofile">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="banner_data_text">
+                            <h2>Order Page</h2>
+                            
+                        </div>
+                         <ul class="nav pull-right">
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, <?php echo $rowss['name']; ?><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                
+                                <li><a href="/my-order.php"><i class="icon-envelope"></i> My Order</a></li>
+                                <li class="divider"></li>
+                                <li><a href="logout.php"><i class="icon-off"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    
+    <!-- Body_data_start -->
+    <section id="volumecalculator_body_data">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="relocatoremovals_datas" style="padding-top:100px;">
+                                <img src="{% static 'images/packars_img.png'%}"  alt="" class="img-responsive">
+                            </div>
+                            <div class="relocatoremovals_content">
+                                <form id="main-calculator-form" method="Post" action="volumecalculator-enquiry_2.php">
+                                    <div class="first_row">
+                                        <div class="form-group">
+                                            <label for="email">I am shifting my</label>
+                                                <select class="select_side" required="" name="select_side" >
+                                                <option>1BHK</option>
+                                                <option>2BHK</option>
+                                                <option>3BHK</option>
+                                                <option>4BHK</option>
+                                                <option>5BHK</option>
+                                                </select>	
+                                        </div>
+                                        <div class="form-group">
+                                            <div id="map" style="width:80%;height:350px; display: none;" ></div>
+                <div id="geoData">
+                    <input type="hidden" name="full_address" id="location" value="">
+                  <input type="hidden" name="postalcode" id="postal_code" value="">
+                  <input type="hidden" name="country" id="country" value="">
+                  <input type="hidden" name="latitude" id="lat" value="">
+                  <input type="hidden" name="longitude" id="lon" value="">
+                    </div> 
+                                            <label for="from">from:</label>
+                                                <input type="text" class="form-control autocomplete" placeholder="Apartment Name/Locality" required="" name="side_from" id="ac1">
+                                        </div>
+                                    </div>
+                                    <div class="second_row">
+                                        <div class="form-group">
+                                            <label for="to">to</label>
+                                                <input type="text" class="form-control autocomplete" placeholder="Apartment Name/Locality" required="" name="side_to" id="ac2">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pwd">from:</label>
+                                            <div class="input-group date" data-date-format="dd.mm.yyyy">
+                                                <div id="sandbox-container" style="width: 100% !important;">
+                                                    <input type="text" name="moving_date"  class="form-control datepickstart" placeholder="Select moving date"  autocomplete="off" required />
+                                                </div>
+                                                <div class="input-group-addon" >
+                                                </div>		
+                                                </div>											
+                                            </div>
+                                    </div>
+                                    <div class="main_next">
+                                        <button type="submit" class="btn btn-default" name="submit">NEXT</button>
+                                    </div>
+                                </form>	
+                            </div>
+                        </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Stat Footer -->
+
+{%endblock%}

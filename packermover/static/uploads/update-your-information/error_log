@@ -1,0 +1,8 @@
+[14-Jul-2019 11:52:39 UTC] PHP Fatal error:  Uncaught Error: Class 'ZipArchive' not found in /home/relocato15122016/public_html/admin/uploads/update-your-information/unzip.php:39
+Stack trace:
+#0 {main}
+  thrown in /home/relocato15122016/public_html/admin/uploads/update-your-information/unzip.php on line 39
+[14-Jul-2019 11:52:46 UTC] PHP Fatal error:  Uncaught Error: Class 'ZipArchive' not found in /home/relocato15122016/public_html/admin/uploads/update-your-information/unzip.php:39
+Stack trace:
+#0 {main}
+  thrown in /home/relocato15122016/public_html/admin/uploads/update-your-information/unzip.php on line 39

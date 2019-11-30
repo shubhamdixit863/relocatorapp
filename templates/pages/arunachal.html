@@ -1,0 +1,165 @@
+{%  extends 'base.html'%}
+{% load static%}
+{%block title%}
+|Welcome
+
+{%endblock%}
+{% block content%}
+<section id="start_now_new">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">					
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="heading_content">
+                            <h1><?php echo $title;?></h1>
+                            <h3>Redefining relocation services</h3>
+                        </div>
+                        <div class="volunteer-form">
+                       <div class="section-title">
+                          <h3>Know how much your move will cost you ?</h3>
+                          <!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>-->
+                       </div>
+                       <div class="clearfix"></div>
+                       <form action="" id="banner_form">
+                             <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" required="">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Email id</label>
+                            <input type="email" class="form-control" required="">
+                          </div>
+                          <div class="form-group">
+                            <label for="contact">Contact</label>
+                            <input type="text" class="form-control" required="">
+                          </div>
+                          <div class="submit_button">
+                          <button type="submit" class="btn btn-default">Submit</button>
+                          </div>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Relocatore Movals Body Area End  -->
+    <div class="main_banner_marquee">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="marquee_text">
+                    <marquee><h3>Welcome to Relocato Removals | Enjoy A Peaceful Relocation | Call 24X7 - +91- 9958291021</h3></marquee>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section id="left_right_section">
+    <div class="container">
+        <div class="row margin_close">
+            <div class="col-md-6 col-sm-6">
+                <div class="box_image">
+                        
+                    <img  src="{% static 'uploads/arunachalpradesh.jpg'%}" alt="" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                    <div class="box_content">
+                            <h3>Best Packers and Movers in Arunachal Pradesh</h3>
+                            <p>We&nbsp;are&nbsp;As Best Packers and Movers in Arunachal Pradesh utilize quality&nbsp;material&nbsp;like bubble sheets, plastic&nbsp;baggage, poly bags, cardboard boxes, and plastic sheets etc. Relocation and shifting from one place&nbsp;to a different become&nbsp;terribly&nbsp;feverish&nbsp;and tedious job&nbsp;currently&nbsp;a day’s. If&nbsp;we have a tendency to&nbsp;set up&nbsp;and focus in your&nbsp;space and region&nbsp;it's&nbsp;rather like&nbsp;to urge&nbsp;cream from milk;&nbsp;we have a tendency to&nbsp;the most effective&nbsp;wares&nbsp;Packers and Movers Arunachal Pradesh is there&nbsp;to assist&nbsp;every&nbsp;and each&nbsp;purpose.</p>
+                        </div>
+            </div>
+        </div>
+        <div class="row margin_close">		
+            <div class="col-md-6 col-sm-6">
+                    <div class="box_content">
+                            <h3>Arunachal PradeshBest Packers and Movers in Arunachal Pradesh</h3>
+                            <p>Relocato Packers and Movers&nbsp;are&nbsp;the most effective&nbsp;cargo&nbsp;Packers and Movers Arunachal Pradesh&nbsp;is that the&nbsp;majority reliable and ingenious Packers and Movers in&nbsp;India. Relocato Packers and Movers in Arunachal Pradesh&nbsp;offers&nbsp;the foremost&nbsp;eminent quality moving and pressing administrations&nbsp;and also the&nbsp;most&nbsp;superb&nbsp;client&nbsp;nurture, all&nbsp;whereas&nbsp;persistent&nbsp;a district&nbsp;organization&nbsp;extraordinarily. Relocato Packers and Movers in Arunachal Pradesh is&nbsp;representation&nbsp;the most effective&nbsp;quality Movers Services with&nbsp;extremely sophisticated&nbsp;and disciplined cooperation.&nbsp;</p>
+                        </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="box_image">
+                    <img src="{% static 'uploads/arunachal-pradesh.jpg'%}" alt="" class="img-responsive">
+                </div>
+                <div class="banner_text_new">
+                            <ul>
+                                <li><i class="fa fa-globe"></i><?php echo $address;?></li>
+                                <li><i class="fa fa-phone"></i><?php echo $phone;?></li>
+                                <li><i class="fa fa-envelope"></i> <?php echo $email;?></li>
+                                <li><i class="fa fa-user"></i> <?php echo $designation;?></li>
+                            </ul>
+                        </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+    <section id="special_packages_start">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="main_title_heading text-center">
+                    <h2 class="overview_title">Special Package</h2>
+                    <div class="separator"><span><i class="fa fa-circle"></i></span></div>
+                    <?php echo $content;?>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row city_sections" id="sticky-anchor">
+                    <div class="form-group city_search"  id="sticky">
+                    <div class="input-group">
+                        <span class="input-group-addon">Search</span>
+                        <input type="text" name="search_text" id="search_text" placeholder="Please Search your Preferred Location here" class="form-control" />
+                    </div>
+                </div>
+                <br />
+                <div id="result"></div>	
+                <div style="margin-left: 46%;">
+                    <button type="button" class="btn btn-primary text-center" id="loadMore">View More</button>
+                </div>
+            </div>
+    
+    
+          <div class="col-md-12">
+                <div class="main_title_heading text-center">
+                    <h2 class="overview_title">Best Packers and Movers in Arunachal Pradesh</h2>
+                    <div class="separator"><span><i class="fa fa-circle"></i></span></div>
+                    <p style="font-size:16px;text-align: justify;">Arunachal Pradesh is one in every of the seven sisters states of India placed within the northeast of country. Being one in every of the growing cities of country, variety of moving’s takes place in and out of the state. for creating it straightforward for the individuals aiming to move, Relocato Removals Packers and Movers Ltd. has been providing premium quality packing and moving services all across the state. With our expert and trained hands, progressive techniques and specially designed carriers, we tend to are competent enough to hide each area of the state and render our service up to the expectations.
+    
+    <b>Relocato Packers and Movers in Arunachal Pradesh</b>. We tend to are a famed movers and packers during this lovely Indian state able to take up any consignment most elegantly. Being a first-rate packing and moving service supplier in Arunachal Pradesh, we tend to make sure that not one assignment is left incomplete. Established name, skilled team, top quality materials and latest technology, we've got all of them, guaranteeing to supply the most effective shifting expertise.
+    
+    <b>Relocato Packers and Movers in Arunachal Pradesh</b> provide Packing Moving, car carrier, Bike transport, local shifting Service to individuals
+    Relocato Removals Packers and Movers in Arunachal Pradesh, we provide specialized world category high quality movers services supplier to all India. We’ve our services all round the world. we offer total solutions for moving relocation with terribly reasonable low price at intervals town /within India of all of your home product, workplace product, car/bike transportation service, packing, loading, escorts service, unloading, unpacking, electrical things assemble , storage/warehousing of home and industrial product, workplace & industrial merchandise, wood crates, IBA approved transport service. You’ll decision us at any time and that we can reach to you on time and allow you to transport something in no time with globe level quality at the speed of native costs. We tend to chauffeurs are well aware of each road of all India.
+    
+    <br><br>
+    <b>Top seventh Features:-</b><br><br>
+    1. Totally specialized Service<br> <br>
+    2. Fully Responsibility of all product<br> <br>
+    3. On Time Delivery<br><br>
+    4. Guaranteed Safety<br> <br>
+    5. Economical valuation<br> <br>
+    6. Top Quality packing<br> <br>
+    7. Service twenty four x7 Hours.<br><br>
+    
+    Relocato Removals Packers and Movers in Arunachal Pradesh relocation specialists are continuously trustworthy to supply high quality relocation solutions for each and every form of providers. Our company takes complete responsibility of all services provided by us. Our employees is acquainted qualified, accountable packing loading unloading unpacking at origin and destination. Packers And Movers in Arunachal Pradesh experience team has acquaintance of pack and moving. Dedication our work helps us giving the most effective work raising our name packing & moving business. Packers and Movers in Arunachal Pradesh famous the most effective in what we provide as we are determined to serve our greatest we are able to. You’ll get these services by only one decision and tell us the place from wherever you wish to move and to wherever be you moving. Rest is on us. We’ll give you the most effective package. Offer us a decision at once to book us for your shifting would like. We tend to are the most effective moving resolution within the city. Our drivers are totally alert to each road and traffic details of every road therefore your product are going to be delivered as shortly as potential whereas shifting inside the city. Relocato Removals Packers and Movers in Arunachal Pradesh….100% safe and quick.
+    
+    <b>Relocato Packers and Movers in Arunachal Pradesh</b> take it as our goal to move your product with full safety to your house. We’ve the expert loading and unloading employees that lookout of your things. Packers And Movers in Arunachal Pradesh team homes the trained packers and movers that pack your product with safety, take them to your new place with safety as quicker because it will be. Everyday many of us return to reside here quit to reside elsewhere in India. < At that point they have safest and renowned.
+    
+    <b>Relocato Removals Packers and Movers in Arunachal Pradesh</b> very best quality transportation and well affected chauffeurs to create moving your product easier and safer. We are the most effective moving answer within the city. We are the most effective in what we provide as we are determined to serve our greatest we are able to. The door two door of your consignment are going to be on time when. Our chauffeurs are cognizant of each road of all India.
+    
+    <b><a href=" https://www.relocatoremovals.in/packers-and-movers-in-andhra-pradesh.php">Packers and Movers</a>.</b> drivers are totally responsive to any road and traffic details of every road therefore your product are going to be delivered as shortly as doable whereas shifting at intervals the city. We offer safest transit for bought cars; old cars whereas moving and sold-out cars. We tend to use safety measures to bring the most effective safety levels for you. Packers and Movers in Arunachal Pradesh services embody bubble sheets which offer the most effective safety levels for your bikes whereas transportation. We provide furnishings moving services whereas you're moving your workplace from recent place to new place. We’ll assist you move your work place in fastest time with our on-time d2d services. Every type of vehicles are out there here at the best budgeted prices.110% safe and quick service.
+    
+    </p>
+                </div>
+            </div>
+            
+            
+            
+            
+    </section>
+    <!-- sticky -->
+    <div id="mySidenav" class="sidenav"> <a href="book-a-survey.php" id="cup"><span><img src="images/cup.jpg"></span><span class="cup-tea">Lets have a Cup of Tea</span></a> </div>
+    <!-- Sticky -->
+
+{%endblock%}

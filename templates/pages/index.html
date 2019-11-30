@@ -24,7 +24,7 @@
   
         
   
-          <form action="https://www.relocatoremovals.in/phone_submit.php" method="post">
+          <form action="#" method="post">
   
             <input class="form-control" name="phone" type="number" placeholder="Enter your Mobile number">
   
@@ -63,13 +63,22 @@
   
   
   <div id="firstModal" class="modal fade" role="dialog">
+      {%include 'partials/_alerts.html' %}
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-body">
+           
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <div class="my-wel-grid">
               <h1 class="quick-connect-title" align="center"><b>Quick Connect</b></h1>
-            <form method="post" id="form" action="#">
+              <form action="{% url 'contact'%}" method="POST">
+                  {%csrf_token%}
+                  {%if user.is_authenticated%}
+                  <input type="hidden" name="user_id" value="{{user.id}}">
+      
+                  {%else%}
+                  <input type="hidden" name="user_id" value="0">
+                  {%endif%}
               <div class="form-group">
                 <div class="">
                   <select name="title" required>
@@ -93,17 +102,22 @@
               </div>
               <div class="form-group">
                 <div class="">
-                  <input type="text" class="form-control" name="f_name" placeholder="Full Name" required>
+                  <input type="text" class="form-control" name="fname" placeholder="First Name" required>
+                </div>
+              </div>
+              <div class="form-group">
+                  <div class="">
+                    <input type="text" class="form-control" name="lname" placeholder="Last Name" required>
+                  </div>
+                </div>
+              <div class="form-group">
+                <div class="">
+                  <input type="email" class="form-control" name="email" placeholder="Email"  required>
                 </div>
               </div>
               <div class="form-group">
                 <div class="">
-                  <input type="email" class="form-control" name="email" placeholder="Email" pattern="" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="">
-                  <input type="phone" class="form-control" name="phone" placeholder="Phone" minlength="10" maxlength="10" required>
+                  <input type="phone" class="form-control" name="phone" placeholder="Phone"  required>
                 </div>
               </div>
               <div class="form-group">
@@ -123,12 +137,12 @@
               </div>            
               <div class="form-group">
                 <div class="">
-                  <input type="text" class="form-control geo" id="shifting-to1" name="move_city" placeholder="City moving from" required>
+                  <input type="text" class="form-control geo" id="shifting-to1" name="moving_city" placeholder="City moving from" required>
                 </div>
               </div>
               <div class="form-group">
                 <div class="">
-                  <input type="text" class="form-control geo" id="shifting-to2" name="destination" placeholder="Destination city" required>
+                  <input type="text" class="form-control geo" id="shifting-to2" name="destination_city" placeholder="Destination city" required>
                 </div>
               </div>
               <div class="form-group">
@@ -147,7 +161,7 @@
               <div class="form-group">
                 <div style="width: 100% !important;">
           <div id="sandbox-container">
-            <input type="text" name="moving_date" class="form-control datepickstart" placeholder="Select moving date" required/>
+            <input type="text" name="move_date" autocomplete="off" class="form-control datepickstart" id="datepicker" placeholder="Select moving date" required/>
           </div>
                  </div>
                 </div>
@@ -275,11 +289,11 @@
                 <option value="Rev.">Rev.</option>
                 <option value="Other">Other</option>
               </select>
-              <input class="floatl" type="text" name="f_name" placeholder="Full Name*" required>
+              <input class="floatl" type="text" name="fname" placeholder="Full Name*" required>
               <input class="floatl" type="email" name="email" placeholder="Email*" pattern="[^ @]@[^ @]" required>
               <input class="floatl" type="tel" name="phone" placeholder="Phone*" minlength="10" maxlength="10" required> 
               <input class="floatl" type="text" name="move_city" placeholder="City moving from*" required>
-              <input class="floatl" type="text" name="destination" placeholder="Destination city*" required>
+              <input class="floatl" type="text" name="destination_city" placeholder="Destination city*" required>
               <select name="size" class="select_option floatl">
                 <option value="">Select Items</option>
                 <option value="Just moving a few items">Just moving a few items</option>
@@ -956,4 +970,16 @@
     </div>
   </div>
   </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      dateFormat: "yy-mm-dd"
+    });
+
+    $( "#datepicker2" ).datepicker({
+      dateFormat: "yy-mm-dd"
+    });
+  } );
+  </script>
 {% endblock%}

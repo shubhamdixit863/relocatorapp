@@ -101,6 +101,33 @@ def contactus(request):
 def requestquote(request):
    return render(request,'pages/requestquote.html')
 
+def services(request):
+   return render(request,'pages/services.html')
+
+def enquiry(request):
+   return render(request,'pages/enquiry.html')
+
+def privacypolicy(request):
+   return render(request,'pages/privacypolicy.html')
+
+def termsconditions(request):
+   return render(request,'pages/termsconditions.html')
+
+def faq(request):
+   return render(request,'pages/faq.html')
+
+def testimonials(request):
+   return render(request,'pages/testimonials.html')
+
+def disclaimer(request):
+   return render(request,'pages/disclaimer.html')
+
+def state(request,statename):
+   app_url = request.path
+   print(statename)
+   return render(request,'pages/{}.html'.format(statename))
+
+
     
     
    

@@ -35,7 +35,15 @@ urlpatterns=[
     path('customervideos',views.customervideos,name='customervideos'),
     path('gallery',views.custominformation,name='gallery'),
     path('contactus',views.contactus,name='contactus'),
-    path('requestquote',views.requestquote,name='requestquote')
+    path('requestquote',views.requestquote,name='requestquote'),
+    path('services',views.services,name='services'),#
+    path('enquiry',views.enquiry,name='enquiry'),#
+    path('privacypolicy',views.privacypolicy,name='privacypolicy'),#
+    path('faq',views.faq,name='faq'),#
+    path('disclaimer',views.disclaimer,name='disclaimer'),#
+    path('termsconditions',views.termsconditions,name='termsconditions'),#
+    path('testimonials',views.testimonials,name='testimonials'),#
+    path('packers/<slug:statename>/', views.state,name="packers")
     
     ]
     

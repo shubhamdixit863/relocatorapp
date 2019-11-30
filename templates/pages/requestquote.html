@@ -69,13 +69,18 @@
 
         <div class="row">
 
-          <div class="col-md-12" style="padding-left: 0;" 
+          <div class="col-md-12" style="padding-left: 0;" ></div>
+          {%include 'partials/_alerts.html' %}
+          <form action="{% url 'contact'%}" class="book-survey-form" method="POST">
+            {%csrf_token%}
+            {%if user.is_authenticated%}
+            <input type="hidden" name="user_id" value="{{user.id}}">
 
-	<!-- =========================== Book a servey form ====================== -->
+            {%else%}
+            <input type="hidden" name="user_id" value="0">
+            {%endif%}
 
-			 <form class="book-survey-form" method="post" action="submit-query.php">
-
-    <div class="form-group col-md-4">
+			 <div class="form-group col-md-4">
 
       <label for="usr">Salutation:</label>
 
@@ -119,7 +124,7 @@
 
       <label for="usr">First Name:</label>
 
-      <input type="text" class="form-control track-input" name="fname" placeholder="First Name" required>
+      <input type="text" autocomplete="off" class="form-control track-input" name="fname" placeholder="First Name" required>
 
     </div>
 
@@ -127,7 +132,7 @@
 
       <label for="usr">Last Name:</label>
 
-      <input type="text" class="form-control track-input" name="lname" placeholder="Last Name" required>
+      <input type="text" autocomplete="off" class="form-control track-input" name="lname" placeholder="Last Name" required>
 
     </div>
 
@@ -135,7 +140,7 @@
 
       <label for="usr">Email address:</label>
 
-      <input type="text" class="form-control track-input" name="email"  pattern="[^ @]*@[^ @]*" placeholder="Email address" required>
+      <input type="text" autocomplete="off" class="form-control track-input" name="email"   placeholder="Email address" required>
 
     </div>
 
@@ -143,7 +148,7 @@
 
       <label for="usr">Phone Number:</label>
 
-      <input type="text" class="form-control track-input" name="phone" pattern="[789][0-9]{9}" placeholder="Phone Number" required>
+      <input type="text" autocomplete="off" class="form-control track-input" name="phone"  placeholder="Phone Number" required>
 
     </div>
 
@@ -153,7 +158,7 @@
 
 		  <div class="input-group date" data-date-format="dd.mm.yyyy">
 
-			<input  type="text" class="form-control track-input" placeholder="Select moving date" name="move_date" style="width: 107%;border-radius: 3px;" required>
+			<input  type="text" autocomplete="off" class="form-control track-input" id="datepicker2" placeholder="Select moving date" name="move_date" style="width: 107%;border-radius: 3px;" required>
 
 			<div class="input-group-addon" ></div>
 
@@ -191,7 +196,7 @@
 
 		  <div class="input-group date" data-date-format="dd.mm.yyyy">
 
-			<input  type="text" class="form-control track-input" placeholder="Select moving date"  name="appointment_date" style="width: 107%;border-radius: 3px;" required>
+			<input  type="text" autocomplete="off" class="form-control track-input" id="datepicker" placeholder="Select moving date"  name="appointment_date" style="width: 107%;border-radius: 3px;" required>
 
 			<div class="input-group-addon" ></div>
 
@@ -203,7 +208,7 @@
 
       <label for="usr">City Moving From:</label>
 
-      <input type="text" class="form-control track-input" name="moving_city" placeholder="City Moving From" required>
+      <input type="text" autocomplete="off" class="form-control track-input" name="moving_city" placeholder="City Moving From" required>
 
     </div>
 
@@ -211,7 +216,7 @@
 
       <label for="usr">Destination city:</label>
 
-      <input type="text" class="form-control track-input" name="destination_city" placeholder="Destination city" required>
+      <input type="text" autocomplete="off" class="form-control track-input" name="destination_city" placeholder="Destination city" required>
 
     </div>
 
@@ -265,37 +270,7 @@
 
           <div class="carousel-inner" role="listbox">
 
-                <?php 
-
-								 $sqlAssign = "SELECT * FROM `testimonial` order by `id` ASC limit 0,3";											
-
-									$resultAssign = mysqli_query($conn, $sqlAssign);											
-
-									if (mysqli_num_rows($resultAssign) > 0) {
-
-									$i=1;
-
-									while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
-
-
-
-										$id = $rowAssign['id'];
-
-                $name = $rowAssign['name'];
-
-                $email = $rowAssign['email'];
-
-                $image = $rowAssign['image'];
-
-                $review = $rowAssign['review'];
-
-                $date = $rowAssign['date'];
-
-                $status = $rowAssign['status'];
-
-							?>
-
-
+              
 
     <div class="item <?php if($id == 6){ echo 'active';}?>">
 
@@ -345,6 +320,17 @@
 <!--============================= Customer Just like end =========================-->
 
 <!-- Stat Footer -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      dateFormat: "yy-mm-dd"
+    });
 
+    $( "#datepicker2" ).datepicker({
+      dateFormat: "yy-mm-dd"
+    });
+  } );
+  </script>
 
 {%endblock%}
