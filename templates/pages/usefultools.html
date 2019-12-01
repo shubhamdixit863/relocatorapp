@@ -1,8 +1,109 @@
 {%  extends 'base.html'%}
+{% load static%}
 {%block title%}
 |Welcome
 
 {%endblock%}
 {% block content%}
+<div class="clearfix"></div>
+<!--header end-->
+<!--Page Title-->
+<section class="page-title inner-baner">
+  <div class="container">
+    <h2>Useful Tools</h2>
+    <ul class="bread-crumb clearfix">
+      <li><i class="fa fa-home"></i> <a href="<?php echo $base_url;?>">Home</a></li>
+      <li class="active">Useful Tools</li>
+    </ul>
+  </div>
+</section>
+<!--End Page Title-->
+<!--================== Useful Tools =====================-->
+<div class="sections-wrapper sec-pad" style="padding-bottom:0;">
+
+        <section class="padd-btm">
+            <div class="container-fluid no-pad">
+                <div class="section-title">
+                    <h2 class="overview_title text-center">Our Useful Tools</h2>
+					<div class="separator"><span><i class="fa fa-circle"></i></span></div>
+                    <p class="wd-50">
+                        Its this founding principle that has helped our organisation as well as our clients become a defining force in the industry. 
+                    </p>
+                </div>
+                <!--========================= Useful tools tab ===========================-->
+				<!-- Tabs -->
+				<div class="container">
+                  <ul class="nav nav-tabs useful-tabs">
+    <li class="active"><a data-toggle="tab" href="#with-in">With-in India</a></li>
+    <li><a data-toggle="tab" href="#international">International</a></li>
+    <li><a data-toggle="tab" href="#relocation">Relocation</a></li>
+    <li><a data-toggle="tab" href="#videos">Videos</a></li>
+  </ul>
+  </div>
+  <div class="useful-content">
+  <div class="container">
+  <div class="tab-content">
+    <div id="with-in" class="tab-pane fade in active">
+      <div class="col-md-12 pad-bottom">
+   
+	  <div class="col-md-3">
+	  <a href="tools.php?u_id=<?php echo $img_id;?>">
+	  <img src="admin/uploads/<?php echo $image;?>">
+	  <h4 class="useful-model"></h4></a>
+	  </div>
+	  <?php }} ?>
+	  </div>
+	  
+    </div>
+    <div id="international" class="tab-pane fade">
+     <div class="col-md-12 pad-bottom">
+   
+	  <div class="col-md-3">
+	  <a href="tools.php?u_id=<?php echo $img_id;?>">
+	  <img src="admin/uploads/<?php echo $image;?>">
+	  <h4 class="useful-model"><?php echo $album_name;?></h4></a>
+	  </div>
+	  <?php }} ?>
+	  </div>
+	 
+    </div>
+    <div id="relocation" class="tab-pane fade">
+     <div class="col-md-12 pad-bottom">
+
+	  <div class="col-md-3">
+	  <a href="tools.php?u_id=<?php echo $img_id;?>">
+	  <img src="admin/uploads/<?php echo $image;?>">
+	  <h4 class="useful-model"><?php echo $album_name;?></h4></a>
+	  </div>
+	 	  </div>
+	 
+    </div>
+    <div id="videos" class="tab-pane fade">
+      <div class="col-md-12 pad-bottom">
+   
+	  <div class="col-md-8 col-md-offset-2 pad-bottom">
+	  <h2 class="overview_title text-center pad-bottom"><?php echo $album_name;?></h2>
+	  <iframe class="vdeo-test" width="100%" height="450" src="<?php echo $video;?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+	  </div>
+
+	  </div>
+	  
+    </div>
+  </div>
+  </div>
+  </div>
+                <!-- ./Tabs -->
+				
+				<!--=========================== Useful tools end ========================-->
+            </div>
+        </section>
+
+    </div>
+<!--================= useful tools end ==================-->
+<!-- sticky -->
+<div id="mySidenav" class="sidenav"> <a href="{%url 'requestquote'%}" id="cup"><span><img src="{% static 'images/cup.jpg'%}"></span><span class="cup-tea">Lets have a Cup of Tea</span></a> </div>
+<!-- Sticky -->
+<!-- Stat Footer -->
+<!--================== footer Strip =====================-->
 
 {%endblock%}

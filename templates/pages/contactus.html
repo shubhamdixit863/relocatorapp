@@ -1,8 +1,152 @@
 {%  extends 'base.html'%}
+{% load static%}
 {%block title%}
+
 |Welcome
 
 {%endblock%}
 {% block content%}
+<!-- ===================== Contact Us ===========================-->
+<div class="sections-wrapper sec-pad track">
+    <div class="container">
+        <div class="section-title title-padd-btm">
+            <h1>GET IN TOUCH</h1>
+            <div class="separator"><span><i class="fa fa-circle"></i></span></div>
+            <p class="contact-subtitle"></p><p>The cost of moving house is made up of lots of different factors, so if we need any more information we’ll get in touch to ask you some questions to find out about your specific move requirements so we can make sure to provide a fixed and accurate quote that makes sure everything that’s important to you happens just how you want it to.</p>
+<p></p>
+        </div>            
+        <div class="row">
+
+            <div class="col-md-7 col-sm-6 col-xs-12 pull-right">
+                
+                <form method="post" id="form" class="contact-form"> 
+                    <p><input type="text" name="name" placeholder="Name"></p>
+                    <p><input type="text" name="phone" placeholder="phone" minlength="10" maxlength="10"></p>
+                    <p><input type="text" name="email" placeholder="Your Email" pattern="[^ @]*@[^ @]*"></p>
+                    <p><input type="text" name="subject" placeholder="Subject"></p>
+                    <p><textarea name="comments" placeholder="Message"></textarea></p>
+                    <button type="submit" id="submit" name="send" value="sendform" class="theme-btn-orng btn-lg">
+                        <span>Submit Now</span>
+                    </button>
+                    <div class="col-sm-12 padding10" id="loader">
+                            <h3><i class="fa fa-refresh fa-spin"></i> Working</h3>
+                        </div>
+                </form>
+                
+                
+                <div id="note"></div>
+               
+                
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="tt-contact">
+                <div class="tt-contact-icon-outer">
+                    <div class="tt-contact-icon">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div> 
+                </div>
+
+                <div class="tt-contact-info">
+                    <div class="simple-text">
+                        <p><?php echo $address;?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacer-15"></div>
+            <div class="tt-contact">
+                <div class="tt-contact-icon-outer">
+                    <div class="tt-contact-icon">
+                        <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                    </div> 
+                </div>
+
+                <div class="tt-contact-info">
+                    <div class="simple-text">
+                        <p>
+                            <?php echo $phone_1;?>
+                            <?php echo $phone_2;?>
+                        </p>
+                    </div>
+                </div>
+            </div><!-- tt-contact -->
+
+            <div class="spacer-15"></div>
+            <div class="tt-contact">
+                <div class="tt-contact-icon-outer">
+                    <div class="tt-contact-icon">
+                        <i class="fa fa-envelope"></i>
+                    </div> 
+                </div>
+
+                <div class="tt-contact-info">
+                    <div class="simple-text">
+                        <p>
+                            <?php echo $email_1;?>
+                            <?php echo $email_2;?>
+                        </p>
+                    </div>
+                </div>
+            </div><!-- tt-contact -->
+
+            </div><!-- col -->
+      
+        </div><!-- row -->
+
+    </div>
+</div>
+
+<!-- Start Map Section -->
+<div class="container-fluid no-pad">
+    <div class="map-column col-md-12 col-sm-6 col-xs-12 no-pad">
+        <div class="inner-box">
+            <div class="map-outer">
+                <!--Map Canvas-->
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28010.770701394318!2d77.35211631263057!3d28.6493468242939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfabbae31843d%3A0xf5857c74104528f7!2sIndirapuram%2C+Ghaziabad%2C+Uttar+Pradesh!5e0!3m2!1sen!2sin!4v1515235372536" width="100%" height="450" frameborder="0" allowfullscreen></iframe>
+            </div>     
+        </div>
+    </div>
+</div>
+<!-- End Map Section -->
+
+
+<!--=============== Contact Us End ==============-->
+
+<!--============================= Customer Just like end =========================-->
+<!-- sticky -->
+<div id="mySidenav" class="sidenav"> <a href="{%url 'requestquote'%}" id="cup"><span><img src="{% static 'images/cup.jpg'%}"></span><span class="cup-tea">Lets have a Cup of Tea</span></a> </div>
+
+<!-- Sticky -->
+<!-- Stat Footer -->
+
+<script type="text/javascript">
+    $(document).ready(function($) {
+        $("#loader").hide();
+        $("#form").submit(function() {
+            $("#submit").hide();
+            $("#loader").show();
+            var str = $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url: "mail.php",
+                data: str,
+                success: function(msg) {
+                    if(msg == 'OK') {
+                        result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';
+                        $("#fields").hide();
+                    } else {
+                        result = msg;
+                    }
+                    $("#submit").show();
+                    $("#loader").hide();
+                    $('#note').html(result);
+                }
+            });
+            return false;
+        });
+    });
+</script>
+
 
 {%endblock%}

@@ -137,3 +137,13 @@ MESSAGE_TAGS = {
     messages.ERROR: 'warning'
     
 }
+
+
+#email config
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='sg2plcpnl0010.prod.sin2.secureserver.net'
+EMAIL_PORT=465
+EMAIL_HOST_USER='info@relocatoremovals.in'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD='wC,e%JW?g(NV'
+EMAIL_USE_TLS=True

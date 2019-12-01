@@ -3,6 +3,864 @@
 |Welcome
 
 {%endblock%}
-{% block content%}
 
+{% block content%}
+<!-- End Navigation -->
+<div class="clearfix"></div>
+<!--header end-->
+<!--Page Title-->
+<section class="services-pages page-title inner-baner" style="background-image:linear-gradient(270deg,rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)),url('admin/uploads/<?php echo $img;?>')">
+  <div class="container">
+    <div class="services-title section-title title-padd-btm">
+      <h2 class="text-center"><?php echo $heading;?></h2>
+      <?php echo $detail;?>
+    </div
+    <!-- /.blog-content -->
+    <!-- button section -->
+     <div class="clearfix"></div>
+    <div class="link-area" style="padding:10px">
+      <ul style="width:33%;margin-left:35%;" class="nav">
+        <li class="botton_links" style="float:left;" class="active"><a class="servey-button" href="<?php echo $base_url;?>book-a-survey.php">BOOK A SURVEY</a></li>
+        <li class="botton_rlinks" style="float:right;"><a class="servey-button" href="<?php echo $base_url;?>international-shifting-steps1.php?service=Within India packers and movers">Request a Quote</a></li>
+      </ul>
+    </div>
+    <!-- button section end -->
+  </div>
+</section>
+<!--End Page Title-->
+<?php
+
+$sqlAssign = "SELECT * FROM `overview` where `type` = '$res'";											
+        $resultAssign = mysqli_query($conn, $sqlAssign);											
+        if (mysqli_num_rows($resultAssign) > 0) {
+        $i=1;
+        while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+
+            $heading = $rowAssign['heading'];
+            $detail = $rowAssign['detail'];
+            
+            
+        }}
+
+?>
+<!-- Nav tabs section  -->
+<section class="services-relocation service-pad">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Nav tabs -->
+        <div class="card">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab"><img src="images/service-icon/overview-img.png">
+              <p>Overview</p>
+              </a></li>
+            <li><img src="images/vertical-line.png">
+            <li>
+            <li role="presentation"><a href="#services" aria-controls="services" role="tab" data-toggle="tab"><img src="images/service-icon/service-img.png">
+              <p>Services</p>
+              </a></li>
+            <li><img src="images/vertical-line.png">
+            <li>
+            <li role="presentation"><a href="#process" aria-controls="process" role="tab" data-toggle="tab"><img src="images/service-icon/process-img.png">
+              <p>Process</p>
+              </a></li>
+            <li><img src="images/vertical-line.png">
+            <li>
+            <li role="presentation"><a href="#areas-cover" aria-controls="areas-cover" role="tab" data-toggle="tab"><img src="images/service-icon/areas-we-cover.png">
+              <p>Areas We Cover</p>
+              </a></li>
+            <li><img src="images/vertical-line.png">
+            <li>
+            <li role="presentation"><a href="#move-type" aria-controls="move-type" role="tab" data-toggle="tab"><img src="images/service-icon/move-img.png">
+              <p>Move Types</p>
+              </a></li>
+            <li><img src="images/vertical-line.png">
+            <li>
+            <li role="presentation"><a href="#cost" aria-controls="cost" role="tab" data-toggle="tab"><img src="images/service-icon/cost-img.png">
+              <p>COST</p>
+              </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Tab panes -->
+  <div class="container-fluid no-pad">
+    <div class="tab-content display-services">
+      <!--================= Over view ========== -->
+      <div id="overview" role="tabpanel" class="tab-pane active">
+        <!--================ Over view =========== -->
+        <div class="content_area container">
+          <div class="row">
+            <div class="col-md-12">
+              <?php echo $heading;?>
+            </div>
+            <div class="col-md-12">
+              <p><img src="images/bar-winner-logo.png" alt="" title="New-OMOTY-Logo-2017.gif" width="193" style="width: 193px; margin: 0px 0px 10px 10px; float: right;">
+                
+                <?php echo $detail;?>
+                </p>
+            </div>
+           
+          </div>
+        </div>
+        <!--================================ Other Section ===========================-->
+        <!--===================== Crousal slider =================-->
+        <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+
+          <div class="carousel-inner" role="listbox">
+                <?php 
+         $sqlAssign = "SELECT * FROM `testimonial` order by `id` ASC limit 0,3";											
+            $resultAssign = mysqli_query($conn, $sqlAssign);											
+            if (mysqli_num_rows($resultAssign) > 0) {
+            $i=1;
+            while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+
+                $id = $rowAssign['id'];
+                $name = $rowAssign['name'];
+                $email = $rowAssign['email'];
+                $image = $rowAssign['image'];
+                $review = $rowAssign['review'];
+                $date = $rowAssign['date'];
+                $status = $rowAssign['status'];
+    ?>
+    <div class="item <?php if($id == 6){ echo 'active';}?>">
+      <div class="testimonial5_slide">
+        <p><?php echo $review;?></p>
+        <h4>Customer feedback for International Removals services from UK to Victoria, Australia</h4>
+        <a class="btn-model-quote" href="testimonial.php">View Testimonial</a> </div>
+    </div>
+    <?php }} ?>
+
+          </div>
+          <a class="left carousel-control" href="#testimonial4" role="button" data-slide="prev"> <span class="fa fa-chevron-left"></span> </a> <a class="right carousel-control" href="#testimonial4" role="button" data-slide="next"> <span class="fa fa-chevron-right"></span> </a> </div>
+        <!--===================== crousal slider end ===========-->
+        <!--=========================Frequently Asked Questions=============================-->
+        <div class="container" style="padding:100px 40px !important;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-title text-center wow zoomIn">
+                <h1>Frequently Asked Questions</h1>
+                <span></span>
+                <p>Our Frequently Asked Questions here.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  
+                  
+                  <?php
+                      $sqlAssign = "SELECT * FROM faq where type='overview' ";											
+                        $resultAssign = mysqli_query($conn, $sqlAssign);											
+                        if (mysqli_num_rows($resultAssign) > 0) {
+                        $i=1;
+                        while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+
+                            $question = $rowAssign['question'];
+                            $answer = $rowAssign['answer'];
+                            $type = $rowAssign['type'];
+                            $u_id = $rowAssign['id'];
+                  ?>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne<?php echo $u_id;?>" aria-expanded="true" aria-controls="collapseOne"> <?php echo $question;?> </a> </h4>
+                  </div>
+                  <div id="collapseOne<?php echo $u_id;?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <p><?php echo $answer;?></p>
+                    </div>
+                  </div>
+                </div>
+                  <?php }} ?>
+               
+              </div>
+            </div>
+            <!--- END COL -->
+          </div>
+          <!--- END ROW -->
+        </div>
+        <!--=========================Frequently Asked Questions End ======================-->
+        <!--=========================  Process & resources ======================-->
+        <div class="background-image container-fluid">
+          <div class="col-md-6 content-column"> <img class="content-img model-one" src="images/icon-process.png">
+            <h4 class="model-six">Our Process </h4>
+            <div class="p-medium-model-ten">
+              <p>Find out more about what happens when you work with Bournes</p>
+            </div>
+            <a class="btn-model-quote" href="book-a-survey.php">LEARN MORE</a> </div>
+          <div class="col-md-6 content-column"> <img class="content-img model-one" src="images//icon-resources.png">
+            <h4 class="model-six">Resources </h4>
+            <div class="p-medium-model-ten">
+              <p>A range of useful resources to help guide you through the process, every step of the way</p>
+            </div>
+            <a class="btn-model-quote" href="useful-tools.php">LEARN MORE</a> </div>
+        </div>
+        <!--========================= Process & resources End ======================-->
+        <!--============================== Other Section End =========================-->
+      </div>
+      <!--================= Over view end ========== -->
+      <!--================= Services ========== -->
+      <div id="services" role="tabpanel" class="tab-pane">
+        <!--========================= Services content area ==============-->
+        <div class="content_area container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+
+                <?php 
+                    $sqlAssign = "SELECT * FROM `service` where `type` = '$res'";	
+                    $resultAssign = mysqli_query($conn, $sqlAssign);											
+                    if (mysqli_num_rows($resultAssign) > 0) {
+                    $i=1;
+                    while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+
+                        $s_heading = $rowAssign['heading'];
+                        $s_detail = $rowAssign['detail'];
+                    }}
+
+                
+                ?>
+                
+                <?php echo $s_heading;?>
+              <!--<h4><i>It??s difficult enough for you to move across continents. It??s challenging enough to find a new home, settle in, adjust to a new job, admit your children at school, cultivate new friends, and come to terms with a different culture.</i></h4>-->
+              <?php echo $s_detail;?>
+            </div>
+            <!--==========================Stress Section =======================-->
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <?php
+                      $sqlAssign = "SELECT * FROM `faq` where  type='service'";											
+                        $resultAssign = mysqli_query($conn, $sqlAssign);											
+                        if (mysqli_num_rows($resultAssign) > 0) {
+                        $i=1;
+                        while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+
+                            $question = $rowAssign['question'];
+                            $answer = $rowAssign['answer'];
+                            $type = $rowAssign['type'];
+                            $u_id = $rowAssign['id'];
+                  ?>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne<?php echo $u_id;?>" aria-expanded="true" aria-controls="collapseOne"> <?php echo $question;?> </a> </h4>
+                  </div>
+                  <div id="collapseOne<?php echo $u_id;?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <p><?php echo $answer;?></p>
+                    </div>
+                  </div>
+                </div>
+                  <?php }} ?>
+            </div>
+              
+                  <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12 text-center">
+                    <div style="padding-bottom: 50px !important; padding-top: 50px !important;"> <a href="book-a-survey.php" class="Request-btn">Get Your Free Move Quote</a> </div>
+                  </div>
+                  <!--=================button end====================-->
+                  <!--======================Your Next steps ==================-->
+                  <div class="col-md-12">
+                    <div class="section-title text-center wow zoomIn animated" style="visibility: visible; animation-name: zoomIn;">
+                      <h2>Your Next Steps</h2>
+                      <h3 class="quality-quote"><i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp;Relocato Removals take good care of your move. With 13 offices across India, the Middle East, and Singapore, we can move you with flair anywhere&nbsp;<i class="fa fa-quote-right" aria-hidden="true"></i></h3>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 col-xs-12 step_one">
+                    <p>You may want to check out the <a  href="#" target="_blank" rel="noreferrer">Case Studies on International Relocation</a>, along with the <a  href="#" target="_blank" rel="noreferrer">FAQs</a>, and <a  href="#" target="_blank" rel="noreferrer">Moving Tools &amp; Tips</a> we have put together for the best moving and packing experience.</p>
+                    <p>Join our <a  href="#" target="_blank" rel="noreferrer">Expat Club for Networking</a> with fellow expats. Browse through the <a  href="#" target="_blank" rel="noreferrer">Orientation Services</a> at <a  target="_blank" href="#">Writer Relocations</a> to make migrating abroad easier.</p>
+                    <p>Do <a  href="book-a-survey.php" target="_blank" rel="noreferrer">request a Free Moving Quote</a> from <a  target="_blank" href="#">Relocato Removals</a> for International Packers &amp; Movers, or Long Distance Moving.</p>
+                  </div>
+                  <div class="col-md-6 col-sm-12 col-xs-12"> <img src="images/moversvan.png"/> </div>
+              
+            <!--======================== Stress Section ========================-->
+          </div>
+        </div>
+        <!--======================== Services content area end=================-->
+
+        <!--======================= 6 Steps to peace of mind ===================-->
+		<div class="container" style="padding-top:70px;">
+          <div class="row">    
+            <div class="col-md-12 text-center">
+              <h2 class="overview_title">6 steps to peace-of-mind packing and moving.</h2>
+            </div> 
+        </div>   
+     </div>
+        <div class="steps-block">
+		<div class="container">
+            <!--<div class="row">
+              <div class="col-md-6 col-md-offset-3 col-sm-9 col-sm-offset-1 col-xs-12 text-center">
+                <h3 class="move-block-headline text-center">6 steps to peace-of-mind packing and moving.</h3>
+              </div>
+            </div>-->
+            <div class="row two-block">
+              <div class="col-md-9 col-md-offset-1">
+                <?php 
+					$sqlAssign = "SELECT * FROM `service-6-steps`";											
+							$resultAssign = mysqli_query($conn, $sqlAssign);											
+							if (mysqli_num_rows($resultAssign)) {
+							while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+		
+								$title = $rowAssign['title'];
+								$content = $rowAssign['content'];
+								$images = $rowAssign['images'];
+								
+								echo ' <div class="col-md-6 col-sm-6">
+										  <div class="steps-border text-center" style="opacity:1;">'; ?>
+										  <img style="width: 90px;" alt="<?php echo $images;?>" src="<?php echo $base_url;?>admin/uploads/<?php echo $images;?>" title="<?php echo $images;?>">
+											<h4><?php echo $title; ?></h4>
+											<?php echo $content; ?>
+										 <?php echo' </div>
+										</div>
+									  ';
+							}}
+				?>
+              </div>
+			  <div class="col-md-1">
+			  <!--<div>
+			  <header><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+			  <h1>My last move 5 years with [another moving company] was a terrible experience, so I certainly was not looking forward to this move!</h1>
+			  </header>
+			  </div>-->
+			  <aside class="right-block">
+			  <h3><strong>"The way we do Small things reflects the way we do everything"</strong></h3>
+			  </aside>
+			  </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12 text-center">
+                <p style="padding-bottom: 30px;">Relocato Removals was founded on a simple idea that Packing and Moving can be made affordable and professional. Today's great minds of the industry brings professional touch  throughout the process that makes Moving & Relocation special , personal & easy that drives yourgoods as one's emotions.</p>
+                <div class="btn-center"><a href="https://www.relocatoremovals.in/book-a-survey.php" class="Request-btn">Get Your Free Move Quote</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===================== 6 Steps to peace of mind =====================-->
+
+        <!--===========customers just like================-->
+        <div class="text-center counter6 customer-like">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 count-header">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 count-header">
+            <h2 class="overview_title text-center">WHY US</h2>
+			  <div class="separator"><span><i class="fa fa-circle"></i></span></div>
+			  <?php echo $why_us;?>
+          </div>
+          </div>
+         <?php include('include/gread.php');?>
+        </div>
+        <!--===========customers just like end================-->
+        <!--===================people Say ============-->
+        <div class="peoplesay container-fluid">
+          <div class="col-md-12 content-column">
+            <h4 class="model-six">Read what people like you say about packing and moving with Relocato Removals. </h4>
+            <h3>"It was a pleasant experience with Relocato Removals. I would give you a 5 out of 5 rating for your services and for sure will recommend your services to anyone in need."</h3>
+            <div class="p-medium-model-ten">
+              <p>Vinodmoorthy Dalavai, India to Sweden, September 2018.</p>
+            </div>
+            <a class="free-move Request-btn" href="<?php echo $base_url;?>book-a-survey.php">Get Your Free Move Quote</a> </div>
+        </div>
+        <!--==================people say================-->
+      </div>
+      <!--================= Services End========== -->
+      <!--================= Process ========== -->
+      <div id="process" role="tabpanel" class="tab-pane">
+	  <!--================================== Process Title ==================================-->
+          <?php 
+              $sqlAssign = "SELECT * FROM `process` where type='$res'";											
+                $resultAssign = mysqli_query($conn, $sqlAssign);											
+                if (mysqli_num_rows($resultAssign) > 0) {
+                $i=1;
+                while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+
+                    $heading = $rowAssign['heading'];
+                    $detail = $rowAssign['detail'];
+                    $survey = $rowAssign['survey'];
+                    $planning = $rowAssign['planning'];
+                    $transit = $rowAssign['transit'];
+                    $delivery = $rowAssign['delivery'];
+                   
+
+                }}
+          ?>
+	  <div class="container">
+<div class="row">    
+<div class="col-md-12 text-center">
+              <?php echo $heading;?>
+              <?php echo $detail;?>
+             
+            </div> 
+</div>   
+</div>
+	  
+	  
+	  <!--============================== Process Title End =============================-->
+        <!--==================== Process Content ======================-->
+        <div class="container margin-top">
+		<div class="row">
+				<div class="col-md-12">
+                    <div class="section-title text-center wow zoomIn animated animated" style="visibility: visible; animation-name: zoomIn;">
+                      <h2 class="overview_title bottom-pad">"Planning Makes Your Move Perfect"</h2>
+                    </div>
+                  </div>
+		</div>
+		</div>
+		
+		<div class="container">
+<div class="col-md-4 agileinfo_about_left"> <img src="images/survey.jpg" alt=" " class="img-responsive"> </div>
+          <div class="col-md-8 agileinfo_about_right">
+            <h3>Survey</h3>
+              <?php echo $survey;?>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="container">
+          <div class="col-md-8 agileinfo_about_right agileinfo_about_right2">
+            <h3>Planning</h3>
+            <?php echo $planning;?>
+
+</div>
+          <div class="col-md-4 agileinfo_about_left"> <img src="images/planing.jpg" alt=" " class="img-responsive"> </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="container">
+          <div class="col-md-4 agileinfo_about_left"> <img src="images/transists.png" alt=" " class="img-responsive"> </div>
+          <div class="col-md-8 agileinfo_about_right">
+            <h3>Transit</h3>
+              <?php echo $transit;?>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="container">
+          <div class="col-md-8 agileinfo_about_right agileinfo_about_right2">
+            <h3>Delivery</h3>
+              <?php echo $delivery;?>
+          </div>
+          <div class="col-md-4 agileinfo_about_left"> <img src="images/delivery.jpg" alt=" " class="img-responsive"> </div>
+          <div class="clearfix"> </div>
+        </div>
+		
+        <!--===================  Process Content End ==================-->
+		<!--======================= FAQ ===============================-->
+		<div class="container" style="padding:100px 40px 0 !important;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-title text-center wow zoomIn animated" style="visibility: visible; animation-name: zoomIn;">
+                <h1>Frequently Asked Questions</h1>
+                <span></span>
+                <p>Our Frequently Asked Questions here.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel-group" id="accordion">
+                    <?php
+                      $sqlAssign = "SELECT * FROM `faq` where  type='process'";											
+                        $resultAssign = mysqli_query($conn, $sqlAssign);											
+                        if (mysqli_num_rows($resultAssign) > 0) {
+                        $i=1;
+                        while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+
+                            $question = $rowAssign['question'];
+                            $answer = $rowAssign['answer'];
+                            $type = $rowAssign['type'];
+                            $u_id = $rowAssign['id'];
+                  ?>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne<?php echo $u_id;?>" aria-expanded="true" aria-controls="collapseOne"> <?php echo $question;?> </a> </h4>
+                  </div>
+                  <div id="collapseOne<?php echo $u_id;?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <p><?php echo $answer;?></p>
+                    </div>
+                  </div>
+                </div>
+                  <?php }} ?>
+
+              </div>
+            </div>
+            <!--- END COL -->
+          </div>
+          <!--- END ROW -->
+        </div>
+		
+		<!--======================= FAQ ==============================-->
+
+		<!--======================= Get a quote =====================-->
+		<div class="get-quote container-fluid">
+          <div class="col-md-12 content-column">
+            <h4 class="model-six">Get a quote </h4>
+            <div class="p-medium-model-ten">
+              <p>A range of useful resources to help guide you through the process, every step of the way</p>
+            </div>
+            <a class="btn-model-quote" href="book-a-survey.php">Get a quote</a> </div>
+        </div>
+		
+		<!--====================== Get a quote End ===================-->
+				<!--======================= PDF Download =====================-->
+		<section class="bg--primary">
+		<div class="container">
+		<div class="row">
+		<div class="col-md-6 col-md-offset-1 col-sm-12 pdf-content">
+		<h3>Love reading this Move Planner? Download the detailed PDF now.</h3>
+		<p>Download the illustrated, convenient, detailed Move Planner.<br>Read it at leisure. Refer to it when you want. Share it with your friends.</p>
+		</div>
+		<div class="col-md-4 col-sm-12">
+		<a class="btn pdf-cta-btn" href="#">Download FREE the PDF now</a>
+		</div>
+		</div>
+		</div>
+		</section>
+		<!--======================== PDF Download end ===================-->
+      </div>
+      <!--================= Process End========== -->
+      <!--================= Areas Cover ========== -->
+      <div id="areas-cover" role="tabpanel" class="tab-pane">
+          <div class="container">
+              <div class="row">    
+                  <div class="col-md-12 text-center" style="margin-bottom:40px">
+                      <h2 style="margin-bottom:24px; font-size:36px">Areas Cover</h2>
+                      <p class="sub-title-loctn">We move families to and from over 180 different countries and as part of the Harmony Relocation Network have services centres across the world, so wherever you need to be, we’re already there.</p>
+            <!--<div class="separator"><span><i class="fa fa-circle"></i></span></div>-->
+            <p class="min-sub-title">Our UK service centres based across the South East mean we ware ideally placed to provide coverage throughout London, Kent, Surrey, Sussex, but don’t worry if you aren’t in these areas - we provide our services throughout the UK.</p>
+
+			<div class="row">
+			  <div class="col-md-12">
+				<div style="margin-bottom: 20px">
+					<select data-placeholder="Choose a Country..." id="state_list" style="width:350px;" tabindex="1">
+						<option value=""></option>
+					</select>
+						
+				</div>	
+					<div id="map"></div>
+			  </div>
+			</div>
+                  </div> 
+              </div>
+                
+          </div>
+          <!--======================= Get a quote =====================-->
+                <div class="get-quote container-fluid">
+                  <div class="col-md-12 content-column">
+                    <h4 class="model-six">Get a quote </h4>
+                    <div class="p-medium-model-ten">
+                      <p>A range of useful resources to help guide you through the process, every step of the way</p>
+                    </div>
+                    <a class="btn-model-quote" href="book-a-survey.php">Get a quote</a> 
+                  </div>
+                </div>
+    
+              <!--====================== Get a quote End ===================--> 
+      </div>
+      <!--================= Areas Cover End========== -->
+      <!--================= Move Type ========== -->
+      <div id="move-type" role="tabpanel" class="tab-pane">
+	  <!--=============== Move types title ==============-->
+<div class="container cost-title">
+<div class="row">    
+    
+    <?php 
+    
+        $sqlAssign = "SELECT * FROM `move` where type= '$res'";											
+        $resultAssign = mysqli_query($conn, $sqlAssign);											
+        if (mysqli_num_rows($resultAssign) > 0) {
+        $i=1;
+        while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+
+            $heading = $rowAssign['heading'];
+            $detail = $rowAssign['detail'];
+            $economy = $rowAssign['economy'];
+            $premium_economy = $rowAssign['premium_economy'];
+            $priority_service = $rowAssign['priority_service'];
+            $dedicated_service = $rowAssign['dedicated_service'];
+           
+		   
+            
+        }}
+
+    
+    ?>
+    
+<div class="col-md-12 text-center">
+             <?php echo $heading;?>
+             <?php echo $detail;?>
+            </div> 
+</div>   
+</div>
+<!--================ Move type title end =================-->
+<!--================ Road Removal Services ==============-->
+<div class="container">
+<div class="row">    
+<div class="col-md-4 text-center movecolumn">
+<div class="column4">
+<p><img src="images/icon-local-moves.png"></p>
+<h4>European Moves</h4>
+<h2>Economy</h2>
+<h3>If You Can Be Completely Flexible</h3>
+<!--<p class="content-text">Quantity of belongings you would like to move (often known as volume)</p>-->
+<ol type="i" class="content-move">
+  <?php echo $economy;?>
+</ol>
+<p><a class="btn-model-quote" href="#">LEARN MORE</a></p>
+</div>
+</div>
+<div class="col-md-4 text-center movecolumn">
+<div class="column4">
+<p><img src="images/icon-local-moves2.png"></p>
+<h4>European Removals</h4>
+<h2>Premium Economy</h2>
+<h3>Our Most Popular Service</h3>
+<ol type="i" class="content-move">
+<?php echo $premium_economy;?>
+</ol>
+<p><a class="btn-model-quote" href="#">LEARN MORE</a></p>
+</div>
+</div>
+
+<div class="col-md-4 text-center movecolumn">
+<div class="column4">
+<p><img src="images/icon-local-moves3.png"></p>
+<h4>European Removals</h4>
+<h2>Priority Service</h2>
+<h3>If You Can Be Completely Flexible</h3>
+<ol type="i" class="content-move">
+  <?php echo $priority_service;?>
+</ol>
+<p><a class="btn-model-quote" href="#">LEARN MORE</a></p>
+</div> 
+</div>  
+<div class="row">    
+<div class="col-md-4 col-md-offset-4 text-center movecolumn">
+<div class="column4">
+<p><img src="images/icon-local-moves4.png"></p>
+<h4>European Removals</h4>
+<h2>Dedicated Service</h2>
+<h3>Our Most Popular Service</h3>
+<ol type="i" class="content-move">
+<?php echo $dedicated_service;?>
+</ol>
+<p><a class="btn-model-quote" href="#">LEARN MORE</a></p>
+</div>
+</div>
+
+ 
+</div> 
+</div>
+</div>
+<!--================ Road Removal Services End ==============-->
+<!-- ============================== FAQ =========================-->
+<div class="container" style="padding:100px 40px !important;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-title text-center wow zoomIn animated animated" style="visibility: visible; animation-name: zoomIn;">
+                <h1>Frequently Asked Questions</h1>
+                <span></span>
+                <p>Our Frequently Asked Questions here.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+                    <?php
+                      $sqlAssign = "SELECT * FROM `faq` where type='movetype'";											
+                        $resultAssign = mysqli_query($conn, $sqlAssign);											
+                        if (mysqli_num_rows($resultAssign) > 0) {
+                        $i=1;
+                        while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+
+                            $question = $rowAssign['question'];
+                            $answer = $rowAssign['answer'];
+                            $type = $rowAssign['type'];
+                            $u_id = $rowAssign['id'];
+                  ?>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne<?php echo $u_id;?>" aria-expanded="true" aria-controls="collapseOne"> <?php echo $question;?> </a> </h4>
+                  </div>
+                  <div id="collapseOne<?php echo $u_id;?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <p><?php echo $answer;?></p>
+                    </div>
+                  </div>
+                </div>
+                  <?php }} ?>
+              </div>
+            </div>
+            <!--- END COL -->
+          </div>
+          <!--- END ROW -->
+        </div>
+<!-- ============================== FAQ End =========================-->
+<!--===================== Crousal slider =================-->
+<div id="testimonial_7" class="carousel slide testimonial_7_indicators testimonial6_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="3000" data-duration="2000">
+          <ol class="carousel-indicators">
+            <li data-target="#testimonial_7" data-slide-to="0" class="active"></li>
+            <li data-target="#testimonial_7" data-slide-to="1"></li>
+            <li data-target="#testimonial_7" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+                <?php 
+								 $sqlAssign = "SELECT * FROM `testimonial` order by `id` ASC limit 0,3";											
+									$resultAssign = mysqli_query($conn, $sqlAssign);											
+									if (mysqli_num_rows($resultAssign) > 0) {
+									$i=1;
+									while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+
+										$id = $rowAssign['id'];
+                $name = $rowAssign['name'];
+                $email = $rowAssign['email'];
+                $image = $rowAssign['image'];
+                $review = $rowAssign['review'];
+                $date = $rowAssign['date'];
+                $status = $rowAssign['status'];
+							?>
+
+    <div class="item <?php if($id == 6){ echo 'active';}?>">
+      <div class="testimonial_7_slide">
+        <p><?php echo $review;?></p>
+        <h4>Customer feedback for International Removals services from UK to Victoria, Australia</h4>
+        <a class="btn-model-quote" href="testimonial.php">View Testimonial</a> </div>
+    </div>
+    <?php }} ?>
+
+          </div>
+          <a class="left carousel-control" href="#testimonial_7" role="button" data-slide="prev"> <span class="fa fa-chevron-left"></span> </a> <a class="right carousel-control" href="#testimonial_7" role="button" data-slide="next"> <span class="fa fa-chevron-right"></span> </a> </div>
+<!--===================== Crousal slider =================-->
+</div>
+      <!--================= Move Type End========== -->
+      <!--================= Cost ========== -->
+      <div id="cost" role="tabpanel" class="tab-pane">
+	  <div class="container cost-title">
+<div class="row">    
+    
+    <?php
+        $sqlAssign = "SELECT * FROM `cost` where type= '$res'";											
+        $resultAssign = mysqli_query($conn, $sqlAssign);											
+        if (mysqli_num_rows($resultAssign) > 0) {
+        $i=1;
+        while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+
+            $heading = $rowAssign['heading'];
+            $detail = $rowAssign['detail'];
+            
+            
+        }}
+
+    
+    ?>
+<div class="col-md-12 text-center">
+              <?php echo $heading;?>
+              <?php echo $detail;?>
+            </div> 
+</div>   
+</div>
+      <!--======================== Costs Steps =======================-->
+	  
+	<div class="container">
+<div class="row">    
+<div class="col-md-4 text-center costcolumn">
+<p><img src="images/icon-home-2.png"></p>
+<p class="content-text">Quantity of belongings you would like to move (often known as volume)</p>
+</div>
+<div class="col-md-4 text-center costcolumn">
+<p><img src="images/icon-international-shipping-2.png"></p>
+<p class="content-text">Method of transport</p>
+</div>
+<div class="col-md-4 text-center costcolumn">
+<p><img src="images/icon-delivery-2.png"></p>
+<p class="content-text">How quickly you need delivery and how flexible you can be around your move dates</p>
+</div> 
+</div>  
+<div class="row">    
+<div class="col-md-4 text-center costcolumn">
+<p><img src="images/icon-closet-3.png"></p>
+<p class="content-text">Types of items you are moving and any special requirements (e.g. items that require dismantling or extra people to lift)</p>
+</div>
+<div class="col-md-4 text-center costcolumn">
+<p><img src="images/icon-buying-boxes-2.png"></p>
+<p class="content-text">Packing services including any items to be crated or given extra protection</p>
+</div>
+<div class="col-md-4 text-center costcolumn">
+<p><img src="images/icon-directions-2.png"></p>
+<p class="content-text">Your origin and destination address</p>
+</div> 
+</div> 
+<div class="row">    
+<div class="col-md-4 text-center costcolumn">
+<p><img src="images/icon-open-door-2.png"></p>
+<p class="content-text">Access at both properties including stairs, parking and distance to your front door</p>
+</div>
+<div class="col-md-4 text-center costcolumn">
+<p><img src="images/icon-date-2.png"></p>
+<p class="content-text">The dates you are moving</p>
+</div>
+<div class="col-md-4 text-center costcolumn">
+<p><img src="images/icon-certificate-2.png"></p>
+<p class="content-text">The professional skills, experience and certifications of the moving company</p>
+</div> 
+</div>
+</div>
+<!-- ============================== FAQ =========================-->
+<div class="container" style="padding:100px 40px !important;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-title text-center wow zoomIn animated" style="visibility: visible; animation-name: zoomIn;">
+                <h1>Frequently Asked Questions</h1>
+                <span></span>
+                <p>Our Frequently Asked Questions here.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <?php
+                      $sqlAssign = "SELECT * FROM `faq` where type='cost'";											
+                        $resultAssign = mysqli_query($conn, $sqlAssign);											
+                        if (mysqli_num_rows($resultAssign) > 0) {
+                        $i=1;
+                        while($rowAssign = mysqli_fetch_assoc($resultAssign)) {
+
+                            $question = $rowAssign['question'];
+                            $answer = $rowAssign['answer'];
+                            $type = $rowAssign['type'];
+                            $u_id = $rowAssign['id'];
+                  ?>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne<?php echo $u_id;?>" aria-expanded="true" aria-controls="collapseOne"> <?php echo $question;?> </a> </h4>
+                  </div>
+                  <div id="collapseOne<?php echo $u_id;?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <p><?php echo $answer;?></p>
+                    </div>
+                  </div>
+                </div>
+                  <?php }} ?>
+              </div>
+            </div>
+            <!--- END COL -->
+          </div>
+          <!--- END ROW -->
+        </div>
+
+<!--=============================== FAQ End ====================-->
+	  
+	  <!--======================== Cost Steps End =======================-->
+	  <!--======================= Get a quote =====================-->
+	  <div class="get-quote container-fluid">
+          <div class="col-md-12 content-column">
+            <h4 class="model-six">Get a quote </h4>
+            <div class="p-medium-model-ten">
+              <p>A range of useful resources to help guide you through the process, every step of the way</p>
+            </div>
+            <a class="btn-model-quote" href="#">Get a quote</a> </div>
+        </div>
+	  <!--====================== Get a quote End ===================-->
+	  </div>
+      <!--================= Cost End ========== -->
+    </div>
+  </div>
+</section>
+<!-- nav tab section end -->
 {%endblock%}

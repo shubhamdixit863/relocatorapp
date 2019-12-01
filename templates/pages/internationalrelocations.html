@@ -1,4 +1,5 @@
 {%  extends 'base.html'%}
+{% load static%}
 {%block title%}
 |Welcome
 
@@ -7,7 +8,7 @@
 <div class="clearfix"></div>
 <!--header end-->
 <!--Page Title-->
-<section class="services-pages page-title inner-baner" style="background-image:linear-gradient(270deg,rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)),url('admin/uploads/<?php echo $img;?>')">
+<section class="services-pages page-title inner-baner" style="background-image:linear-gradient(270deg,rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)),url( {% static 'images/uploads/ac-installation-banner4' % })">
   <div class="container">
     <div class="services-title section-title title-padd-btm">
       <h2 class="text-center"><?php echo $heading;?></h2>
@@ -18,8 +19,8 @@
      <div class="clearfix"></div>
     <div class="link-area" style="padding:10px">
       <ul style="width:33%;margin-left:35%;" class="nav">
-        <li class="botton_links" style="float:left;" class="active"><a class="servey-button" href="<?php echo $base_url;?>book-a-survey.php">BOOK A SURVEY</a></li>
-        <li class="botton_rlinks" style="float:right;"><a class="servey-button" href="<?php echo $base_url;?>relocatoremovals-local.php">Request a Quote</a></li>
+        <li class="botton_links" style="float:left;" class="active"><a class="servey-button" href="{%url 'requestquote'%}">BOOK A SURVEY</a></li>
+        <li class="botton_rlinks" style="float:right;"><a class="servey-button"href="{%url 'requestquote'%}">Request a Quote</a></li>
       </ul>
     </div>
     <!-- button section end -->
@@ -35,32 +36,32 @@
         <!-- Nav tabs -->
         <div class="card">
           <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab"><img src="images/service-icon/overview-img.png">
+            <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab"><img src="{% static 'images/service-icon/overview-img.png'%}">
               <p>Overview</p>
               </a></li>
-            <li><img src="images/vertical-line.png">
+            <li><img src="{% static 'images/vertical-line.png'%}">
             <li>
-            <li role="presentation"><a href="#services" aria-controls="services" role="tab" data-toggle="tab"><img src="images/service-icon/service-img.png">
+            <li role="presentation"><a href="#services" aria-controls="services" role="tab" data-toggle="tab"><img src="{% static 'images/service-icon/service-img.png'%}">
               <p>Services</p>
               </a></li>
-            <li><img src="images/vertical-line.png">
+            <li><img src="{% static 'images/vertical-line.png'%}">
             <li>
-            <li role="presentation"><a href="#process" aria-controls="process" role="tab" data-toggle="tab"><img src="images/service-icon/process-img.png">
+            <li role="presentation"><a href="#process" aria-controls="process" role="tab" data-toggle="tab"><img src="{% static 'images/service-icon/process-img.png'%}">
               <p>Process</p>
               </a></li>
-            <li><img src="images/vertical-line.png">
+            <li><img src="{% static 'images/vertical-line.png'%}">
             <li>
-            <li role="presentation"><a href="#areas-cover" aria-controls="areas-cover" role="tab" data-toggle="tab"><img src="images/service-icon/areas-we-cover.png">
+            <li role="presentation"><a href="#areas-cover" aria-controls="areas-cover" role="tab" data-toggle="tab"><img src="{% static 'images/service-icon/areas-we-cover.png'%}">
               <p>Areas We Cover</p>
               </a></li>
-            <li><img src="images/vertical-line.png">
+            <li><img src="{% static 'images/vertical-line.png'%}">
             <li>
-            <li role="presentation"><a href="#move-type" aria-controls="move-type" role="tab" data-toggle="tab"><img src="images/service-icon/move-img.png">
+            <li role="presentation"><a href="#move-type" aria-controls="move-type" role="tab" data-toggle="tab"><img src="{% static 'images/service-icon/move-img.png'%}">
               <p>Move Types</p>
               </a></li>
-            <li><img src="images/vertical-line.png">
+            <li><img src="{% static 'images/vertical-line.png'%}">
             <li>
-            <li role="presentation"><a href="#cost" aria-controls="cost" role="tab" data-toggle="tab"><img src="images/service-icon/cost-img.png">
+            <li role="presentation"><a href="#cost" aria-controls="cost" role="tab" data-toggle="tab"><img src="{% static 'images/service-icon/cost-img.png'%}">
               <p>COST</p>
               </a></li>
           </ul>
@@ -77,12 +78,12 @@
         <div class="content_area container">
           <div class="row">
             <div class="col-md-12">
-              <?php echo $heading;?>
+             
             </div>
             <div class="col-md-12">
-              <p><img src="images/bar-winner-logo.png" alt="" title="New-OMOTY-Logo-2017.gif" width="193" style="width: 193px; margin: 0px 0px 10px 10px; float: right;">
+              <p><img src="{% static 'images/bar-winner-logo.png'%}" alt="" title="New-OMOTY-Logo-2017.gif" width="193" style="width: 193px; margin: 0px 0px 10px 10px; float: right;">
                 
-                <?php echo $detail;?>
+               
                 </p>
             </div>
            
@@ -172,13 +173,13 @@
         <!--=========================Frequently Asked Questions End ======================-->
         <!--=========================  Process & resources ======================-->
         <div class="background-image container-fluid">
-          <div class="col-md-6 content-column"> <img class="content-img model-one" src="images/icon-process.png">
+          <div class="col-md-6 content-column"> <img class="content-img model-one" src="{% static 'images/icon-process.png'%}">
             <h4 class="model-six">Our Process </h4>
             <div class="p-medium-model-ten">
               <p>Find out more about what happens when you work with Bournes</p>
             </div>
             <a class="btn-model-quote" href="book-a-survey.php">LEARN MORE</a> </div>
-          <div class="col-md-6 content-column"> <img class="content-img model-one" src="images//icon-resources.png">
+          <div class="col-md-6 content-column"> <img class="content-img model-one" src="{% static 'images//icon-resources.png'%}">
             <h4 class="model-six">Resources </h4>
             <div class="p-medium-model-ten">
               <p>A range of useful resources to help guide you through the process, every step of the way</p>
@@ -257,7 +258,7 @@
                     <p>Join our <a  href="#" target="_blank" rel="noreferrer">Expat Club for Networking</a> with fellow expats. Browse through the <a  href="#" target="_blank" rel="noreferrer">Orientation Services</a> at <a  target="_blank" href="#">Writer Relocations</a> to make migrating abroad easier.</p>
                     <p>Do <a  href="book-a-survey.php" target="_blank" rel="noreferrer">request a Free Moving Quote</a> from <a  target="_blank" href="#">Relocato Removals</a> for International Packers &amp; Movers, or Long Distance Moving.</p>
                   </div>
-                  <div class="col-md-6 col-sm-12 col-xs-12"> <img src="images/moversvan.png"/> </div>
+                  <div class="col-md-6 col-sm-12 col-xs-12"> <img src="{% static 'images/moversvan.png'%}"/> </div>
               
             <!--======================== Stress Section ========================-->
           </div>
@@ -392,7 +393,7 @@
 		</div>
 		
 		<div class="container">
-<div class="col-md-4 agileinfo_about_left"> <img src="images/survey.jpg" alt=" " class="img-responsive"> </div>
+<div class="col-md-4 agileinfo_about_left"> <img src="{% static 'images/survey.jpg' %}" alt=" " class="img-responsive"> </div>
           <div class="col-md-8 agileinfo_about_right">
             <h3>Survey</h3>
               <?php echo $survey;?>
@@ -405,11 +406,11 @@
             <?php echo $planning;?>
 
 </div>
-          <div class="col-md-4 agileinfo_about_left"> <img src="images/planing.jpg" alt=" " class="img-responsive"> </div>
+          <div class="col-md-4 agileinfo_about_left"> <img src="{% static 'images/planing.jpg'%}" alt=" " class="img-responsive"> </div>
           <div class="clearfix"> </div>
         </div>
         <div class="container">
-          <div class="col-md-4 agileinfo_about_left"> <img src="images/transists.png" alt=" " class="img-responsive"> </div>
+          <div class="col-md-4 agileinfo_about_left"> <img src="{% static 'images/transists.png'%}" alt=" " class="img-responsive"> </div>
           <div class="col-md-8 agileinfo_about_right">
             <h3>Transit</h3>
               <?php echo $transit;?>
@@ -421,7 +422,7 @@
             <h3>Delivery</h3>
               <?php echo $delivery;?>
           </div>
-          <div class="col-md-4 agileinfo_about_left"> <img src="images/delivery.jpg" alt=" " class="img-responsive"> </div>
+          <div class="col-md-4 agileinfo_about_left"> <img src="{% static 'images/delivery.jpg'%}" alt=" " class="img-responsive"> </div>
           <div class="clearfix"> </div>
         </div>
 		
@@ -582,7 +583,7 @@
 <div class="row">    
 <div class="col-md-4 text-center movecolumn">
 <div class="column4">
-<p><img src="images/icon-local-moves.png"></p>
+<p><img src="{% static 'images/icon-local-moves.png'%}"></p>
 <h4>European Moves</h4>
 <h2>Economy</h2>
 <h3>If You Can Be Completely Flexible</h3>
@@ -595,7 +596,7 @@
 </div>
 <div class="col-md-4 text-center movecolumn">
 <div class="column4">
-<p><img src="images/icon-local-moves2.png"></p>
+<p><img src="{% static 'images/icon-local-moves2.png'%}"></p>
 <h4>European Removals</h4>
 <h2>Premium Economy</h2>
 <h3>Our Most Popular Service</h3>
@@ -608,7 +609,7 @@
 
 <div class="col-md-4 text-center movecolumn">
 <div class="column4">
-<p><img src="images/icon-local-moves3.png"></p>
+<p><img src="{% static 'images/icon-local-moves3.png'%}"></p>
 <h4>European Removals</h4>
 <h2>Priority Service</h2>
 <h3>If You Can Be Completely Flexible</h3>
@@ -621,7 +622,7 @@
 <div class="row">    
 <div class="col-md-4 col-md-offset-4 text-center movecolumn">
 <div class="column4">
-<p><img src="images/icon-local-moves4.png"></p>
+<p><img src="{% static 'images/icon-local-moves4.png'%}"></p>
 <h4>European Removals</h4>
 <h2>Dedicated Service</h2>
 <h3>Our Most Popular Service</h3>
@@ -748,43 +749,43 @@
 	<div class="container">
 <div class="row">    
 <div class="col-md-4 text-center costcolumn">
-<p><img src="images/icon-home-2.png"></p>
+<p><img src="{% static 'images/icon-home-2.png'%}"></p>
 <p class="content-text">Quantity of belongings you would like to move (often known as volume)</p>
 </div>
 <div class="col-md-4 text-center costcolumn">
-<p><img src="images/icon-international-shipping-2.png"></p>
+<p><img src="{% static 'images/icon-international-shipping-2.png'%}"></p>
 <p class="content-text">Method of transport</p>
 </div>
 <div class="col-md-4 text-center costcolumn">
-<p><img src="images/icon-delivery-2.png"></p>
+<p><img src="{% static 'images/icon-delivery-2.png'%}"></p>
 <p class="content-text">How quickly you need delivery and how flexible you can be around your move dates</p>
 </div> 
 </div>  
 <div class="row">    
 <div class="col-md-4 text-center costcolumn">
-<p><img src="images/icon-closet-3.png"></p>
+<p><img src="{% static 'images/icon-closet-3.png'%}"></p>
 <p class="content-text">Types of items you are moving and any special requirements (e.g. items that require dismantling or extra people to lift)</p>
 </div>
 <div class="col-md-4 text-center costcolumn">
-<p><img src="images/icon-buying-boxes-2.png"></p>
+<p><img src="{% static 'images/icon-buying-boxes-2.png'%}"></p>
 <p class="content-text">Packing services including any items to be crated or given extra protection</p>
 </div>
 <div class="col-md-4 text-center costcolumn">
-<p><img src="images/icon-directions-2.png"></p>
+<p><img src="{% static 'images/icon-directions-2.png'%}"></p>
 <p class="content-text">Your origin and destination address</p>
 </div> 
 </div> 
 <div class="row">    
 <div class="col-md-4 text-center costcolumn">
-<p><img src="images/icon-open-door-2.png"></p>
+<p><img src="{% static 'images/icon-open-door-2.png'%}"></p>
 <p class="content-text">Access at both properties including stairs, parking and distance to your front door</p>
 </div>
 <div class="col-md-4 text-center costcolumn">
-<p><img src="images/icon-date-2.png"></p>
+<p><img src="{% static 'images/icon-date-2.png'%}"></p>
 <p class="content-text">The dates you are moving</p>
 </div>
 <div class="col-md-4 text-center costcolumn">
-<p><img src="images/icon-certificate-2.png"></p>
+<p><img src="{% static 'images/icon-certificate-2.png'%}"></p>
 <p class="content-text">The professional skills, experience and certifications of the moving company</p>
 </div> 
 </div>

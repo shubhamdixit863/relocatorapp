@@ -1,8 +1,2597 @@
 {%  extends 'base.html'%}
+{% load static%}
 {%block title%}
 |Welcome
 
 {%endblock%}
 {% block content%}
+
+<!-- End Navigation -->
+
+<div class="clearfix"></div>
+
+<!--header end-->
+
+<!--Page Title-->
+
+<section class="page-title inner-baner">
+
+  <div class="container">
+
+    <h2>Volume Calculator</h2>
+
+    <ul class="bread-crumb clearfix">
+
+      <li><i class="fa fa-home"></i> <a href="http://www.relocatoremovals.in/demo/index.html">Home</a></li>
+
+      <li class="active">Volume Calculator</li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+<!--End Page Title-->
+
+</div>
+
+<!-- ===================== Tracking Tabs ===========================-->
+
+<!-- Calculate your volumet -->
+
+<div class="container track volume-content" style="padding:100px 40px !important;">
+
+  <div class="service-text-box">
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <div class="section-title text-center wow zoomIn animated" style="visibility: visible; animation-name: zoomIn;">
+
+          <h1>Calculate your volume</h1>
+
+          <span></span>
+
+          <p class="min-sub-title">This volume calculator will help you with calculating the volume (both) of the household goods you want to move. You can choose what you want to take from each room. Whenever you are done you can fill in your e-mail address and click on the button 'Mail' to send the list to yourself.</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+            
+
+            
+
+            
+
+          <div class="panel panel-default">
+
+            <div class="panel-heading" role="tab" id="headingOne">
+
+              <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Living room</a> </h4>
+
+            </div>
+
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+
+              <div class="panel-body">
+
+                <!--==========================  Living Room  ==========================-->
+
+                <div class="table-responsive">
+
+                 
+
+                    <table class="table table-striped vc">
+
+                      <!--<thead>
+
+        <tr>
+
+          <th colspan="6" class="text-center cat">Living Room</th>
+
+        </tr>
+
+      </thead>-->
+
+                      <tbody>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/aquarium.png'%}"></span>Aquarium <span class="item_number">
+
+                            <input type="text" id="a1" name="a1" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Bar ( Portable )<span class="item_number">
+
+                            <input type="text" id="a2" name="a2" onchange='Calculate();'>
+
+                            </span></td>
+
+                          
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Cabinet<span class="item_number">
+
+                            <input type="text" id="a3" name="a3" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/armchair.png'%}"></span>Arm chair<span class="item_number">
+
+                            <input type="text" id="a4" name="a4" onchange='Calculate();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/books.png'%}"></span>Book Shelves<span class="item_number">
+
+                            <input type="text" id="a5" name="a5" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/sofa_sets.png'%}"></span>Cane sofa set<span class="item_number">
+
+                            <input type="text" id="a6" name="a6" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chest_of_drawers.png'%}"></span>Chest of Drawer<span class="item_number">
+
+                            <input type="text" id="a7" name="a7" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/aquarium.png'%}"></span>Aquarium<span class="item_number">
+
+                            <input type="text" id="a8" name="a8" onchange='Calculate();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chair_dining.png'%}"></span>Baby's High Chair<span class="item_number">
+
+                            <input type="text" id="a9" name="a9" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/books_carton.png'%}"></span>Book Shelves -2<span class="item_number">
+
+                            <input type="text" id="a10" name="a10" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Center Table<span class="item_number">
+
+                            <input type="text" id="a11" name="a11" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chairs.png'%}"></span>Chair Straight<span class="item_number">
+
+                            <input type="text" id="a12" name="a12" onchange='Calculate();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/coffee_table.png'%}"></span>Coffee table<span class="item_number">
+
+                            <input type="text" id="a13" name="a13" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/computer.png'%}"></span>Computer components<span class="item_number">
+
+                            <input type="text" id="a14" name="a14" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/table_side_bedroom.png'%}"></span>Day Bed<span class="item_number">
+
+                            <input type="text" id="a15" name="a15" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/table_computer.png'%}"></span>Doctor's Screen<span class="item_number">
+
+                            <input type="text" id="a16" name="a16" onchange='Calculate();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chair_dining.png'%}"></span>Easy Chair<span class="item_number">
+
+                            <input type="text" id="a17" name="a17" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/stool.png'%}"></span>Foot stool<span class="item_number">
+
+                            <input type="text" id="a18" name="a18" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/clock.png'%}"></span>Grand father clock<span class="item_number">
+
+                            <input type="text" id="a19" name="a19" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/piano.png'%}"></span>Grand piano<span class="item_number">
+
+                            <input type="text" id="a20" name="a20" onchange='Calculate();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chest_of_drawers.png'%}"></span>Hosterfield chest<span class="item_number">
+
+                            <input type="text" id="a21" name="a21" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/shoe_rack.png'%}"></span>Magazine Rack<span class="item_number">
+
+                            <input type="text" id="a22" name="a22" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/radio.png'%}"></span>Music Cabinet<span class="item_number">
+
+                            <input type="text" id="a23" name="a23" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/lamp.png'%}"></span>Pedestal Lamp<span class="item_number">
+
+                            <input type="text" id="a24" name="a24" onchange='Calculate();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/washing_machines.png'%}"></span>Photograph console<span class="item_number">
+
+                            <input type="text" id="a25" name="a25" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/piano.png'%}"></span>Piano Stool<span class="item_number">
+
+                            <input type="text" id="a26" name="a26" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chairs.png'%}"></span>Rocking chair<span class="item_number">
+
+                            <input type="text" id="a27" name="a27" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/carpet.png'%}"></span>Rolls/ Pad Rugs, Large<span class="item_number">
+
+                            <input type="text" id="a28" name="a28" onchange='Calculate();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/carpet.png'%}"></span>Rolls/ Pad Rugs, Small<span class="item_number">
+
+                            <input type="text" id="a29" name="a29" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/writing_desk.png'%}"></span>Secretarial Desk<span class="item_number">
+
+                            <input type="text" id="a30" name="a30" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/table_side_bedroom.png'%}"></span>Side table<span class="item_number">
+
+                            <input type="text" id="a31" name="a31" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/writing_desk.png'%}.png'%}"></span>Small desk<span class="item_number">
+
+                            <input type="text" id="a32" name="a32" onchange='Calculate();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/sofa.png'%}"></span>Sofa 1 Seater<span class="item_number">
+
+                            <input type="text" id="a33" name="a33" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/sofa_sets.png'%}"></span>Sofa 2 Seater<span class="item_number">
+
+                            <input type="text" id="a34" name="a34" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/sofa_garden_flat.png'%}"></span>Sofa 3 Seater <span class="item_number">
+
+                            <input type="text" id="a35" name="a35" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/sofa_sets.png'%}"></span>Sofa Loveseat<span class="item_number">
+
+                            <input type="text" id="a36" name="a36" onchange='Calculate();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/speaker.png'%}"></span>Speaker<span class="item_number">
+
+                            <input type="text" id="a37" name="a37" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/table_computer.png'%}"></span>Stereo Components<span class="item_number">
+
+                            <input type="text" id="a38" name="a38" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tvs.png'%}"></span>T.V. Big<span class="item_number">
+
+                            <input type="text" id="a39" name="a39" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tvs.png'%}"></span>T.V. Console<span class="item_number">
+
+                            <input type="text" id="a40" name="a40" onchange='Calculate();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tvs.png'%}"></span>T.V. Small<span class="item_number">
+
+                            <input type="text" id="a41" name="a41" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Table davenport<span class="item_number">
+
+                            <input type="text" id="a42" name="a42" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Table library<span class="item_number">
+
+                            <input type="text" id="a43" name="a43" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/coat_stand.png'%}"></span>Telephone stand<span class="item_number">
+
+                            <input type="text" id="a44" name="a44" onchange='Calculate();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chairs.png'%}"></span>Upholstered chair<span class="item_number">
+
+                            <input type="text" id="a45" name="a45" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/piano.png'%}"></span>Upright Piano<span class="item_number">
+
+                            <input type="text" id="a46" name="a46" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/freezer.png'%}"></span>Window Airconditoner<span class="item_number">
+
+                            <input type="text" id="a47" name="a47" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/miscellaneous.png'%}"></span>Box Large<span class="item_number">
+
+                            <input type="text" id="a48" name="a48" onchange='Calculate();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Corner Cabinet<span class="item_number">
+
+                            <input type="text" id="a49" name="a49" onchange='Calculate();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Crockery Cabinet<span class="item_number">
+
+                            <input type="text" id="a50" name="a50" onchange='Calculate();'>
+
+                            </span></td>
+
+                            
+
+                            
+
+  <script type="text/javascript">
+
+   function Calculate()
+
+    {
+
+   var a1 = document.getElementById("a1").value; 
+
+   var a2 = document.getElementById("a2").value; 
+
+   var a3 = document.getElementById("a3").value; 
+
+   var a4 = document.getElementById("a4").value; 
+
+   var a5 = document.getElementById("a5").value; 
+
+   var a6 = document.getElementById("a6").value; 
+
+   var a7 = document.getElementById("a7").value; 
+
+   var a8 = document.getElementById("a8").value; 
+
+   var a9 = document.getElementById("a9").value; 
+
+   var a10 = document.getElementById("a10").value; 
+
+   var a11 = document.getElementById("a11").value; 
+
+   var a12 = document.getElementById("a12").value; 
+
+   var a13 = document.getElementById("a13").value; 
+
+   var a14 = document.getElementById("a14").value; 
+
+   var a15 = document.getElementById("a15").value; 
+
+   var a16 = document.getElementById("a16").value; 
+
+   var a17 = document.getElementById("a17").value; 
+
+   var a18 = document.getElementById("a18").value; 
+
+   var a19 = document.getElementById("a19").value; 
+
+   var a20 = document.getElementById("a20").value; 
+
+   var a21 = document.getElementById("a21").value; 
+
+   var a22 = document.getElementById("a22").value; 
+
+   var a23 = document.getElementById("a23").value; 
+
+   var a24 = document.getElementById("a24").value; 
+
+   var a25 = document.getElementById("a25").value; 
+
+   var a26 = document.getElementById("a26").value; 
+
+   var a27 = document.getElementById("a27").value; 
+
+   var a28 = document.getElementById("a28").value; 
+
+   var a29 = document.getElementById("a29").value; 
+
+   var a30 = document.getElementById("a30").value; 
+
+   var a31 = document.getElementById("a31").value; 
+
+   var a32 = document.getElementById("a32").value; 
+
+   var a33 = document.getElementById("a33").value; 
+
+   var a34 = document.getElementById("a34").value; 
+
+   var a35 = document.getElementById("a35").value; 
+
+   var a36 = document.getElementById("a36").value; 
+
+   var a37 = document.getElementById("a37").value; 
+
+   var a38 = document.getElementById("a38").value; 
+
+   var a39 = document.getElementById("a39").value; 
+
+   var a40 = document.getElementById("a40").value; 
+
+   var a41 = document.getElementById("a41").value; 
+
+   var a42 = document.getElementById("a42").value; 
+
+   var a43 = document.getElementById("a43").value; 
+
+   var a44 = document.getElementById("a44").value; 
+
+   var a45 = document.getElementById("a45").value; 
+
+   var a46 = document.getElementById("a46").value; 
+
+   var a47 = document.getElementById("a47").value; 
+
+   var a48 = document.getElementById("a48").value; 
+
+   var a49 = document.getElementById("a49").value; 
+
+   var a50 = document.getElementById("a50").value; 
+
+        var live =  Number(a1) + Number(a2) + Number(a3) + Number(a4) + Number(a5) + Number(a6) + Number(a7) + Number(a8) + Number(a9) + Number(a10) + Number(a11) + Number(a12) + Number(a13) + Number(a14) + Number(a15) + Number(a16) + Number(a17) + Number(a18) + Number(a19) + Number(a20) + Number(a21) + Number(a22) + Number(a23) + Number(a24) + Number(a25) + Number(a26) + Number(a27) + Number(a28) + Number(a29) + Number(a30) + Number(a31) + Number(a32) + Number(a33) + Number(a34) + Number(a35) + Number(a36) + Number(a37) + Number(a38) + Number(a39) + Number(a40) + Number(a41) + Number(a42) + Number(a43) + Number(a44) + Number(a45) + Number(a46) + Number(a47) + Number(a48) + Number(a49) + Number(a50);
+
+        var live_rate =  Number(a1 * 6) + Number(a2 * 15) + Number(a3 * 30) + Number(a4 * 30) + Number(a5 * 20) + Number(a6 * 75) + Number(a7 * 30) + Number(a8 * 6) + Number(a9 * 10) + Number(a10 * 5) + Number(a11 * 20) + Number(a12 * 5) + Number(a13 * 5) + Number(a14 * 8) + Number(a15 * 30) + Number(a16 * 35) + Number(a17 * 15) + Number(a18 * 2) + Number(a19 * 20) + Number(a20 * 80) + Number(a21 * 50) + Number(a22 * 6) + Number(a23 * 10) + Number(a24 * 3) + Number(a25 * 25) + Number(a26 * 5) + Number(a27 * 15) + Number(a28 * 10) + Number(a29 * 30) + Number(a30 * 35) + Number(a31 * 5) + Number(a32 * 20) + Number(a33 * 31) + Number(a34 * 40) + Number(a35 * 50) + Number(a36 * 35) + Number(a37 * 2) + Number(a38 * 8) + Number(a39 * 15) + Number(a40 * 15) + Number(a41 * 10) + Number(a42 * 15) + Number(a43 * 20) + Number(a44 * 10) + Number(a45 * 25) + Number(a46 * 60) + Number(a47 * 20) + Number(a48 * 42) + Number(a49 * 20) + Number(a50 * 35);
+
+   
+
+   document.getElementById("living_product").value= live;
+
+   document.getElementById("living_product_rate").value= live_rate;
+
+      
+
+    } 
+
+</script>
+
+<!--                                        <input readonly  name="a_des" class="form-control" type="text"/>-->
+
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+
+                  
+
+                                        
+
+                                        
+
+                </div>
+
+                <!--========================= Living Room End ========================-->
+
+              </div>
+
+            </div>
+
+          </div>
+
+       
+
+    <div class="panel panel-default">
+
+            <div class="panel-heading" role="tab" id="headingTwo">
+
+              <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Bed Room</a> </h4>
+
+            </div>
+
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false" style="height: 0px;">
+
+              <div class="panel-body">
+
+                <!--==========================  Bed Room  ==========================-->
+
+                <div class="table-responsive">
+
+                  
+
+                    <table class="table table-striped vc">
+
+                      
+
+       
+
+                      <tbody>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/basket_cane.png'%}"></span>Baby Carriage ( Folding )<span class="item_number">
+
+                            <input type="text"  id="b1" name="b1" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/waste_paper_band.png'%}"></span>Bed Double Box type<span class="item_number">
+
+                            <input type="text"  id="b2" name="b2" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/table_side_bedroom.png'%}"></span>Bed, Single/Hollywood<span class="item_number">
+
+                            <input type="text"  id="b3" name="b3" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/basket_cane.png'%}"></span>Box Dish Pack<span class="item_number">
+
+                            <input type="text"  id="b4" name="b4" onchange='Calculates();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cots.png'%}"></span>Bab Cot<span class="item_number">
+
+                            <input type="text"  id="b5" name="b5" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cots.png'%}"></span>Bed Double<span class="item_number">
+
+                            <input type="text"  id="b6" name="b6" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cots.png'%}"></span>Bed Single<span class="item_number">
+
+                            <input type="text"  id="b7" name="b7" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cots.png'%}"></span>Bed Single Box Type<span class="item_number">
+
+                            <input type="text"  id="b8" name="b8" onchange='Calculates();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/trunk.png'%}"></span>Big Trunk<span class="item_number">
+
+                            <input type="text"  id="b9" name="b9" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/bookshelf.png'%}"></span>Book Shelves<span class="item_number">
+
+                            <input type="text"  id="b10" name="b10" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box Large<span class="item_number">
+
+                            <input type="text"  id="b11" name="b11" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box Medium<span class="item_number">
+
+                            <input type="text"  id="b12" name="b12" onchange='Calculates();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box Small<span class="item_number">
+
+                            <input type="text"  id="b13" name="b13" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box Wardrobe<span class="item_number">
+
+                            <input type="text"  id="b14" name="b14" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box Wardrobe<span class="item_number">
+
+                            <input type="text"  id="b15" name="b15" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chair_dining.png'%}"></span>Chair <span class="item_number">
+
+                            <input type="text"  id="b16" name="b16" onchange='Calculates();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chest_of_drawers.png'%}"></span>Chest Rocker<span class="item_number">
+
+                            <input type="text"  id="b17" name="b17" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/hifi-equip.png'%}"></span>Dresser Triple<span class="item_number">
+
+                            <input type="text"  id="b18" name="b18" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/hifi-equip.png'%}"></span>Dresser - Double<span class="item_number">
+
+                            <input type="text"  id="b19" name="b19" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/hifi-equip.png'%}"></span>Dressere - Single<span class="item_number">
+
+                            <input type="text"  id="b20" name="b20" onchange='Calculates();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/hifi-equip.png'%}"></span>Dresser l Vanity VCH<span class="item_number">
+
+                            <input type="text"  id="b21" name="b21" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/guitar.png'%}"></span>Music Cabinet<span class="item_number">
+
+                            <input type="text"  id="b22" name="b22" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables_livingroom.png'%}"></span>Night Table<span class="item_number">
+
+                            <input type="text"  id="b23" name="b23" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/coffee_table.png'%}"></span>Rug Large<span class="item_number">
+
+                            <input type="text"  id="b24" name="b24" onchange='Calculates();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/coffee_table.png'%}"></span>Rug Small<span class="item_number">
+
+                            <input type="text"  id="b25" name="b25" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/washing_machines.png'%}"></span>Sewing Machine ( Foot )<span class="item_number">
+
+                            <input type="text"  id="b26" name="b26" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Side Table<span class="item_number">
+
+                            <input type="text"  id="b27" name="b27" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Telephone Table<span class="item_number">
+
+                            <input type="text"  id="b28" name="b28" onchange='Calculates();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Toys Cabinet (Medium)<span class="item_number">
+
+                            <input type="text"  id="b29" name="b29" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/wardrobe.png'%}"></span>Wardrobe Small <span class="item_number">
+
+                            <input type="text"  id="b30" name="b30" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/wardrobe.png'%}"></span>Wardrobe l Large<span class="item_number">
+
+                            <input type="text"  id="b31" name="b31" onchange='Calculates();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/waste_paper_band.png'%}"></span>Waste Paper Basket<span class="item_number">
+
+                            <input type="text"  id="b32" name="b32" onchange='Calculates();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/coffee_table.png'%}"></span>Writing Table<span class="item_number">
+
+                            <input type="text"  id="b33" name="b33" onchange='Calculattes();'>
+
+                            </span></td>
+
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+
+  <script type="text/javascript">
+
+   function Calculates()
+
+    {
+
+   var b1 = document.getElementById("b1").value; 
+
+   var b2 = document.getElementById("b2").value; 
+
+   var b3 = document.getElementById("b3").value; 
+
+   var b4 = document.getElementById("b4").value; 
+
+   var b5 = document.getElementById("b5").value; 
+
+   var b6 = document.getElementById("b6").value; 
+
+   var b7 = document.getElementById("b7").value; 
+
+   var b8 = document.getElementById("b8").value; 
+
+   var b9 = document.getElementById("b9").value; 
+
+   var b10 = document.getElementById("b10").value; 
+
+   var b11 = document.getElementById("b11").value; 
+
+   var b12 = document.getElementById("b12").value; 
+
+   var b13 = document.getElementById("b13").value; 
+
+   var b14 = document.getElementById("b14").value; 
+
+   var b15 = document.getElementById("b15").value; 
+
+   var b16 = document.getElementById("b16").value; 
+
+   var b17 = document.getElementById("b17").value; 
+
+   var b18 = document.getElementById("b18").value; 
+
+   var b19 = document.getElementById("b19").value; 
+
+   var b20 = document.getElementById("b20").value; 
+
+   var b21 = document.getElementById("b21").value; 
+
+   var b22 = document.getElementById("b22").value; 
+
+   var b23 = document.getElementById("b23").value; 
+
+   var b24 = document.getElementById("b24").value; 
+
+   var b25 = document.getElementById("b25").value; 
+
+   var b26 = document.getElementById("b26").value; 
+
+   var b27 = document.getElementById("b27").value; 
+
+   var b28 = document.getElementById("b28").value; 
+
+   var b29 = document.getElementById("b29").value; 
+
+   var b30 = document.getElementById("b30").value; 
+
+   var b31 = document.getElementById("b31").value; 
+
+   var b32 = document.getElementById("b32").value; 
+
+   var b33 = document.getElementById("b33").value; 
+
+   
+
+        var bed =  Number(b1 * 8) + Number(b2 * 70) + Number(b3 * 3) + Number(b4 * 4) + Number(b5 * 28) + Number(b6 * 20) + Number(b7 * 10) + Number(b8 * 40) + Number(b9 * 8) + Number(b10 * 22) + Number(b11 * 6) + Number(b12 * 3) + Number(b13 * 2) + Number(b14 * 10) + Number(b15 * 10) + Number(b16 * 10) + Number(b17 * 12) + Number(b18 * 50) + Number(b19 * 40) + Number(b20 * 30) + Number(b21 * 3) + Number(b22 * 25) + Number(b23 * 5) + Number(b24 * 10) + Number(b25 * 3) + Number(b26 * 21) + Number(b27 * 18) + Number(b28 * 5) + Number(b29 * 10) + Number(b30 * 20) + Number(b31 * 80) + Number(b32 * 3) + Number(b33 * 25);
+
+        
+
+        var beds =  Number(b1) + Number(b2) + Number(b3) + Number(b4) + Number(b5) + Number(b6) + Number(b7) + Number(b8) + Number(b9) + Number(b10) + Number(b11) + Number(b12) + Number(b13) + Number(b14) + Number(b15) + Number(b16) + Number(b17) + Number(b18) + Number(b19) + Number(b20) + Number(b21) + Number(b22) + Number(b23) + Number(b24) + Number(b25) + Number(b26) + Number(b27) + Number(b28) + Number(b29) + Number(b30) + Number(b31) + Number(b32) + Number(b33);
+
+        
+
+   document.getElementById("bed_product").value= bed;
+
+   document.getElementById("bedroomrate").value= beds;
+
+      
+
+    } 
+
+</script>                </div>
+
+
+
+
+
+                  <!--========================= Bed Room End ========================-->
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="panel panel-default">
+
+            <div class="panel-heading" role="tab" id="headingThree">
+
+              <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Kitchen</a> </h4>
+
+            </div>
+
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
+
+              <div class="panel-body">
+
+                <!--==========================  Kitchen Room  ==========================-->
+
+                <div class="table-responsive">
+
+                  
+
+ <table class="table table-striped vc">
+
+                      <!--<thead>
+
+        <tr>
+
+          <th colspan="6" class="text-center cat">Kitchen</th>
+
+        </tr>
+
+      </thead>-->
+
+                      <tbody>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box Small<span class="item_number">
+
+                            <input type="text"  id="c1" name="c1" onchange='Calculattess();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chairs.png'%}"></span>Chair High<span class="item_number">
+
+                            <input type="text"  id="c2" name="c2" onchange='Calculattess();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box Dish Pack<span class="item_number">
+
+                            <input type="text"  id="c3" name="c3" onchange='Calculattess();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box l Large<span class="item_number">
+
+                            <input type="text"  id="c4" name="c4" onchange='Calculattess();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box l Large<span class="item_number">
+
+                            <input type="text"  id="c5" name="c5" onchange='Calculattess();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box l Large<span class="item_number">
+
+                            <input type="text"  id="c6" name="c6" onchange='Calculattess();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box l Large<span class="item_number">
+
+                            <input type="text"  id="c7" name="c7" onchange='Calculattess();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box l Medium<span class="item_number">
+
+                            <input type="text"  id="c8" name="c8" onchange='Calculattess();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box l Small<span class="item_number">
+
+                            <input type="text"  id="c9" name="c9" onchange='Calculattess();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chairs.png'%}"></span>Breakfast Suit Chair<span class="item_number">
+
+                            <input type="text"  id="c10" name="c10" onchange='Calculattess();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/table_garden.png'%}"></span>Breakfast Table<span class="item_number">
+
+                            <input type="text"  id="c11" name="c11" onchange='Calculattess();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chair_dining.png'%}"></span>Chair l High<span class="item_number">
+
+                            <input type="text"  id="c12" name="c12" onchange='Calculattess();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/kitchen.png'%}"></span>Kitchen Cabinet<span class="item_number">
+
+                            <input type="text"  id="c13" name="c13" onchange='Calculattess();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Serving Cart<span class="item_number">
+
+                            <input type="text"  id="c14" name="c14" onchange='Calculattess();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box_long.png'%}"></span>Stone Grinder<span class="item_number">
+
+                            <input type="text"  id="c15" name="c15" onchange='Calculattess();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/stool.png'%}"></span>Stool<span class="item_number">
+
+                            <input type="text"  id="c16" name="c16" onchange='Calculattess();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Table<span class="item_number">
+
+                            <input type="text"  id="c17" name="c17" onchange='Calculattess();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Utility Cabinet<span class="item_number">
+
+                            <input type="text"  id="c18" name="c18" onchange='Calculattess();'>
+
+                            </span></td>
+
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+
+  <script type="text/javascript">
+
+   function Calculattess()
+
+    {
+
+   var c1 = document.getElementById("c1").value; 
+
+   var c2 = document.getElementById("c2").value; 
+
+   var c3 = document.getElementById("c3").value; 
+
+   var c4 = document.getElementById("c4").value; 
+
+   var c5 = document.getElementById("c5").value; 
+
+   var c6 = document.getElementById("c6").value; 
+
+   var c7 = document.getElementById("c7").value; 
+
+   var c8 = document.getElementById("c8").value; 
+
+   var c9 = document.getElementById("c9").value; 
+
+   var c10 = document.getElementById("c10").value; 
+
+   var c11 = document.getElementById("c11").value; 
+
+   var c12 = document.getElementById("c12").value; 
+
+   var c13 = document.getElementById("c13").value; 
+
+   var c14 = document.getElementById("c14").value; 
+
+   var c15 = document.getElementById("c15").value; 
+
+   var c16 = document.getElementById("c16").value; 
+
+   var c17 = document.getElementById("c17").value; 
+
+   var c18 = document.getElementById("c18").value; 
+
+   
+
+        var kit =  Number(c1 * 3) + Number(c2 * 6) + Number(c3 * 10) + Number(c4 * 6) + Number(c5 * 6) + Number(c6 * 6) + Number(c7 * 6) + Number(c8 * 3) + Number(c9 * 2) + Number(c10 * 5) + Number(c11 * 5) + Number(c12 * 5) + Number(c13 * 30) + Number(c14 * 15) + Number(c15 * 8) + Number(c16 * 3) + Number(c17 * 50) + Number(c18 * 10);
+
+        
+
+        var kits =  Number(c1) + Number(c2) + Number(c3) + Number(c4) + Number(c5) + Number(c6) + Number(c7) + Number(c8) + Number(c9) + Number(c10) + Number(c11) + Number(c12) + Number(c13) + Number(c14) + Number(c15) + Number(c16) + Number(c17) + Number(c18);
+
+        
+
+   document.getElementById("kit_product").value= kits;
+
+   document.getElementById("kit_rate").value= kit;
+
+      
+
+    } 
+
+</script>                            
+
+                  
+
+                  
+
+                  
+
+                  
+
+                  </div>
+
+                <!--========================= Kitchen Room End ========================-->
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="panel panel-default">
+
+            <div class="panel-heading" role="tab" id="headingFour">
+
+              <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Dining Room</a> </h4>
+
+            </div>
+
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour" aria-expanded="false" style="height: 0px;">
+
+              <div class="panel-body">
+
+                <!--========================== Dining Room  ==========================-->
+
+                <div class="table-responsive">
+
+                  
+
+                    <table class="table table-striped vc">
+
+                      <tbody>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chair_dining.png'%}"></span>Dining Chair<span class="item_number">
+
+                            <input type="text"  id="d1" name="d1" onchange='Calculattesss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/coffee_table.png'%}"></span>Dining Table<span class="item_number">
+
+                            <input type="text"  id="d2" name="d2" onchange='Calculattesss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/others.png'%}"></span>Water Filter<span class="item_number">
+
+                            <input type="text"  id="d3" name="d3" onchange='Calculattesss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/glass.png'%}"></span>Tea Cart<span class="item_number">
+
+                            <input type="text"  id="d4" name="d4" onchange='Calculattesss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+
+  <script type="text/javascript">
+
+   function Calculattesss()
+
+    {
+
+   var d1 = document.getElementById("d1").value; 
+
+   var d2 = document.getElementById("d2").value; 
+
+   var d3 = document.getElementById("d3").value; 
+
+   var d4 = document.getElementById("d4").value; 
+
+   
+
+   
+
+        var leave =  Number(d1 * 10) + Number(d2 * 35) + Number(d3 * 8) + Number(d4 * 10);
+
+        
+
+        var leaves =  Number(d1) + Number(d2) + Number(d3) + Number(d4);
+
+        
+
+   document.getElementById("leave_rate").value= leave;
+
+   document.getElementById("leave_product").value= leaves;
+
+      
+
+    } 
+
+</script>      
+
+                    
+
+                    
+
+                </div>
+
+                <!--========================= Dining Room End ========================-->
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="panel panel-default">
+
+            <div class="panel-heading" role="tab" id="headingFive">
+
+              <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Porch & Outdoor</a> </h4>
+
+            </div>
+
+            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive" aria-expanded="false" style="height: 0px;">
+
+              <div class="panel-body">
+
+                <!--========================== Porch & Outdoor  ==========================-->
+
+                <div class="table-responsive">
+
+                 
+
+                    <table class="table table-striped vc">
+
+                      <tbody>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chair_dining.png'%}"></span>Chairs l Metal<span class="item_number">
+
+                            <input type="text"  id="e1" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chair_dining.png'%}"></span>Chair l Metal<span class="item_number">
+
+                            <input type="text"  id="e2" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/others.png'%}"></span>Ladder - 8" Metal<span class="item_number">
+
+                            <input type="text"  id="e3" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/others.png'%}"></span>Rug l Large<span class="item_number">
+
+                            <input type="text"  id="e4" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Table l Large<span class="item_number">
+
+                            <input type="text"  id="e5" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/shoe_rack.png'%}"></span>Shoe Rack<span class="item_number">
+
+                            <input type="text"  id="e6" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/others.png'%}"></span>Lawn Moer l Power<span class="item_number">
+
+                            <input type="text"  id="e7" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chair_dining.png'%}"></span>Chair l Aluminium<span class="item_number">
+
+                            <input type="text"  id="e8" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/mirror.png'%}"></span>Out Door Swings<span class="item_number">
+
+                            <input type="text"  id="e9" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Leaf Sweeper<span class="item_number">
+
+                            <input type="text"  id="e10" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Table l Small<span class="item_number">
+
+                            <input type="text"  id="e11" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/bike.png'%}"></span>Motor Cycle <span class="item_number">
+
+                            <input type="text"  id="e12" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/vacuum_cleaner.png'%}"></span>Vaccum Cleaner<span class="item_number">
+
+                            <input type="text"  id="e13" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Cooler<span class="item_number">
+
+                            <input type="text"  id="e14" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Lawn Moer l Hand<span class="item_number">
+
+                            <input type="text"  id="e15" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Glider l Settee<span class="item_number">
+
+                            <input type="text"  id="e16" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/table_garden.png'%}"></span>Umbrella<span class="item_number">
+
+                            <input type="text"  id="e17" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/lamps-ceiling.png'%}"></span>Tool Chest<span class="item_number">
+
+                            <input type="text"  id="e18" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Ladder Extension<span class="item_number">
+
+                            <input type="text"  id="e19" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/table_garden.png'%}"></span>Garden Hose &amp; Tools<span class="item_number">
+
+                            <input type="text"  id="e20" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cycle.png'%}"></span>Bicycle<span class="item_number">
+
+                            <input type="text"  id="e21" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Picnic Table<span class="item_number">
+
+                            <input type="text"  id="e22" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Outdoor Child Slide<span class="item_number">
+
+                            <input type="text"  id="e23" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/coat_stand.png'%}"></span>Cloth Stand<span class="item_number">
+
+                            <input type="text"  id="e24" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/treadmill.png'%}"></span>Out Door Child Gym<span class="item_number">
+
+                            <input type="text"  id="e25" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/carpet.png'%}"></span>Lawn Roller<span class="item_number">
+
+                            <input type="text"  id="e26" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/dryer.png'%}"></span>Out Door Dry Racks<span class="item_number">
+
+                            <input type="text"  id="e27" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Ladder l Metal<span class="item_number">
+
+                            <input type="text"  id="e28" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/bike.png'%}"></span>Scooter<span class="item_number">
+
+                            <input type="text"  id="e29" name="e" onchange='Calculattessss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+
+ <script type="text/javascript">
+
+   function Calculattessss()
+
+    {
+
+   var e1 = document.getElementById("e1").value; 
+
+   var e2 = document.getElementById("e2").value; 
+
+   var e3 = document.getElementById("e3").value; 
+
+   var e4 = document.getElementById("e4").value; 
+
+   var e5 = document.getElementById("e5").value; 
+
+   var e6 = document.getElementById("e6").value; 
+
+   var e7 = document.getElementById("e7").value; 
+
+   var e8 = document.getElementById("e8").value; 
+
+   var e9 = document.getElementById("e9").value; 
+
+   var e10 = document.getElementById("e10").value; 
+
+   var e11 = document.getElementById("e11").value; 
+
+   var e12 = document.getElementById("e12").value; 
+
+   var e13 = document.getElementById("e13").value; 
+
+   var e14 = document.getElementById("e14").value; 
+
+   var e15 = document.getElementById("e15").value; 
+
+   var e16 = document.getElementById("e16").value; 
+
+   var e17 = document.getElementById("e17").value; 
+
+   var e18 = document.getElementById("e18").value; 
+
+   var e19 = document.getElementById("e19").value; 
+
+   var e20 = document.getElementById("e20").value; 
+
+   var e21 = document.getElementById("e21").value; 
+
+   var e22 = document.getElementById("e22").value; 
+
+   var e23 = document.getElementById("e23").value; 
+
+   var e24 = document.getElementById("e24").value; 
+
+   var e25 = document.getElementById("e25").value; 
+
+   var e26 = document.getElementById("e26").value; 
+
+   var e27 = document.getElementById("e27").value; 
+
+   var e28 = document.getElementById("e28").value; 
+
+   var e29 = document.getElementById("e29").value; 
+
+   
+
+        var porch =  Number(e1 * 13) + Number(e2 * 3) + Number(e3 * 2) + Number(e4 * 7) + Number(e5 * 4) + Number(e6 * 12) + Number(e7 * 15) + Number(e8 * 1) + Number(e9 * 30) + Number(e10 * 1) + Number(e11 * 2) + Number(e12 * 75) + Number(e13 * 5) + Number(e14 * 35) + Number(e15 * 5) + Number(e16 * 20) + Number(e17 * 5) + Number(e18 * 3) + Number(e19 * 8) + Number(e20 * 10) + Number(e21 * 18) + Number(e22 * 20) + Number(e23 * 10) + Number(e24 * 2) + Number(e25 * 20) + Number(e26 * 15) + Number(e27 * 5) + Number(e28 * 11) + Number(e29 * 70);
+
+        
+
+        var porchs =  Number(e1) + Number(e2) + Number(e3) + Number(e4) + Number(e5) + Number(e6) + Number(e7) + Number(e8) + Number(e9) + Number(e10) + Number(e11) + Number(e12) + Number(e13) + Number(e14) + Number(e15) + Number(e16) + Number(e17) + Number(e18) + Number(e19) + Number(e20) + Number(e21) + Number(e22) + Number(e23) + Number(e24) + Number(e25) + Number(e26) + Number(e27) + Number(e28) + Number(e29);
+
+        
+
+   document.getElementById("porch_rate").value= porch;
+
+   document.getElementById("porch_pro").value= porchs;
+
+      
+
+    } 
+
+</script>           
+
+                  
+
+                    
+
+                  </div>
+
+                <!--========================= Porch & Outdoor End ========================-->
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="panel panel-default">
+
+            <div class="panel-heading" role="tab" id="headingSix">
+
+              <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">Miscellaneous</a> </h4>
+
+            </div>
+
+            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix" aria-expanded="false" style="height: 0px;">
+
+              <div class="panel-body">
+
+                <!--========================== Miscellaneous  ==========================-->
+
+                <div class="table-responsive">
+
+                  
+
+                    <table class="table table-striped vc">
+
+                      <thead>
+
+                        <tr>
+
+                          <th colspan="6" class="text-center cat">Miscellaneous</th>
+
+                        </tr>
+
+                      </thead>
+
+                      <tbody>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/others.png'%}"></span>Sled<span class="item_number">
+
+                            <input type="text"  id="f1" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/coat_stand.png'%}"></span>Power Tool Stand<span class="item_number">
+
+                            <input type="text"  id="f2" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/basket_cane.png'%}"></span>Trash Can<span class="item_number">
+
+                            <input type="text"  id="f3" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/writing_desk.png'%}"></span>Office Desk<span class="item_number">
+
+                            <input type="text"  id="f4" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Card Table<span class="item_number">
+
+                            <input type="text"  id="f5" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Card Table<span class="item_number">
+
+                            <input type="text"  id="f6" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/plants.png'%}"></span>Fern/ Plants Stands<span class="item_number">
+
+                            <input type="text"  id="f7" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables_livingroom.png'%}"></span>Work Bench<span class="item_number">
+
+                            <input type="text"  id="f8" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box.png'%}"></span>Box, Small<span class="item_number">
+
+                            <input type="text"  id="f9" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cds.png'%}"></span>Tire With Rim<span class="item_number">
+
+                            <input type="text"  id="f10" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/stove.png'%}"></span>Gas/ Electric Heater <span class="item_number">
+
+                            <input type="text"  id="f11" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Filling Cabinet 4 Door<span class="item_number">
+
+                            <input type="text"  id="f12" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Utility table<span class="item_number">
+
+                            <input type="text"  id="f13" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cds.png'%}"></span>Tire<span class="item_number">
+
+                            <input type="text"  id="f14" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/waste_paper_band.png'%}"></span>Wastepaper Basket<span class="item_number">
+
+                            <input type="text"  id="f15" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box_long.png'%}"></span>Clothes Basket<span class="item_number">
+
+                            <input type="text"  id="f16" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/wardrobe.png'%}"></span>Golf Bag<span class="item_number">
+
+                            <input type="text"  id="f17" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/wardrobe.png'%}"></span>Filing Cabinet 2 doors<span class="item_number">
+
+                            <input type="text"  id="f18" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Table, Game<span class="item_number">
+
+                            <input type="text"  id="f19" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/statue.png'%}"></span>Filing Cabinet Cadboard<span class="item_number">
+
+                            <input type="text"  id="f20" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/toys.png'%}"></span>Child's Wagon<span class="item_number">
+
+                            <input type="text"  id="f21" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/lamps-ceiling.png'%}"></span>Fan<span class="item_number">
+
+                            <input type="text"  id="f22" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/suitcase.png'%}"></span>Suitcase<span class="item_number">
+
+                            <input type="text"  id="f23" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/washing_machines.png'%}"></span>Sewing Machine Port<span class="item_number">
+
+                            <input type="text"  id="f24" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/toys.png'%}"></span>Baby Carriage<span class="item_number">
+
+                            <input type="text"  id="f25" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box_long.png'%}"></span>Tackle Box<span class="item_number">
+
+                            <input type="text"  id="f26" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/lamp.png'%}"></span>Pool Table Lamp<span class="item_number">
+
+                            <input type="text"  id="f27" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Metel Shelves<span class="item_number">
+
+                            <input type="text"  id="f28" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/writing_desk.png'%}"></span>Footlockers<span class="item_number">
+
+                            <input type="text"  id="f29" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box_long.png'%}"></span>Box, Medium<span class="item_number">
+
+                            <input type="text"  id="f30" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Toolchest, Small<span class="item_number">
+
+                            <input type="text"  id="f31" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/chairs.png'%}"></span>Folding Chairs<span class="item_number">
+
+                            <input type="text"  id="f32" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/coat_stand.png'%}"></span>Clothes Hamper<span class="item_number">
+
+                            <input type="text"  id="f33" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/storage_box_long.png'%}"></span>Box, Large<span class="item_number">
+
+                            <input type="text"  id="f34" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cabinet.png'%}"></span>Toolchest, Medium<span class="item_number">
+
+                            <input type="text"  id="f35" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables.png'%}"></span>Table, Ping Pong<span class="item_number">
+
+                            <input type="text"  id="f36" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/washing_machines.png'%}"></span>Sewing Machine Console<span class="item_number">
+
+                            <input type="text"  id="f37" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/tables_livingroom.png'%}"></span>Pool Stand Table<span class="item_number">
+
+                            <input type="text"  id="f38" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cycle.png'%}"></span>Bicycle<span class="item_number">
+
+                            <input type="text"  id="f39" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/cycle.png'%}"></span>Tricycle<span class="item_number">
+
+                            <input type="text"  id="f40" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/washing_machines.png'%}"></span>Sewing Machine Cabinet<span class="item_number">
+
+                            <input type="text"  id="f41" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/coffee_table.png'%}"></span>Power Tool Hand<span class="item_number">
+
+                            <input type="text"  id="f42" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/coffee_table.png'%}"></span>Toolchest, Large<span class="item_number">
+
+                            <input type="text"  id="f43" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/coat_stand.png'%}"></span>Folding Cot<span class="item_number">
+
+                            <input type="text"  id="f44" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/dish_washer.png'%}"></span>Bowling/ Ball/ Bag<span class="item_number">
+
+                            <input type="text"  id="f45" name="f" onchange='Calculattesssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+
+ <script type="text/javascript">
+
+   function Calculattesssss()
+
+    {
+
+   var f1 = document.getElementById("f1").value; 
+
+   var f2 = document.getElementById("f2").value; 
+
+   var f3 = document.getElementById("f3").value; 
+
+   var f4 = document.getElementById("f4").value; 
+
+   var f5 = document.getElementById("f5").value; 
+
+   var f6 = document.getElementById("f6").value; 
+
+   var f7 = document.getElementById("f7").value; 
+
+   var f8 = document.getElementById("f8").value; 
+
+   var f9 = document.getElementById("f9").value; 
+
+   var f10 = document.getElementById("f10").value; 
+
+   var f11 = document.getElementById("f11").value; 
+
+   var f12 = document.getElementById("f12").value; 
+
+   var f13 = document.getElementById("f13").value; 
+
+   var f14 = document.getElementById("f14").value; 
+
+   var f15 = document.getElementById("f15").value; 
+
+   var f16 = document.getElementById("f16").value; 
+
+   var f17 = document.getElementById("f17").value; 
+
+   var f18 = document.getElementById("f18").value; 
+
+   var f19 = document.getElementById("f19").value; 
+
+   var f20 = document.getElementById("f20").value; 
+
+   var f21 = document.getElementById("f21").value; 
+
+   var f22 = document.getElementById("f22").value; 
+
+   var f23 = document.getElementById("f23").value; 
+
+   var f24 = document.getElementById("f24").value; 
+
+   var f25 = document.getElementById("f25").value; 
+
+   var f26 = document.getElementById("f26").value; 
+
+   var f27 = document.getElementById("f27").value; 
+
+   var f28 = document.getElementById("f28").value; 
+
+   var f29 = document.getElementById("f29").value; 
+
+   var f30 = document.getElementById("f30").value; 
+
+   var f31 = document.getElementById("f31").value; 
+
+   var f32 = document.getElementById("f32").value; 
+
+   var f33 = document.getElementById("f33").value; 
+
+   var f34 = document.getElementById("f34").value; 
+
+   var f35 = document.getElementById("f35").value; 
+
+   var f36 = document.getElementById("f36").value; 
+
+   var f37 = document.getElementById("f37").value; 
+
+   var f38 = document.getElementById("f38").value; 
+
+   var f39 = document.getElementById("f39").value; 
+
+   var f40 = document.getElementById("f40").value; 
+
+   var f41 = document.getElementById("f41").value; 
+
+   var f42 = document.getElementById("f42").value; 
+
+   var f43 = document.getElementById("f43").value; 
+
+   var f44 = document.getElementById("f44").value; 
+
+   var f45 = document.getElementById("f45").value; 
+
+  
+
+   
+
+        var mis =  Number(f1 * 2) + Number(f2 * 15) + Number(f3 * 7) + Number(f4 * 30) + Number(f5 * 2) + Number(f6 * 2) + Number(f7 * 2) + Number(f8 * 20) + Number(f9 * 2) + Number(f10 * 5) + Number(f11 * 5) + Number(f12 * 20) + Number(f13 * 5) + Number(f14 * 3) + Number(f15 * 2) + Number(f16 * 5) + Number(f17 * 4) + Number(f18 * 10) + Number(f19 * 15) + Number(f20 * 3) + Number(f21 * 50) + Number(f22 * 5) + Number(f23 * 5) + Number(f24 * 5) + Number(f25 * 4) + Number(f26 * 1) + Number(f27 * 40) + Number(f28 * 5) + Number(f29 * 5) + Number(f30 * 3) + Number(f31 * 5) + Number(f32 * 1) + Number(f33 * 5) + Number(f34 * 6) + Number(f35 * 10) + Number(f36 * 40) + Number(f37 * 10) + Number(f38 * 15) + Number(f39 * 18) + Number(f40 * 5) + Number(f41 * 20) + Number(f42 * 3) + Number(f43 * 15) + Number(f44 * 10) + Number(f45 * 3);
+
+        
+
+        var miss =  Number(f1) + Number(f2) + Number(f3) + Number(f4) + Number(f5) + Number(f6) + Number(f7) + Number(f8) + Number(f9) + Number(f10) + Number(f11) + Number(f12) + Number(f13) + Number(f14) + Number(f15) + Number(f16) + Number(f17) + Number(f18) + Number(f19) + Number(f20) + Number(f21) + Number(f22) + Number(f23) + Number(f24) + Number(f25) + Number(f26) + Number(f27) + Number(f28) + Number(f29) +Number(f30) + Number(f31) + Number(f32) + Number(f33) + Number(f34) + Number(f35) + Number(f36) + Number(f37) + Number(f38) + Number(f39) + Number(f40) + Number(f41) + Number(f42) + Number(f43) + Number(f44) + Number(f45);
+
+        
+
+   document.getElementById("mis_rate").value= mis;
+
+   document.getElementById("mis_pro").value= miss;
+
+      
+
+    } 
+
+</script>              
+
+                  
+
+                    
+
+                  </div>
+
+                <!--========================= Miscellaneous End ========================-->
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="panel panel-default">
+
+            <div class="panel-heading" role="tab" id="headingSeven">
+
+              <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">Appliances</a> </h4>
+
+            </div>
+
+            <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven" aria-expanded="false" style="height: 0px;">
+
+              <div class="panel-body">
+
+                <!--========================== Appliances  ==========================-->
+
+                <div class="table-responsive">
+
+                  
+
+                    <table class="table table-striped vc">
+
+                      <tbody>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/wardrobe.png'%}"></span>Air Conditioner <span class="item_number">
+
+                            <input type="text"  id="g1" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/kitchen.png'%}"></span>Cooking range<span class="item_number">
+
+                            <input type="text"  id="g2" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/dish_washer.png'%}"></span>Dish Washer<span class="item_number">
+
+                            <input type="text"  id="g3" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/freezer.png'%}"></span>Fridge 100 Ltr<span class="item_number">
+
+                            <input type="text"  id="g4" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/freezer.png'%}"></span>Fridge 165 Ltr<span class="item_number">
+
+                            <input type="text"  id="g5" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/washing_machines.png'%}"></span>Espresso Machine <span class="item_number">
+
+                            <input type="text"  id="g6" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/freezer.png'%}"></span>Fridge 200 Ltr<span class="item_number">
+
+                            <input type="text"  id="g7" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/freezer.png'%}"></span>Fridge l Large<span class="item_number">
+
+                            <input type="text"  id="g8" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/stove.png'%}"></span>Gas Stove<span class="item_number">
+
+                            <input type="text"  id="g9" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/microwave.png'%}"></span>Microwave Oven<span class="item_number">
+
+                            <input type="text"  id="g10" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/microwave.png'%}"></span>Mixer l  Grinder l  Blender<span class="item_number">
+
+                            <input type="text"  id="g11" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/vacuum_cleaner.png'%}"></span>Vacuum Cleaner<span class="item_number">
+
+                            <input type="text"  id="g12" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                        <tr>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/washing_machines.png'%}"></span>Washing Machine<span class="item_number">
+
+                            <input type="text"  id="g13" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                          <td><span class="cat-icon"><img src="{%  static 'images/volume-icon/refrigerators.png'%}"></span>Water Dispenser<span class="item_number">
+
+                            <input type="text"  id="g14" name="g" onchange='Calculattessssss();'>
+
+                            </span></td>
+
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+
+ <script type="text/javascript">
+
+   function Calculattessssss()
+
+    {
+
+   var g1 = document.getElementById("g1").value; 
+
+   var g2 = document.getElementById("g2").value; 
+
+   var g3 = document.getElementById("g3").value; 
+
+   var g4 = document.getElementById("g4").value; 
+
+   var g5 = document.getElementById("g5").value; 
+
+   var g6 = document.getElementById("g6").value; 
+
+   var g7 = document.getElementById("g7").value; 
+
+   var g8 = document.getElementById("g8").value; 
+
+   var g9 = document.getElementById("g9").value; 
+
+   var g10 = document.getElementById("g10").value; 
+
+   var g11 = document.getElementById("g11").value; 
+
+   var g12 = document.getElementById("g12").value; 
+
+   var g13 = document.getElementById("g13").value; 
+
+   var g14 = document.getElementById("g14").value; 
+
+   
+
+   
+
+        var apli =  Number(g1 * 20) + Number(g2 * 30) + Number(g3 * 20) + Number(g4 * 17) + Number(g5 * 20) + Number(g6 * 20) + Number(g7 * 22) + Number(g8 * 30) + Number(g9 * 6) + Number(g10 * 20) + Number(g11 * 3) + Number(g12 * 5) + Number(g13 * 25) + Number(g14 * 20);
+
+        
+
+        var aplis =  Number(g1) + Number(g2) + Number(g3) + Number(g4) + Number(g5) + Number(g6) + Number(g7) + Number(g8) + Number(g9) + Number(g10) + Number(g11) + Number(g12) + Number(g13) + Number(g14);
+
+        
+
+   document.getElementById("apli_rate").value= apli;
+
+   document.getElementById("apli_pro").value= aplis;
+
+      
+
+    } 
+
+</script>        
+
+                    
+
+                  
+
+                  </div>
+
+                <!--========================= Appliances End ========================-->
+
+              </div>
+
+            </div>
+
+          </div>
+
+         
+
+          <div class="panel panel-default">
+
+            <div class="panel-heading" role="tab" id="headingSeven">
+
+              <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseresult" aria-expanded="false" aria-controls="collapseSeven">Result</a> </h4>
+
+            </div>
+
+            <div id="collapseresult" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven" aria-expanded="false" style="height: 0px;">
+
+              <div class="panel-body">
+
+                <!--========================== Appliances  ==========================-->
+
+                <div class="table-responsive">
+
+<table class="table">
+
+	<tbody>
+
+        <form id ='myForm' action="" method="post" name="myForm" oninput="sas.value=(parseInt(living_product_rate.value)+parseInt(bed_product.value)+parseInt(kit_rate.value)+parseInt(leave_rate.value)+parseInt(porch_rate.value)+parseInt(mis_rate.value)+parseInt(apli_rate.value))">
+
+				<tr>
+
+				<td>Total Product Of Living Room</td>
+
+				<td class="total_living"><input readonly value="0" name="a_s" id="living_product" class="form-control" type="text" onchange='Calculates();'/></td>
+
+				<td>Sub Total Of Living Room</td>
+
+				<td class="total_living"><input readonly name="living_product_rate" id="living_product_rate" value="0" class="form-control" type="text"/></td>
+
+			</tr>
+
+			
+
+						
+
+			<tr>
+
+				<td>Total Products Of Bed Room</td>
+
+				<td class="total_living"><input readonly value="0" name="a_s" id="bedroomrate" class="form-control" type="text"/></td>
+
+				<td>Sub Total Of Bed Room</td>
+
+				<td class="total_living"><input readonly name="bed_product" id="bed_product" value="0" class="form-control" type="text"/></td>
+
+			</tr>
+
+			
+
+			
+
+					
+
+			<tr>
+
+				<td>Total Products Of Kitchen</td>
+
+				<td class="total_living"><input readonly value="0" type="text"  id="kit_product"  class="form-control" name="kit_product"></td>
+
+				<td>Sub Total Of Kitchen</td>
+
+				<td class="total_living"><input readonly type="text"  id="kit_rate" value="0" name="kit_rate" class="form-control"></td>
+
+			</tr>
+
+			
+
+			
+
+					
+
+			<tr>
+
+				<td>Total Products Of Dining Room</td>
+
+				<td class="total_living"><input readonly value="0" type="text"  id="leave_product" class="form-control"  name="leave_product"></td>
+
+				<td>Sub Total Of Dining Room</td>
+
+				<td class="total_living"><input readonly type="text"  id="leave_rate" value="0" name="leave_rate" class="form-control"></td>
+
+			</tr>
+
+			
+
+			
+
+					
+
+			<tr>
+
+				<td>Total Number Of Porch &amp; Outdoor</td>
+
+				<td class="total_living"><input readonly value="0" type="text"  id="porch_pro" class="form-control" name="porch_pro"></td>
+
+				<td>Sub Total Of Porch &amp; Outdoor</td>
+
+				<td class="total_living"><input readonly type="text"  id="porch_rate" value="0" name="porch_rate" class="form-control"></td>
+
+			</tr>
+
+			
+
+			
+
+					
+
+			<tr>
+
+				<td>Total Number Of Miscellaneous</td>
+
+				<td class="total_living"><input readonly value="0" type="text"  id="mis_pro" name="mis_pro" class="form-control"></td>
+
+				<td>Sub Total Of Miscellaneous</td>
+
+				<td class="total_living"><input readonly type="text"  id="mis_rate" value="0" name="mis_rate" class="form-control"></td>
+
+			</tr>
+
+			
+
+			
+
+					
+
+			<tr>
+
+				<td>Total Number Of Appliances</td>
+
+				<td class="total_living"><input readonly value="0" type="text"  id="apli_pro" name="kit_rate" class="form-control"></td>
+
+				<td>Sub Total Of Appliances</td>
+
+				<td class="total_living"><input readonly type="text"  id="apli_rate" value="0" name="apli_rate" class="form-control"></td>
+
+			</tr>
+
+			
+
+<!--
+
+
+
+			
+
+				
+
+		
+
+		
+
+		<tr class="vcr-total">
+
+			<td>Total :</td>
+
+			<td class="final_total"><input  type="text" name="sas" id="sas" class="form-control"></td>
+
+		</tr>	
+
+-->
+
+        </form>
+
+</tbody></table>   
+
+                  </div>
+
+                <!--========================= Appliances End ========================-->
+
+              </div>
+
+            </div>
+
+          </div>
+
+           
+
+            
+
+         
+
+         
+
+        </div>
+
+      </div>
+
+      <!--- END COL -->
+
+    </div>
+
+  </div>
+
+  <!--- END ROW -->
+
+</div>
+
+<!--===============Calculate your volumet End===========================-->
+
+<!--=============== Resource ==============-->
+
+<div class="loction-bg container-fluid">
+
+  <div class="col-md-12 content-column">
+
+    <h4 class="location-title model-six">Resources </h4>
+
+    <div class="p-medium-model-ten">
+
+      <p class="location-sub-title">A range of useful resources to help guide you through the process, every step of the way</p>
+
+    </div>
+
+    <a class="btn-model-quote" href="useful-tools.php">LEARN MORE</a> </div>
+
+</div>
+
+<!--=============== Resource End==============-->
+
+<!--============================= Customer Just Like ==============================-->
+
+<div class="text-center counter6 customer-like">
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 count-header">
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 count-header">
+
+      <h2 class="overview_title text-center">WHY US</h2>
+
+      <div class="separator"><span><i class="fa fa-circle"></i></span></div>
+
+     
+
+    </div>
+
+  </div>
+
+
+
+</div>
+
+<!--============================= Customer Just like end =========================-->
+
+<!-- sticky -->
+
+<div id="mySidenav" class="sidenav"> <a href="{%url 'requestquote'%}" id="cup"><span><img src="{%  static 'images/cup.jpg'%}"></span><span class="cup-tea">Lets have a Cup of Tea</span></a> </div>
+
+<!-- Sticky -->
+
+<!-- Stat Footer -->
 
 {%endblock%}

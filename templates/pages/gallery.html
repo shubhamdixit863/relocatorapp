@@ -1,8 +1,150 @@
 {%  extends 'base.html'%}
+{% load static%}
 {%block title%}
 |Welcome
 
 {%endblock%}
 {% block content%}
+
+<div class="clearfix"></div>
+<!--header end-->
+<!--Page Title-->
+<section class="page-title inner-baner">
+    <div class="container">
+        <h2>GALLERY</h2>
+        <ul class="bread-crumb clearfix">
+            <li><i class="fa fa-home"></i> <a href="<?php echo $base_url;?>">Home</a></li>
+            <li class="active">Gallery</li>
+        </ul>
+    </div>
+</section>
+<!--End Page Title-->
+</div>
+<!-- Gallery Section 1 -->
+<section class="sec-pad track refund-policy-section">
+    <div class="container">
+        <div class="row">
+            <h2 class="overview_title text-center">Gallery</h2>
+            <div class="separator"><span><i class="fa fa-circle"></i></span></div>
+<div class="co-md-4 col-sm-4 col-xs-12">
+        <div class="service-image-block">
+            <div class="service-image-inner">
+                <div class="service-img"> <a href="{% static 'uploads/material for tree packaging.jpeg'%}">
+                    <img style="width: 100%; height: 260px;" src="{% static 'uploads/material for tree packaging.jpeg'%}" alt="Material for Tree Packaging"></a> 
+                </div>
+                    <h3>Material for Tree Packaging</h3>
+            </div>
+
+        </div>
+    </div>
+  <div class="co-md-4 col-sm-4 col-xs-12">
+        <div class="service-image-block">
+            <div class="service-image-inner">
+                <div class="service-img"> <a href="{% static 'uploads/crate for tree packing.jpeg'%}">
+                    <img style="width: 100%; height: 260px;" src="{% static 'uploads/crate for tree packing.jpeg'%}" alt="Crate for Tree Packing"></a> 
+                </div>
+                    <h3>Crate for Tree Packing</h3>
+            </div>
+
+        </div>
+    </div>
+  <div class="co-md-4 col-sm-4 col-xs-12">
+        <div class="service-image-block">
+            <div class="service-image-inner">
+                <div class="service-img"> <a href="{% static 'uploads/Tree Packing.jpeg'%}">
+                    <img style="width: 100%; height: 260px;" src="{% static 'uploads/Tree Packing.jpeg'%}" alt="Tree Packing"></a> 
+                </div>
+                    <h3>Tree Packing</h3>
+            </div>
+
+        </div>
+    </div>
+  <div class="co-md-4 col-sm-4 col-xs-12">
+        <div class="service-image-block">
+            <div class="service-image-inner">
+                <div class="service-img"> <a href="{% static 'uploads/bubble roll for packaging.jpg'%}">
+                    <img style="width: 100%; height: 260px;" src="{% static 'uploads/bubble roll for packaging.jpg'%}" alt="Bubble Roll for Packaging"></a> 
+                </div>
+                    <h3>Bubble Roll for Packaging</h3>
+            </div>
+
+        </div>
+    </div>
+  <div class="co-md-4 col-sm-4 col-xs-12">
+        <div class="service-image-block">
+            <div class="service-image-inner">
+                <div class="service-img"> <a href="{% static 'uploads/Base for packing equipment.jpg'%}">
+                    <img style="width: 100%; height: 260px;" src="{% static 'uploads/Base for packing equipment.jpg'%}" alt="Base for Packing Equipment"></a> 
+                </div>
+                    <h3>Base for Packing Equipment</h3>
+            </div>
+
+        </div>
+    </div>
+  <div class="co-md-4 col-sm-4 col-xs-12">
+        <div class="service-image-block">
+            <div class="service-image-inner">
+                <div class="service-img"> <a href="{% static 'uploads/Packed Equipment.jpg'%}">
+                    <img style="width: 100%; height: 260px;" src="{% static 'uploads/Packed Equipment.jpg'%}" alt="Packed Equipment"></a> 
+                </div>
+                    <h3>Packed Equipment</h3>
+            </div>
+
+        </div>
+    </div>
+  <div class="co-md-4 col-sm-4 col-xs-12">
+        <div class="service-image-block">
+            <div class="service-image-inner">
+                <div class="service-img"> <a href="{% static 'uploads/Packing Image.jpg'%}">
+                    <img style="width: 100%; height: 260px;" src="{% static 'uploads/Packing Image.jpg'%}" alt="Equipment Packing"></a> 
+                </div>
+                    <h3>Equipment Packing</h3>
+            </div>
+
+        </div>
+    </div>
+  <div class="co-md-4 col-sm-4 col-xs-12">
+        <div class="service-image-block">
+            <div class="service-image-inner">
+                <div class="service-img"> <a href="{% static 'uploads/Packing.jpg'%}">
+                    <img style="width: 100%; height: 260px;" src="{% static 'uploads/Packing.jpg'%}" alt="Office Packing"></a> 
+                </div>
+                    <h3>Office Packing</h3>
+            </div>
+
+        </div>
+    </div>
+  
+            
+        </div>
+    </div>
+</section>
+<!-- Gallery Section 1 End -->
+
+<!--=============== Resource ==============-->
+<div class="loction-bg container-fluid">
+    <div class="col-md-12 content-column">
+        <h4 class="location-title model-six">Resources </h4>
+        <div class="p-medium-model-ten">
+            <p class="location-sub-title">A range of useful resources to help guide you through the process, every step of the way</p>
+        </div> <a class="btn-model-quote" href="#">LEARN MORE</a> </div>
+</div>
+<!--=============== Resource End==============-->
+<!--============================= Customer Just Like ==============================-->
+<div class="text-center counter6 customer-like">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 count-header">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 count-header">
+            <h2 class="overview_title text-center">WHY US</h2>
+            <div class="separator"><span><i class="fa fa-circle"></i></span></div>
+           <?php echo $why_us;?>
+        </div>
+    </div>
+
+  
+    
+</div>
+<!--============================= Customer Just like end =========================-->
+<!-- sticky -->
+<div id="mySidenav" class="sidenav"> <a href="{%url 'requestquote'%}" id="cup"><span><img src="{% static 'images/cup.jpg'%}"></span><span class="cup-tea">Lets have a Cup of Tea</span></a> </div>
 
 {%endblock%}

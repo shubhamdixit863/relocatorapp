@@ -45,12 +45,22 @@
                             <div class="relocatoremovals_datas" style="padding-top:100px;">
                                 <img src="{% static 'images/packars_img.png'%}"  alt="" class="img-responsive">
                             </div>
+                            {%include 'partials/_alerts.html' %}
                             <div class="relocatoremovals_content">
-                                <form id="main-calculator-form" method="Post" action="volumecalculator-enquiry_2.php">
+                                  
+                                    <form action="{% url 'contactenquiry'%}" id="main-calculator-form" method="POST">
+                                      {%csrf_token%}
+                                      {%if user.is_authenticated%}
+                                      <input type="hidden" name="user_id" value="{{user.id}}">
+                          
+                                      {%else%}
+                                      <input type="hidden" name="user_id" value="0">
+                                      {%endif%}
+                               
                                     <div class="first_row">
                                         <div class="form-group">
                                             <label for="email">I am shifting my</label>
-                                                <select class="select_side" required="" name="select_side" >
+                                                <select class="select_side" required="" name="prop_size" >
                                                 <option>1BHK</option>
                                                 <option>2BHK</option>
                                                 <option>3BHK</option>
@@ -60,35 +70,82 @@
                                         </div>
                                         <div class="form-group">
                                             <div id="map" style="width:80%;height:350px; display: none;" ></div>
-                <div id="geoData">
-                    <input type="hidden" name="full_address" id="location" value="">
-                  <input type="hidden" name="postalcode" id="postal_code" value="">
-                  <input type="hidden" name="country" id="country" value="">
-                  <input type="hidden" name="latitude" id="lat" value="">
-                  <input type="hidden" name="longitude" id="lon" value="">
-                    </div> 
+                
                                             <label for="from">from:</label>
-                                                <input type="text" class="form-control autocomplete" placeholder="Apartment Name/Locality" required="" name="side_from" id="ac1">
+                                                <input type="text" class="form-control autocomplete" placeholder="Apartment Name/Locality" required="" name="moving_city" id="ac1">
                                         </div>
                                     </div>
                                     <div class="second_row">
                                         <div class="form-group">
                                             <label for="to">to</label>
-                                                <input type="text" class="form-control autocomplete" placeholder="Apartment Name/Locality" required="" name="side_to" id="ac2">
+                                                <input type="text" class="form-control autocomplete" placeholder="Apartment Name/Locality" required="" name="destination_city" id="ac2">
                                         </div>
                                         <div class="form-group">
                                             <label for="pwd">from:</label>
                                             <div class="input-group date" data-date-format="dd.mm.yyyy">
                                                 <div id="sandbox-container" style="width: 100% !important;">
-                                                    <input type="text" name="moving_date"  class="form-control datepickstart" placeholder="Select moving date"  autocomplete="off" required />
+                                                    <input type="text" name="move_date"  id="datepicker2" class="form-control datepickstart" placeholder="Select moving date"  autocomplete="off" required />
                                                 </div>
                                                 <div class="input-group-addon" >
                                                 </div>		
                                                 </div>											
                                             </div>
+
+                                            <div class="form-group">
+                                                    <label for="pwd">First Name</label>
+                                                    <div class="input-group date" data-date-format="dd.mm.yyyy">
+                                                        <div id="sandbox-container" style="width: 100% !important;">
+
+                                                            <input type="text" name="fname"   class="form-control datepickstart" placeholder="First Name"  autocomplete="off" required />
+                                                        </div>
+                                                        <div class="input-group-addon" >
+                                                        </div>		
+                                                        </div>
+                                                       										
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                            <label for="pwd">Last Name</label>
+                                                            <div class="input-group date" data-date-format="dd.mm.yyyy">
+                                                                <div id="sandbox-container" style="width: 100% !important;">
+        
+                                                                    <input type="text" name="lname"   class="form-control datepickstart" placeholder="Last Name"  autocomplete="off" required />
+                                                                </div>
+                                                                <div class="input-group-addon" >
+                                                                </div>		
+                                                                </div>
+                                                                                                       
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                    <label for="pwd">Email</label>
+                                                                    <div class="input-group date" data-date-format="dd.mm.yyyy">
+                                                                        <div id="sandbox-container" style="width: 100% !important;">
+                
+                                                                            <input type="text" name="email"   class="form-control datepickstart" placeholder="Email"  autocomplete="off" required />
+                                                                        </div>
+                                                                        <div class="input-group-addon" >
+                                                                        </div>		
+                                                                        </div>
+                                                                                                               
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                            <label for="pwd">Phone</label>
+                                                                            <div class="input-group date" data-date-format="dd.mm.yyyy">
+                                                                                <div id="sandbox-container" style="width: 100% !important;">
+                        
+                                                                                    <input type="text" name="phone"   class="form-control datepickstart" placeholder="Phone"  autocomplete="off" required />
+                                                                                </div>
+                                                                                <div class="input-group-addon" >
+                                                                                </div>		
+                                                                                </div>
+                                                                                                                       
+                                                                            </div>
+                                                    
                                     </div>
                                     <div class="main_next">
-                                        <button type="submit" class="btn btn-default" name="submit">NEXT</button>
+                                        <button type="submit" class="btn btn-default" name="submit">SUBMIT</button>
                                     </div>
                                 </form>	
                             </div>
@@ -98,6 +155,18 @@
             </div>
         </div>
     </section>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      dateFormat: "yy-mm-dd"
+    });
+
+    $( "#datepicker2" ).datepicker({
+      dateFormat: "yy-mm-dd"
+    });
+  } );
+  </script>
     <!-- Stat Footer -->
 
 {%endblock%}
