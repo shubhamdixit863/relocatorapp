@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /DWISSEL
+Disallow: /users
+Disallow: /REZLT
+Disallow: /ID_UPLOADS
+Disallow: /bots
