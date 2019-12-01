@@ -15,20 +15,20 @@ def contact(request):
     try:
         app_url = request.path
         if request.method == 'POST':
-            title= "Not Mentioned" or request.POST["title"]
-            fname= "Not Mentioned" or request.POST["fname"]
-            lname="Not Mentioned" or request.POST["lname"]
-            service_type= "NOT MENTIONED" or request.POST["service_type"]
+            title=request.POST["title"]
+            fname=request.POST["fname"]
+            lname=request.POST["lname"]
+            service_type=request.POST["service_type"] or "NOT MENTIONED"
             name="{} {} {}".format(title,fname,lname)
-            email="Not Mentioned" or request.POST["email"]
-            phone= "Not Mentioned" or request.POST["phone"]
-            movedate= "Not Mentioned" or request.POST["move_date"]
-            propsize= "Not Mentioned" or request.POST["prop_size"]
-            appoint_date= "Not Mentioned" or request.POST["appointment_date"]
-            moving_city="Not Mentioned" or request.POST["moving_city"]
-            destination_city="Not Mentioned" or request.POST["destination_city"]
-            phone="Not Mentioned" or request.POST["phone"]
-            msg="Not Mentioned" or request.POST["msg"]
+            email=request.POST["email"]
+            phone=request.POST["phone"]
+            movedate=request.POST["move_date"]
+            propsize=request.POST["prop_size"]
+            appoint_date=request.POST["appointment_date"]
+            moving_city=request.POST["moving_city"]
+            destination_city=request.POST["destination_city"]
+            phone=request.POST["phone"]
+            msg=request.POST["msg"]
             message="Hello, I am looking to move  from {}  to {} on {} I need an appointment for {}.My luggage is {} .My Service Type is {} .Comments {}".format(moving_city,destination_city,movedate,appoint_date,propsize,service_type,msg)
             user_id=request.POST["user_id"]
        # realtor_email=request.POST["realtor_email"]
@@ -48,6 +48,7 @@ def contact(request):
             fail_silently=True,
              )
              """
+            print("email submiteed"+email)
             message = Mail(
             from_email='info@relocatoremovals.in',
             to_emails=email,
@@ -59,7 +60,7 @@ def contact(request):
             subject='A new Enquiry Has Arrived',
             html_content="Hi Admin ,You have a Enquiry From Client ,Login To Admin Panel To See More")
             try:
-               sg = SendGridAPIClient('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')
+               sg = SendGridAPIClient('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')
                response = sg.send(message)
                response = sg.send(messageadmin)
                print(response.status_code)
@@ -82,22 +83,23 @@ def contactenquiry(request):
     try:
         app_url = request.path
         if request.method == 'POST':
-            title= "Not Mentioned" or request.POST["title"]
-            fname= "Not Mentioned" or request.POST["fname"]
-            lname="Not Mentioned" or request.POST["lname"]
-            service_type= "NOT MENTIONED" or request.POST["service_type"]
+            title=request.POST["title"]
+            fname=request.POST["fname"]
+            lname=request.POST["lname"]
+            service_type=request.POST["service_type"]
             name="{} {} {}".format(title,fname,lname)
-            email="Not Mentioned" or request.POST["email"]
-            phone= "Not Mentioned" or request.POST["phone"]
-            movedate= "Not Mentioned" or request.POST["move_date"]
-            propsize= "Not Mentioned" or request.POST["prop_size"]
-            appoint_date= "Not Mentioned" or request.POST["appointment_date"]
-            moving_city="Not Mentioned" or request.POST["moving_city"]
-            destination_city="Not Mentioned" or request.POST["destination_city"]
-            phone="Not Mentioned" or request.POST["phone"]
-            msg="Not Mentioned" or request.POST["msg"]
+            email=request.POST["email"]
+            phone=request.POST["phone"]
+            movedate=request.POST["move_date"]
+            propsize=request.POST["prop_size"]
+            appoint_date=request.POST["appointment_date"]
+            moving_city=request.POST["moving_city"]
+            destination_city=request.POST["destination_city"]
+            phone=request.POST["phone"]
+            msg=request.POST["msg"]
             message="Hello, I am looking to move  from {}  to {} on {} I need an appointment for {}.My luggage is {} .My Service Type is {} .Comments {}".format(moving_city,destination_city,movedate,appoint_date,propsize,service_type,msg)
             user_id=request.POST["user_id"]
+            print(user_id)
        # realtor_email=request.POST["realtor_email"]
         #Check if user has already made enquiry
             if request.user.is_authenticated:
@@ -117,7 +119,7 @@ def contactenquiry(request):
              """
             message = Mail(
             from_email='info@relocatoremovals.in',
-            to_emails='shubhamdixit863@gmail.com',
+            to_emails=email,
             subject='Hey,Thanks For Saying Us Hi !!!',
             html_content=htmlcontent)
             message = Mail(
@@ -126,7 +128,7 @@ def contactenquiry(request):
             subject='A new Enquiry Has Arrived',
             html_content="Hi Admin ,You have a Enquiry From Client ,Login To Admin Panel To See More")
             try:
-               sg = SendGridAPIClient('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')
+               sg = SendGridAPIClient('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')
                response = sg.send(message)
                response = sg.send(message)
                print(response.status_code)
@@ -135,8 +137,8 @@ def contactenquiry(request):
             except Exception as e:
                print("This e"+e)
             messages.success(request,"We will Get Back To You Soon")
-            return redirect('requestquote')
+            return redirect('enquiry')
     except Exception as e: 
         print(e)
         messages.error(request,"Please ensure that you input correct data")
-        return redirect('requestquote')
+        return redirect('enquiry')

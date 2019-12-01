@@ -52,7 +52,7 @@
                                       {%csrf_token%}
                                       {%if user.is_authenticated%}
                                       <input type="hidden" name="user_id" value="{{user.id}}">
-                          
+                                     
                                       {%else%}
                                       <input type="hidden" name="user_id" value="0">
                                       {%endif%}
@@ -70,7 +70,11 @@
                                         </div>
                                         <div class="form-group">
                                             <div id="map" style="width:80%;height:350px; display: none;" ></div>
-                
+                                            <input type="hidden" name="title" value="Mr/Miss">
+                                            <input type="hidden" name="service_type" value="Relocation">
+                                            <input type="hidden" name="service_type" value="Relocation">
+                                            <input type="hidden" name="msg" value="Relocation">
+                                            <input type="hidden" name="appointment_date" value="{% now 'jS F Y H:i' %}">
                                             <label for="from">from:</label>
                                                 <input type="text" class="form-control autocomplete" placeholder="Apartment Name/Locality" required="" name="moving_city" id="ac1">
                                         </div>
