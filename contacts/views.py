@@ -36,15 +36,22 @@ def contact(request):
                 
             contact=Contact(name=name,email=email,phone=phone,user_id=user_id,message=message)
             contact.save()
-            """
+            
             send_mail(
-           'Property Listing Enquiry',
-           'There Has Been An Enquiry For Sign In to Admin Panel To See More',
-           'searchingmyself660@gmail.com',
-            ['searchingmyself660@gmail.com','searchingmyself660@gmail.com'],
+             'Property Listing Enquiry',
+            'There Has Been An Enquiry For Sign In to Admin Panel To See More',
+            'info@relocatoremovals.in',
+            ['info@relocatoremovals.in'],
             fail_silently=True,
              )
-             """
+            send_mail(
+           'Property Listing Enquiry',
+           'Thanks For Showing Interest in Our Services .Our Team Will Get In Touch With You Soon',
+           'info@relocatoremovals.in',
+            [email],
+            fail_silently=True,
+             )
+            """
             print("email submiteed"+email)
             message = Mail(
             from_email='info@relocatoremovals.in',
@@ -65,6 +72,7 @@ def contact(request):
                print(response.headers)
             except Exception as e:
                print("This e"+e)
+            """
             messages.success(request,"We will Get Back To You Soon")
             return redirect('enquiry')
     except Exception as e: 
@@ -97,34 +105,42 @@ def contactenquiry(request):
                 
             contact=Contact(name=name,email=email,phone=phone,user_id=user_id,message=msg)
             contact.save()
-            """
+            
             send_mail(
            'Property Listing Enquiry',
            'There Has Been An Enquiry For Sign In to Admin Panel To See More',
-           'searchingmyself660@gmail.com',
-            ['searchingmyself660@gmail.com','searchingmyself660@gmail.com'],
+           'info@relocatoremovals.in',
+            ['info@relocatoremovals.in'],
             fail_silently=True,
              )
-             """
+            send_mail(
+           'Property Listing Enquiry',
+           'Thanks For Showing Interest in Our Services .Our Team Will Get In Touch With You Soon',
+           'info@relocatoremovals.in',
+            [email],
+            fail_silently=True,
+             )
+            """
             message = Mail(
             from_email='info@relocatoremovals.in',
             to_emails=email,
             subject='Hey,Thanks For Saying Us Hi !!!',
             html_content=htmlcontent)
-            message = Mail(
+            messageadmin = Mail(
             from_email='info@relocatoremovals.in',
             to_emails='info@relocatoremovals.in',
             subject='A new Enquiry Has Arrived',
             html_content="Hi Admin ,You have a Enquiry From Client ,Login To Admin Panel To See More")
             try:
-               sg = SendGridAPIClient('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')
+               sg = SendGridAPIClient('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')
                response = sg.send(message)
-               response = sg.send(message)
+              # response = sg.send(messageadmin)
                print(response.status_code)
                print(response.body)
                print(response.headers)
             except Exception as e:
                print("This e"+e)
+            """
             messages.success(request,"We will Get Back To You Soon")
             return redirect('contactus')
     except Exception as e: 

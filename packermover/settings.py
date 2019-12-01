@@ -25,7 +25,9 @@ SECRET_KEY = 'jwns%hyfb^$q_70q@#95!6b(8_92wfvt@o0k2&n$*&obco1wkn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS =['103.211.219.213','localhost']
+
+ALLOWED_HOSTS = ['0.0.0.0','103.211.219.213','localhost']
+
 
 
 # Application definition
@@ -148,9 +150,9 @@ MESSAGE_TAGS = {
 
 #email config
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST='sg2plcpnl0010.prod.sin2.secureserver.net'
-EMAIL_PORT=465
-EMAIL_HOST_USER='info@relocatoremovals.in'
+EMAIL_HOST='smtp-relay.sendinblue.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER='shubhamdixit865@gmail.com'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD='wC,e%JW?g(NV'
+EMAIL_HOST_PASSWORD='yEBOc4Dmp5IYA69F'
 EMAIL_USE_TLS=True
