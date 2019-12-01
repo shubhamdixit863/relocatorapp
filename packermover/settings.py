@@ -25,7 +25,7 @@ SECRET_KEY = 'jwns%hyfb^$q_70q@#95!6b(8_92wfvt@o0k2&n$*&obco1wkn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS =['103.211.219.213']
+ALLOWED_HOSTS =['103.211.219.213','localhost']
 
 
 # Application definition
@@ -70,6 +70,13 @@ TEMPLATES = [
         },
     },
 ]
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'my_cache_table',
+    }
+}
 
 WSGI_APPLICATION = 'packermover.wsgi.application'
 

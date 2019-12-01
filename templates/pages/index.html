@@ -1,188 +1,13 @@
 {%  extends 'base.html'%}
+{% load static%}
 {%block title%}
 |Welcome
 
 {%endblock%}
 {% block content%}
-<!-- popup -->
 
-<div class="popup" data-popup="popup-5">
-
-    <div class="popup-inner">
-  
-      <h3 class="text-center">Call me now</h3>
-  
-      
-  
-      
-  
-        <form>
-  
-            
-  
-        </form>
-  
-        
-  
-          <form action="#" method="post">
-  
-            <input class="form-control" name="phone" type="number" placeholder="Enter your Mobile number">
-  
-            <div class="clearfix"> </div><br><br>
-  
-            <button class="btn btn-success" name="submit" type="submit">Call Now</button>
-  
-            
-  
-            
-  
-        </form>
-  
-       
-  
-     
-  
-      <p><a class="btn" data-popup-close="popup-5" href="#">Close</a></p>
-  
-      <a class="popup-close" data-popup-close="popup-5" href="#">x</a> </div>
-  
-  </div>
   
   <!-- popup end-->
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <div id="firstModal" class="modal fade" role="dialog">
-      {%include 'partials/_alerts.html' %}
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-           
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <div class="my-wel-grid">
-              <h1 class="quick-connect-title" align="center"><b>Quick Connect</b></h1>
-              <form action="{% url 'contact'%}" method="POST">
-                  {%csrf_token%}
-                  {%if user.is_authenticated%}
-                  <input type="hidden" name="user_id" value="{{user.id}}">
-      
-                  {%else%}
-                  <input type="hidden" name="user_id" value="0">
-                  {%endif%}
-              <div class="form-group">
-                <div class="">
-                  <select name="title" required>
-                    <option value="">--Select Salutation--</option>
-                    <option value="Miss">Miss</option>
-                    <option value="Mr">Mr</option>
-                    <option value="Mrs">Mrs</option>
-                    <option value="Ms">Ms</option>
-                    <option value="Dr.">Dr.</option>
-                    <option value="Prof.">Prof.</option>
-                    <option value="Col.">Col.</option>
-                    <option value="Mjr.">Mjr.</option>
-                    <option value="Deacon">Deacon</option>
-                    <option value="Lord">Lord</option>
-                    <option value="Lady">Lady</option>
-                    <option value="Sir">Sir</option>
-                    <option value="Rev.">Rev.</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="">
-                  <input type="text" class="form-control" name="fname" placeholder="First Name" required>
-                </div>
-              </div>
-              <div class="form-group">
-                  <div class="">
-                    <input type="text" class="form-control" name="lname" placeholder="Last Name" required>
-                  </div>
-                </div>
-              <div class="form-group">
-                <div class="">
-                  <input type="email" class="form-control" name="email" placeholder="Email"  required>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="">
-                  <input type="phone" class="form-control" name="phone" placeholder="Phone"  required>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="">
-                  <select  name="service_type" id="selectServiceType" required onchange="checkSelectServiceType()">
-                    <option value="">Select Service Type</option>
-                    <option value="INTERNATIONAL RELOCATION">INTERNATIONAL <span>RELOCATION</span></option>
-                    <option value="WITH IN CITY RELOCATION">WITH IN CITY <span>RELOCATION</span></option>
-                    <option value="CAR SHIFTING">CAR <span>SHIFTING</span></option>
-                    <option value="World Class Storage">World Class <span>Storage</span></option>
-                    <option value="Fine Art Moving">Fine Art <span>Moving</span></option>
-                    <option value="Orientation Services">Orientation <span>Services</span></option>
-                    <option value="Pet Relocation">Pet <span>Relocation</span></option>
-                    <option value="Plants & Trees Relocation">Plants & Trees <span>Relocation</span></option>                                  
-                  </select>
-                </div>
-              </div>            
-              <div class="form-group">
-                <div class="">
-                  <input type="text" class="form-control geo" id="shifting-to1" name="moving_city" placeholder="City moving from" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="">
-                  <input type="text" class="form-control geo" id="shifting-to2" name="destination_city" placeholder="Destination city" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="">
-                  <select name="size"  id="selectSizeOfProperty">
-                    <option value="Not Allow" selected="selected">Select Size of Property</option>
-                   <option value="Just moving a few items">Just moving a few items</option>
-                  <option value="1 bedroom">1 bedroom</option>
-                  <option value="2 bedroom">2 bedrooms</option>
-                  <option value="3 bedroom">3 bedrooms</option>
-                  <option value="4 bedroom">4 bedrooms</option>
-                  <option value="5 bedrooms or more">5 bedrooms or more</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <div style="width: 100% !important;">
-          <div id="sandbox-container">
-            <input type="text" name="move_date" autocomplete="off" class="form-control datepickstart" id="datepicker" placeholder="Select moving date" required/>
-          </div>
-                 </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="">
-                  <textarea class="form-control" name="msg" placeholder="Comments" style="height:55px;"></textarea>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <input type="submit" class="btn btn-primary" id="submit" name="send" value="submit">
-              </div>
-        <div class="col-sm-12 padding10" id="loader">
-          <h3><i class="fa fa-refresh fa-spin"></i> Working</h3>
-        </div>
-            </form>
-        <div id="note"></div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
   <script>
       function checkSelectServiceType() {
@@ -248,85 +73,25 @@
               </div></div>
               <!-- ======================== Text Slider End===========================-->
               <div class="banner_bottom">
-              <a href="https://www.relocatoremovals.in/relocatoremovals-local.php" class="btn-white btn-xlg wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms"><i class="fa fa-home" aria-hidden="true"></i> Shift Home</a> <a href="https://www.relocatoremovals.in/services.php" class="btn-white btn-xlg wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">Explore US</a> <a href="https://www.relocatoremovals.in/vehicle-shifting-steps1.php" class="btn-white btn-xlg wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms"><i class="fa fa-car" aria-hidden="true"></i> Shift Vehicle</a></div>
+              <a href="{% url 'enquiry'%}" class="btn-white btn-xlg wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms"><i class="fa fa-home" aria-hidden="true"></i> Shift Home</a> <a href="{% url 'contactus'%}" class="btn-white btn-xlg wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">Explore US</a> <a href="{% url 'enquiry'%}" class="btn-white btn-xlg wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms"><i class="fa fa-car" aria-hidden="true"></i> Shift Vehicle</a></div>
           </div>
         </div>
       </div>
     </div>
   </div>
   <!--End Main Slider-->
-  <div class="sections-wrapper">
-    <section class="sec-pad form-section padtop">
-      <div class="ntainer-fluid">
-        <!--===================== relocate option ============-->
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2 text-center efficientTool" style="margin-left:10.5%;">
-            <h3 class="call-us">Call Us: <span><b><a style="color:white;" href="tel:"></a></b></span> </h3>
-            <h3 style><b>1 Minute Call is better than 1 Hour Research</b></h3>
-            <p>SHIFTING DOMESTIC & INTERNATIONAL </p>
-          </div>
-        </div>
-        <br><br>
-        <!--===================== relocate option end============-->
-        <div class="row" style="padding-top: 70px;">
-            <form method="post" id="form1" action="#">
-          <div class="col-md-12 col-sm-12 col-xs-12 pull-right">
-            <div class="form-post">
-              <select name="title" class="select_option floatl">
-                <option value="">--Select Salutation--</option>
-                <option value="Miss">Miss</option>
-                <option value="Mr">Mr</option>
-                <option value="Mrs">Mrs</option>
-                <option value="Ms">Ms</option>
-                <option value="Dr.">Dr.</option>
-                <option value="Prof.">Prof.</option>
-                <option value="Col.">Col.</option>
-                <option value="Mjr.">Mjr.</option>
-                <option value="Deacon">Deacon</option>
-                <option value="Lord">Lord</option>
-                <option value="Lady">Lady</option>
-                <option value="Sir">Sir</option>
-                <option value="Rev.">Rev.</option>
-                <option value="Other">Other</option>
-              </select>
-              <input class="floatl" type="text" name="fname" placeholder="Full Name*" required>
-              <input class="floatl" type="email" name="email" placeholder="Email*" pattern="[^ @]@[^ @]" required>
-              <input class="floatl" type="tel" name="phone" placeholder="Phone*" minlength="10" maxlength="10" required> 
-              <input class="floatl" type="text" name="move_city" placeholder="City moving from*" required>
-              <input class="floatl" type="text" name="destination_city" placeholder="Destination city*" required>
-              <select name="size" class="select_option floatl">
-                <option value="">Select Items</option>
-                <option value="Just moving a few items">Just moving a few items</option>
-                  <option value="1 bedroom">1 bedroom</option>
-                  <option value="2 bedroom">2 bedrooms</option>
-                  <option value="3 bedroom">3 bedrooms</option>
-                  <option value="4 bedroom">4 bedrooms</option>
-                  <option value="5 bedrooms or more">5 bedrooms or more</option>
-              </select>
-              <textarea class="form-control col-textarea" name="msg" placeholder="Comments"></textarea>
-               <input type="submit" class="btn btn-primary" id="submit1" name="send1" value="submit">
-            </div>   
-          </div>
-          <div class="col-sm-12 padding10" id="loader1">
-          <h3><i class="fa fa-refresh fa-spin"></i> Working</h3>
-        </div>
-          </form>
-          <div id="note1"></div>
-        </div>
-      </div>
-    </section>
-  </div>
+ 
   <section class="about-section">
     <div class="container">
       <div class="row">
         <div class="col-md-4 hidden-sm hidden-xs">
-          <div class="mover-man-img wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms"> <img src="https://www.relocatoremovals.in/images/mover-man.png" alt=""> </div>
+          <div class="mover-man-img wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1000ms"> <img src="{% static 'images/mover-man.png'%}" alt=""> </div>
         </div>
         <div class="col-md-8">
           <div class="content-col">
             <h1>Welcome to  Packers and Movers</h1>
             <p></p>
-            <a href="https://www.relocatoremovals.in/about.php" class="theme-btn-orng btn-lg">READ MORE</a> </div>
+            <a href="{% url 'about'%}" class="theme-btn-orng btn-lg">READ MORE</a> </div>
         </div>
       </div>
     </div>
@@ -344,155 +109,157 @@
           <div class="owl-carousel">
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/International-relocation.png" alt="International Relocation"/>
+                  
+                <figure class="effect-sarah"> <img src="{% static 'uploads/International-relocation.png'%}" alt="International Relocation"/>
                   <figcaption>
                     <h2>International Relocation</h2>
                     <p><p>Now Forget Stress of Moving as Relocato Covers over 125 countries worldwide and making your international move a cheerful memory to you ever , offering Removals, Shipping , Air Freight &amp; Relocation Support Services .</p>
   </p>
-                    <a href="https://www.relocatoremovals.in/international-relocation.php">View more</a> </figcaption>
+                    </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/within city relocation.jpg" alt="With in City Relocation"/>
+                 
+                <figure class="effect-sarah"> <img  src="{% static 'uploads/178827fa147b0eac68b2ff28db3467fe.jpg'%}" alt="With in City Relocation"/>
                   <figcaption>
                     <h2>With in City Relocation</h2>
                     <p><p>No relocation opportunity is small to us whether you move across the house or street as it is just a way to showcase our expertise to you for future references.</p>
   </p>
-                    <a href="https://www.relocatoremovals.in/with-in-india-shifting-steps1.php">View more</a> </figcaption>
+                     </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/178827fa147b0eac68b2ff28db3467fe.jpg" alt="Vehicle Shifting"/>
+                <figure class="effect-sarah"> <img src="{% static 'uploads/178827fa147b0eac68b2ff28db3467fe.jpg'%}" alt="Vehicle Shifting"/>
                   <figcaption>
                     <h2>Vehicle Shifting</h2>
                     <p><p>Let us transport your car Safe &amp; Hygienically at your Door Step # Feel the Royalism</p>
   </p>
-                    <a href="https://www.relocatoremovals.in/vehicle-shifting.php">View more</a> </figcaption>
+                     </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/fine-art-moving.jpg" alt="Fine Art <span>Moving</span>"/>
+                <figure class="effect-sarah"> <img src="{% static 'uploads/fine-art-moving.jpg'%}" alt="Fine Art <span>Moving</span>"/>
                   <figcaption>
                     <h2>Fine Art <span>Moving</span></h2>
                     <p><p>Don&#39;t afford to take any chance when moving your high value collectivities . It&#39;s awesome to trust our Highly Trained Packers And Movers Crews .</p>
   </p>
-                    <a href="https://www.relocatoremovals.in/fine-art-moving.php">View more</a> </figcaption>
+                   </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/orientation-relocation-service.jpg" alt="Orientation Services"/>
+                <figure class="effect-sarah"> <img src="{% static 'uploads/orientation-relocation-service.jpg'%}" alt="Orientation Services"/>
                   <figcaption>
                     <h2>Orientation Services</h2>
                     <p></p>
-                    <a href="https://www.relocatoremovals.in/orientation-services.php">View more</a> </figcaption>
+                     </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/Inter State Relocation.jpg" alt="Inter State Relocation"/>
+                <figure class="effect-sarah"> <img src="{% static 'uploads/178827fa147b0eac68b2ff28db3467fe.jpg'%}" alt="Inter State Relocation"/>
                   <figcaption>
                     <h2>Inter State Relocation</h2>
                     <p></p>
-                    <a href="https://www.relocatoremovals.in/with-in-india-shifting.php">View more</a> </figcaption>
+                     </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/office relocation.png" alt="Office Moves"/>
+                <figure class="effect-sarah"> <img src="{% static 'uploads/office relocation.png'%}" alt="Office Moves"/>
                   <figcaption>
                     <h2>Office Moves</h2>
                     <p></p>
-                    <a href="https://www.relocatoremovals.in/office-moves.php">View more</a> </figcaption>
+                     </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/hospitality logistics.jpg" alt="Hospitality Logistics"/>
+                <figure class="effect-sarah"> <img src="{% static 'uploads/hospitality-logistics.jpg'%}" alt="Hospitality Logistics"/>
                   <figcaption>
                     <h2>Hospitality Logistics</h2>
                     <p></p>
-                    <a href="https://www.relocatoremovals.in/hospitality-logistics.php">View more</a> </figcaption>
+                    </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/commercial moves.jpg" alt="Commercial Moves"/>
+                <figure class="effect-sarah"> <img src="{% static 'uploads/commercial moves.jpg'%}" alt="Commercial Moves"/>
                   <figcaption>
                     <h2>Commercial Moves</h2>
                     <p></p>
-                    <a href="https://www.relocatoremovals.in/commercial-moves.php">View more</a> </figcaption>
+                     </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/1-2918f390.jpg" alt="Plants Trees Relocation"/>
+                <figure class="effect-sarah"> <img src="{% static 'uploads/1-2918f390.jpg'%}" alt="Plants Trees Relocation"/>
                   <figcaption>
                     <h2>Plants Trees Relocation</h2>
                     <p></p>
-                    <a href="https://www.relocatoremovals.in/plants-trees-relocation.php">View more</a> </figcaption>
+                    </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/cover-petrelocation3618.jpg" alt="Pet Relocation"/>
+                <figure class="effect-sarah"> <img src="{% static 'uploads/cover-petrelocation3618.jpg'%}" alt="Pet Relocation"/>
                   <figcaption>
                     <h2>Pet Relocation</h2>
                     <p></p>
-                    <a href="https://www.relocatoremovals.in/pet-relocation.php">View more</a> </figcaption>
+                   </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/handyman.jpg" alt="handyman Valet Services"/>
+                <figure class="effect-sarah"> <img src="{% static 'uploads/handyman.jpg'%}" alt="handyman Valet Services"/>
                   <figcaption>
                     <h2>handyman Valet Services</h2>
                     <p></p>
-                    <a href="https://www.relocatoremovals.in/handyman-valet-services.php">View more</a> </figcaption>
+                    </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/Airmax-Inc.1-1.jpg" alt="AC Installation"/>
+                <figure class="effect-sarah"> <img src="{% static 'uploads/Airmax-Inc.1-1.jpg'%}" alt="AC Installation"/>
                   <figcaption>
                     <h2>AC Installation</h2>
                     <p></p>
-                    <a href="https://www.relocatoremovals.in/ac-installation.php">View more</a> </figcaption>
+                   </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/hhhhhhh.jpg" alt="Rent A Home"/>
+                <figure class="effect-sarah"> <img src="{% static 'uploads/hhhhhhh.jpg'%}" alt="Rent A Home"/>
                   <figcaption>
                     <h2>Rent A Home</h2>
                     <p></p>
-                    <a href="https://www.relocatoremovals.in/rent-a-home.php">View more</a> </figcaption>
+                    </figcaption>
                 </figure>
               </div>
             </div>
                         <div class="item">
               <div class="grid">
-                <figure class="effect-sarah"> <img src="https://www.relocatoremovals.in/admin/uploads/transportation service.jpg" alt="Transportation"/>
+                <figure class="effect-sarah"> <img src="{% static 'uploads/transportation service.jpg'%}" alt="Transportation"/>
                   <figcaption>
                     <h2>Transportation</h2>
                     <p></p>
-                    <a href="https://www.relocatoremovals.in/transportation.php">View more</a> </figcaption>
+                    </figcaption>
                 </figure>
               </div>
             </div>
@@ -527,7 +294,7 @@
                           <div class="bg_black">
   
   
-                          <img src="https://www.relocatoremovals.in/images/why-us/Transparent Pricing.png" alt="" class="img-responsive">
+                          <img src="{% static 'images/why-us/Transparent Pricing.png'%}" alt="" class="img-responsive">
   
   
                           </div>
@@ -560,7 +327,7 @@
                           <div class="bg_black">
   
   
-                          <img src="https://www.relocatoremovals.in/images/why-us/Flawless Quality.png" alt="" class="img-responsive">
+                          <img src="{% static 'images/why-us/Flawless Quality.png'%}" alt="" class="img-responsive">
   
   
                           </div>
@@ -593,7 +360,7 @@
                           <div class="bg_black">
   
   
-                          <img src="https://www.relocatoremovals.in/images/why-us/Regular Updates.png" alt="" class="img-responsive">
+                          <img src="{% static 'images/why-us/Regular Updates.png'%}" alt="" class="img-responsive">
   
   
                           </div>
@@ -626,7 +393,7 @@
                           <div class="bg_black">
   
   
-                         <img src="https://www.relocatoremovals.in/images/why-us/Superior Packaging Material.png" alt="" class="img-responsive">
+                         <img src="{% static 'images/why-us/Superior Packaging Material.png'%}" alt="" class="img-responsive">
   
   
                           </div>
@@ -659,7 +426,7 @@
                           <div class="bg_black">
   
   
-                          <img src="https://www.relocatoremovals.in/images/why-us/Strong Experience.png" alt="" class="img-responsive">
+                          <img src="{% static 'images/why-us/Strong Experience.png'%}" alt="" class="img-responsive">
   
   
                           </div>
@@ -692,7 +459,7 @@
                           <div class="bg_black">
   
   
-                          <img src="https://www.relocatoremovals.in/images/why-us/Lead A Business Attitude.png" alt="" class="img-responsive">
+                          <img src="{% static 'images/why-us/Lead A Business Attitude.png'%}" alt="" class="img-responsive">
   
   
                           </div>
@@ -743,21 +510,21 @@
         </ul>
         <div id="testim-content" class="cont">
               <div class="active">
-            <div class="img"><img src="https://www.relocatoremovals.in/admin/uploads/kevil.jpg" alt=""></div>
+            <div class="img"><img src="{% static 'uploads/kevil.jpg'%}" alt=""></div>
             <div class="h4"><strong>Amresh Naruka</strong><br>
               <br>
              </div>
             <p>I have opted for your services to move my household goods from Hyderabad to Pune. The staff was professionally equipped and very friendly. I am more than satisfied with the service and would surely recommend it to others. </p>
           </div>
               <div class="">
-            <div class="img"><img src="https://www.relocatoremovals.in/admin/uploads/client2.jpg" alt=""></div>
+            <div class="img"><img src="{% static 'uploads/client2.jpg'%}" alt=""></div>
             <div class="h4"><strong>Gunjan Gupta</strong><br>
               <br>
              </div>
             <p>Relocation involves 100s of things that you need to worry about, thanks to Relocato team there is one less thing you will have to worry about! Relocato Removals provide highly professional and efficient services! The entire team, knows their job well! Right from the survey person to packaging and back office responses every one will provide you to the point information and support! Thanks Relocato Removals for moving my goods safely! More over I am happy to see the care of stuff so nicely even a</p>
           </div>
               <div class="">
-            <div class="img"><img src="https://www.relocatoremovals.in/admin/uploads/su-test.jpg" alt=""></div>
+            <div class="img"><img src="{% static 'uploads/su-test.jpg'%}" alt=""></div>
             <div class="h4"><strong>Aahan </strong><br>
               <br>
              </div>
@@ -767,49 +534,7 @@
       </div>
     </div>
   </section>
-  <section class="next-move-tab counter6 blog-home">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center blog-header">
-          <h2 class="overview_title text-center">Explore Our BLOG</h2>
-      <a href="https://www.relocatoremovals.in/blog.php" class="view-morebtn">Click Here To Know More</a></div>
-          <div class="separator"><span><i class="fa fa-circle"></i></span></div>
-          <div class="section-title">
-            <p>How to get a Gif in true sense about your Relocation partner whether he pretends to be a Big Brand</p>
-          </div>
-        </div>
-      </div>
-      <div class="row count-row">
-                          
-          <div class="col-sm-4">
-              <div class="info-box">
-                  <div class="icons"><img src="https://www.relocatoremovals.in/admin/uploads/international-moving.jpg" alt="Book packers and movers services online" title="Book packers and movers services online" class="img-responsive"></div>
-                  <ul class="text-center" type="none">
-                      <li><strong</strong></li>
-                      <li>Book packers and movers services online</li> <li class="moretext"><p><strong>Why to book packers and movers services online?</strong></p>
-  
-  <p>Anybody who has ever tried to shift base should know and understand that it is difficult to move all of your things and belongings. Whether you move home and your car, to say the least, it can be overwhelming and exhausting.</p>
-  
-  <p>But the good news is you don&rsquo;t have to do it on your own. You don&rsquo;t have to worry about anything with virtual packers and movers on your hands. They are the ultimate mediators and will coordinate the need for the best movers and packers to attend and take care of change and transfer, car transport, relocation in the workplace, shop shift and business change.</p>
-  
-  <p><strong>Challenges to book packers and movers services online:</strong></p>
-  
-  <p>Selecting the right national and book packers and digital movers can be a task. There is the question of finding reputable movers for homes, including the possibility that they are qualified or not and the value they say is worth it. Here you can rest assured that you will find the best packers and products at a reasonable rate to make it as easy and convenient as possible for you.</p>
-  
-  <p><strong>House shifting through packers and movers services online be like:</strong></p>
-  
-  <p>After all you let go of the comfortable and pass over new land, it&rsquo;s hard to move home. Many people move, whether as a result of a change, relocation or a new beginning of existence, for different reasons. An individual alone cannot handle the process of moving the property. The skilled packers and movers are hiring online and taking all the risks before taking the big leap.</p>
-  
-  <p><strong>Transportation of vehicles through packers and movers services online be like:</strong></p>
-  
-  <p>If you own a four-wheeler, you may need to move the vehicle rapidly and on schedule to the required location. Due to packers and movers facilities that book packers and movers services online app offers, you can be assured that your </li>
-                      <a class="moreless-button btn btn-sm btn-primary">Explore</a>
-                  </ul>
-              </div>
-          </div>
-             </div>
-    </div>
-  </section>
+ 
   <div class="container" style="display:none;">
     <div class="row">
       <div class="col-md-12" style="padding-top: 5%;">
@@ -867,55 +592,55 @@
           <h2 class="overview_title text-center">OUR PARTNERS</h2><span><i class="fa fa-circle"></i></span><a href="https://www.relocatoremovals.in/partners.php" class="view-morebtn">View More</a></div>
         <div class="row main-clients">
           <div class="customers__partner col-xs-12 col-md-3">
-            <img src="https://www.relocatoremovals.in/images/home-cliennt/airtel.png" alt="" class="img-responsive">
+            <img src="{% static 'images/home-cliennt/airtel.png'%}" alt="" class="img-responsive">
           </div>
           <div class="customers__partner col-xs-12 col-md-3">
-            <img src="https://www.relocatoremovals.in/images/home-cliennt/apollo.png" alt="" class="img-responsive">
+            <img src="{% static 'images/home-cliennt/apollo.png'%}" alt="" class="img-responsive">
           </div>
           <div class="customers__partner col-xs-12 col-md-3">
-            <img src="https://www.relocatoremovals.in/images/home-cliennt/samsung.png" alt="" class="img-responsive">
+            <img src="{% static 'images/home-cliennt/samsung.png'%}" alt="" class="img-responsive">
           </div>
       <div class="customers__partner col-xs-12 col-md-3">
-            <img src="https://www.relocatoremovals.in/images/home-cliennt/ril.png" alt="" class="img-responsive">
+            <img src="{% static 'images/home-cliennt/ril.png'%}" alt="" class="img-responsive">
           </div>
           <div class="customers__partner col-xs-12 col-md-3">
-            <img src="https://www.relocatoremovals.in/images/home-cliennt/godrej.png" alt="" class="img-responsive">
+            <img src="{% static 'images/home-cliennt/godrej.png'%}" alt="" class="img-responsive">
           </div>
         </div>
         <div class="row main-clients">
       <div class="col-sm-offset-2">
           <div class="customers__partner col-xs-12 col-md-2">
-            <img src="https://www.relocatoremovals.in/images/home-cliennt/oppo.jpg" alt="" class="img-responsive">
+            <img src="{% static 'images/home-cliennt/oppo.jpg'%}" alt="" class="img-responsive">
           </div>
           <div class="customers__partner col-xs-12 col-md-2">
-            <img src="https://www.relocatoremovals.in/images/home-cliennt/acc.jpg" alt="" class="img-responsive">
+            <img src="{% static 'images/home-cliennt/acc.jpg'%}" alt="" class="img-responsive">
           </div>
       <div class="customers__partner col-xs-12 col-md-3">
-            <img src="https://www.relocatoremovals.in/images/home-cliennt/pepsico.png" alt="" class="img-responsive">
+            <img src="{% static 'images/home-cliennt/pepsico.png'%}" alt="" class="img-responsive">
           </div>
           <div class="customers__partner col-xs-12 col-md-3">
-            <img src="https://www.relocatoremovals.in/images/home-cliennt/asian-paints.png" alt="" class="img-responsive">
+            <img src="{% static 'images/home-cliennt/asian-paints.png'%}" alt="" class="img-responsive">
           </div>
       </div>
         </div>
       </div>
     </div>
   </section>
-  <div id="mySidenav" class="sidenav"> <a href="https://www.relocatoremovals.in/book-a-survey.php" id="cup"><span><img src="https://www.relocatoremovals.in/images/cup.jpg"></span><span class="cup-tea">Lets have a Cup of Tea</span></a> </div>
-  <p class="slide-toggle arrowleft"><img src="https://www.relocatoremovals.in/images/arrow_left.png"></p>
-  <p class="slide-toggle arrowright"><img src="https://www.relocatoremovals.in/images/arrow_right.png"></p>
+  <div id="mySidenav" class="sidenav"> <a href="{% url 'contactus'%}" id="cup"><span><img src="{% static 'images/cup.jpg'%}"></span><span class="cup-tea">Lets have a Cup of Tea</span></a> </div>
+  <p class="slide-toggle arrowleft"><img src="{% static 'images/arrow_left.png'%}"></p>
+  <p class="slide-toggle arrowright"><img src="{% static 'images/arrow_right.png'%}"></p>
   <nav class="social">
     <ul>
       <li><a href="tel:" title="Call Back">Call me <i class="fa fa-phone" aria-hidden="true"></i></a></li>
       <li><a href="#" id="addClass" title="Chat">Chat <i class="fa fa-comment" aria-hidden="true"></i></a></li>
-      <li><a href="https://www.relocatoremovals.in/contact-us.php" title="Contact">Contact <i class="fa fa-address-card" aria-hidden="true"></i></a></li>
+      <li><a href="{% url 'contactus'%}" title="Contact">Contact <i class="fa fa-address-card" aria-hidden="true"></i></a></li>
       <li><a href="https://web.whatsapp.com/+91-9958291021" id="addClass" title="Chat" target="_blank">WhatsApp <i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
       <li><a href="skype:" title="Contact">Skype <i class="fa fa-skype" aria-hidden="true"></i></a></li>
     </ul>
   </nav>
   <div class="popup-box chat-popup" id="qnimate">
     <div class="popup-head">
-    <div class="popup-head-left pull-left"><img src="../bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" alt="iamgurdeeposahan"> Gurdeep Osahan</div>
+    <div class="popup-head-left pull-left"><img src="https://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" alt="iamgurdeeposahan"> Gurdeep Osahan</div>
     <div class="popup-head-right pull-right">
     <div class="btn-group">
       <button class="chat-header-button" data-toggle="dropdown" type="button" aria-expanded="false"> <i class="fa fa-cog" aria-hidden="true"></i> </button>
@@ -937,7 +662,7 @@
         <div class="direct-chat-msg doted-border">
           <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Osahan</span> </div>
           <!-- /.direct-chat-info -->
-          <img alt="message user image" src="../bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img">
+          <img alt="message user image" src="https://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg'%}" class="direct-chat-img">
           <!-- /.direct-chat-img -->
           <div class="direct-chat-text"> Hey bro, how’s everything going ? </div>
           <div class="direct-chat-info clearfix"> <span class="direct-chat-timestamp pull-right">3.36 PM</span> </div>
@@ -950,11 +675,11 @@
         <div class="direct-chat-msg doted-border">
           <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Osahan</span> </div>
           <!-- /.direct-chat-info -->
-          <img alt="iamgurdeeposahan" src="../bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img">
+          <img alt="iamgurdeeposahan" src="../bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg'%}" class="direct-chat-img">
           <!-- /.direct-chat-img -->
           <div class="direct-chat-text"> Hey bro, how’s everything going ? </div>
           <div class="direct-chat-info clearfix"> <span class="direct-chat-timestamp pull-right">3.36 PM</span> </div>
-          <div class="direct-chat-info clearfix"> <img alt="iamgurdeeposahan" src="../bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" class="direct-chat-img big-round"> <span class="direct-chat-reply-name">Singh</span> </div>
+          <div class="direct-chat-info clearfix"> <img alt="iamgurdeeposahan" src="../bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg'%}" class="direct-chat-img big-round"> <span class="direct-chat-reply-name">Singh</span> </div>
           <!-- /.direct-chat-text -->
         </div>
         <!-- /.direct-chat-msg -->

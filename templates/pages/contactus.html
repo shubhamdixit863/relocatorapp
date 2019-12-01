@@ -19,18 +19,24 @@
 
             <div class="col-md-7 col-sm-6 col-xs-12 pull-right">
                 
-                <form method="post" id="form" class="contact-form"> 
+                    {%include 'partials/_alerts.html' %}
+                    <form action="{% url 'contactenquiry'%}" class="book-survey-form" id="regForm" method="POST">
+                      {%csrf_token%}
+                      {%if user.is_authenticated%}
+                      <input type="hidden" name="user_id" value="{{user.id}}">
+          
+                      {%else%}
+                      <input type="hidden" name="user_id" value="0">
+                      {%endif%}
                     <p><input type="text" name="name" placeholder="Name"></p>
                     <p><input type="text" name="phone" placeholder="phone" minlength="10" maxlength="10"></p>
                     <p><input type="text" name="email" placeholder="Your Email" pattern="[^ @]*@[^ @]*"></p>
-                    <p><input type="text" name="subject" placeholder="Subject"></p>
-                    <p><textarea name="comments" placeholder="Message"></textarea></p>
+                   
+                    <p><textarea name="msg" placeholder="Message"></textarea></p>
                     <button type="submit" id="submit" name="send" value="sendform" class="theme-btn-orng btn-lg">
                         <span>Submit Now</span>
                     </button>
-                    <div class="col-sm-12 padding10" id="loader">
-                            <h3><i class="fa fa-refresh fa-spin"></i> Working</h3>
-                        </div>
+                    
                 </form>
                 
                 
@@ -48,8 +54,7 @@
 
                 <div class="tt-contact-info">
                     <div class="simple-text">
-                        <p><?php echo $address;?>
-                        </p>
+                       
                     </div>
                 </div>
             </div>
@@ -64,10 +69,7 @@
 
                 <div class="tt-contact-info">
                     <div class="simple-text">
-                        <p>
-                            <?php echo $phone_1;?>
-                            <?php echo $phone_2;?>
-                        </p>
+                        
                     </div>
                 </div>
             </div><!-- tt-contact -->
@@ -82,10 +84,7 @@
 
                 <div class="tt-contact-info">
                     <div class="simple-text">
-                        <p>
-                            <?php echo $email_1;?>
-                            <?php echo $email_2;?>
-                        </p>
+                       
                     </div>
                 </div>
             </div><!-- tt-contact -->
@@ -120,33 +119,7 @@
 <!-- Sticky -->
 <!-- Stat Footer -->
 
-<script type="text/javascript">
-    $(document).ready(function($) {
-        $("#loader").hide();
-        $("#form").submit(function() {
-            $("#submit").hide();
-            $("#loader").show();
-            var str = $(this).serialize();
-            $.ajax({
-                type: "POST",
-                url: "mail.php",
-                data: str,
-                success: function(msg) {
-                    if(msg == 'OK') {
-                        result = '<div class="notification_ok">Your message has been sent. Thank you!</div>';
-                        $("#fields").hide();
-                    } else {
-                        result = msg;
-                    }
-                    $("#submit").show();
-                    $("#loader").hide();
-                    $('#note').html(result);
-                }
-            });
-            return false;
-        });
-    });
-</script>
+
 
 
 {%endblock%}

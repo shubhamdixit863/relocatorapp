@@ -15,21 +15,18 @@ def contact(request):
     try:
         app_url = request.path
         if request.method == 'POST':
-            title=request.POST["title"]
-            fname=request.POST["fname"]
-            lname=request.POST["lname"]
-            service_type=request.POST["service_type"] or "NOT MENTIONED"
-            name="{} {} {}".format(title,fname,lname)
+            name=request.POST["name"]
             email=request.POST["email"]
             phone=request.POST["phone"]
             movedate=request.POST["move_date"]
-            propsize=request.POST["prop_size"]
-            appoint_date=request.POST["appointment_date"]
-            moving_city=request.POST["moving_city"]
-            destination_city=request.POST["destination_city"]
-            phone=request.POST["phone"]
+            propsize=request.POST["currentfloor"]
+            moving_city=request.POST["from"]
+            destination_city=request.POST["to"]
+            l1=request.POST["liftsource"]
+            l2=request.POST["liftsourcedestination"]
+            l1=request.POST["currentfloordestination"]
             msg=request.POST["msg"]
-            message="Hello, I am looking to move  from {}  to {} on {} I need an appointment for {}.My luggage is {} .My Service Type is {} .Comments {}".format(moving_city,destination_city,movedate,appoint_date,propsize,service_type,msg)
+            message="Hello, I am looking to move  from {}  to {} on {} I need an appointment for {}.My luggage is {} .My Service Type is {} .Comments {}".format(moving_city,destination_city,movedate,l1,propsize,l2,msg)
             user_id=request.POST["user_id"]
        # realtor_email=request.POST["realtor_email"]
         #Check if user has already made enquiry
@@ -69,11 +66,11 @@ def contact(request):
             except Exception as e:
                print("This e"+e)
             messages.success(request,"We will Get Back To You Soon")
-            return redirect('requestquote')
+            return redirect('enquiry')
     except Exception as e: 
         print(e)
         messages.error(request,"Please ensure that you input correct data")
-        return redirect('requestquote')
+        return redirect('enquiry')
 
 
 
@@ -83,21 +80,13 @@ def contactenquiry(request):
     try:
         app_url = request.path
         if request.method == 'POST':
-            title=request.POST["title"]
-            fname=request.POST["fname"]
-            lname=request.POST["lname"]
-            service_type=request.POST["service_type"]
-            name="{} {} {}".format(title,fname,lname)
+            name=request.POST["name"]
+          
             email=request.POST["email"]
             phone=request.POST["phone"]
-            movedate=request.POST["move_date"]
-            propsize=request.POST["prop_size"]
-            appoint_date=request.POST["appointment_date"]
-            moving_city=request.POST["moving_city"]
-            destination_city=request.POST["destination_city"]
-            phone=request.POST["phone"]
+           
             msg=request.POST["msg"]
-            message="Hello, I am looking to move  from {}  to {} on {} I need an appointment for {}.My luggage is {} .My Service Type is {} .Comments {}".format(moving_city,destination_city,movedate,appoint_date,propsize,service_type,msg)
+            
             user_id=request.POST["user_id"]
             print(user_id)
        # realtor_email=request.POST["realtor_email"]
@@ -106,7 +95,7 @@ def contactenquiry(request):
                 user_id=request.user.id 
            
                 
-            contact=Contact(name=name,email=email,phone=phone,user_id=user_id,message=message)
+            contact=Contact(name=name,email=email,phone=phone,user_id=user_id,message=msg)
             contact.save()
             """
             send_mail(
@@ -137,8 +126,8 @@ def contactenquiry(request):
             except Exception as e:
                print("This e"+e)
             messages.success(request,"We will Get Back To You Soon")
-            return redirect('enquiry')
+            return redirect('contactus')
     except Exception as e: 
         print(e)
         messages.error(request,"Please ensure that you input correct data")
-        return redirect('enquiry')
+        return redirect('contactus')
